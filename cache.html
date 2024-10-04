@@ -1,0 +1,673 @@
+<div
+  id="back-drop"
+  class="hidden inset-y-0 z-40 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
+></div>
+<section
+  id="side-bar"
+  class="fixed inset-y-0 z-40 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
+>
+  <div class="w-[220px] mr-3 mt-[14px] pl-2 size3:mr-10">
+    <nav class="w-full border-b border-custom6">
+      <div class="h-14 w-14 mb-[15px]">
+        <img class="w-full h-full" src="/assets/logo/logo.svg" />
+      </div>
+      <a
+        href="#"
+        class="hidden size5:flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+      >
+        <div class="h-6 w-6">
+          <img class="h-full w-full" src="/assets/icon/nav/home-active.svg" />
+        </div>
+        <p class="font-medium pl-4 text-base text-custom7 leading-[22.4px]">
+          Home
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/explore-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Explore
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/creator-match-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Creator Match
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/friends-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Friends
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/messages-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Messages
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/notification-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Notifications
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/profile-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Profile
+        </p>
+      </a>
+      <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+        <div class="h-6 w-6">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/settings-inactive.svg"
+          />
+        </div>
+        <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+          Settings
+        </p>
+      </a>
+    </nav>
+
+    <div class="w-full pt-5 border-b border-custom6 pb-5 mb-7">
+      <p class="uppercase text-base text-custom4 font-normal">
+        active communities
+      </p>
+      <button class="flex items-center h-10 mt-3 mb-1">
+        <div class="flex items-center justify-center h-10 w-10 mr-1">
+          <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
+        </div>
+        <p class="text-base text-custom2 font-normal">Create a community</p>
+      </button>
+
+      <div class="flex items-center h-[73px]">
+        <div
+          class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-base sm:text-[20px] sm:h-12 sm:w-12"
+        >
+          N
+        </div>
+        <div>
+          <p
+            class="font-medium text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base"
+          >
+            Newbie Artists
+          </p>
+          <p
+            class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+          >
+            24k Members
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center h-[73px]">
+        <div
+          class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-base sm:text-[20px] sm:h-12 sm:w-12"
+        >
+          N
+        </div>
+        <div>
+          <p
+            class="font-medium text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base"
+          >
+            Art Hub
+          </p>
+          <p
+            class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+          >
+            29k Members
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center h-[73px]">
+        <div
+          class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-base sm:text-[20px] sm:h-12 sm:w-12"
+        >
+          N
+        </div>
+        <div>
+          <p
+            class="font-medium text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base"
+          >
+            Art Hub
+          </p>
+          <p
+            class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+          >
+            29k Members
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center h-[73px]">
+        <div
+          class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-base sm:text-[20px] sm:h-12 sm:w-12"
+        >
+          T
+        </div>
+        <div>
+          <p
+            class="font-medium text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base"
+          >
+            Cultural Practices
+          </p>
+          <p
+            class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+          >
+            1.4M Members
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <a class="text-custom4 font-normal text-base" href=""
+      >How to use ContentMatch</a
+    >
+    <button class="text-custom4 font-normal text-base my-4" href="">
+      Learn how to place ADs
+    </button>
+  </div>
+</section>
+
+<!-- section two -->
+<section class="flex flex-col flex-1">
+  <header
+    class="w-full h-[84px] px-10 flex items-center border-b border-custom6"
+  >
+    <button
+      id="hb-btn"
+      class="h-14 w-14 flex items-center justify-center mr-1 size4:hidden"
+    >
+      <img class="w-full h-full" src="/assets/logo/logo.svg" />
+    </button>
+    <div class="h-[44px] w-full flex">
+      <div
+        class="flex flex-1 items-center px-5 rounded-[32px] overflow-hidden bg-custom8"
+      >
+        <div class="flex items-center h-5 flex-1">
+          <input
+            type="email"
+            class="w-full h-full mt-[1px] text-[12px] bg-transparent text-custom2 px-0 border-0 border-none placeholder-custom4 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-sm focus:border-b-[2px] focus:border-none"
+            placeholder="Search for accounts, videos and groups"
+          />
+          <div class="w-8 border-l border-custom flex justify-end">
+            <img
+              class="h-full w-5"
+              src="/assets/icon/home/ep_search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="h-10 w-10 mx-5 flex items-center justify-center rounded-full border border-custom1"
+      >
+        <img
+          class="h-6 w-6"
+          src="/assets/icon/nav/creator-match-active.svg"
+          alt=""
+        />
+      </div>
+      <button
+        class="h-[38px] flex items-center px-4 bg-secondary rounded-[32px]"
+      >
+        <img src="/assets/icon/home/add-c.svg" alt="" />
+        <p class="pl-[9px] text-base text-custom9 pt-[2px] font-medium">
+          Create Post
+        </p>
+      </button>
+    </div>
+  </header>
+  <div
+    class="w-full h-[48px] px-10 flex items-end pb-2 mb-4 border-b border-custom6"
+  >
+    <button class="text-secondary border-b-2 border-custom2 px-2">
+      For you
+    </button>
+    <button class="text-custom2 font-normal px-2 mx-3">Following</button>
+    <button class="text-custom2 font-normal px-2">Communities</button>
+  </div>
+
+  <div class="flex-1 overflow-y-auto px-[25px]">
+    <div class="w-full mb-5 border-b border-custom6">
+      <div class="flex justify-between w-full mb-1">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full">
+            <img
+              class="w-fulll h-full"
+              src="/assets/images/home/pp-placeholder.png"
+            />
+          </div>
+          <p class="text-base font-medium text-secondary pl-1 pr-3">
+            Thomas Andrews
+          </p>
+          <button class="text-sm font-bold text-secondary">Follow</button>
+        </div>
+
+        <button class="h-5 w-5 flex items-center justify-center mt-2">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/home/v-menu.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <p class="leading-[22.4px] text-base text-secondary font-normal">
+        As the final buzzer sounds, echoing through the neighborhood, the court
+        transforms into a stage where the spirit of competition and camaraderie
+        thrives.
+      </p>
+
+      <div class="relative w-full h-[579px] mt-4 rounded-lg overflow-hidden">
+        <div
+          class="absolute top-4 left-4 flex bg-custom10 items-center h-9 px-3 backdrop-blur-md rounded-[20px]"
+        >
+          <div class="w-7 h-5">
+            <img class="w-full h-full" src="/assets/icon/socials/youtube.svg" />
+          </div>
+          <p class="text-sm text-secondary font-medium pl-1">
+            Uploaded from YouTube
+          </p>
+        </div>
+        <img
+          class="object-cover h-full w-full"
+          src="/assets/images/home/video-placeholder.png"
+        />
+      </div>
+
+      <div class="flex items-center justify-between gap-1 mt-[22px] mb-[26px]">
+        <div class="flex items-center">
+          <div class="h-[28px] flex bg-green-950">
+            <div
+              class="h-full w-[28px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="h-full w-[28px] -ml-[10px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-2.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="h-full w-[28px] -ml-[10px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-3.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="h-full w-[28px] -ml-[10px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-3.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="h-full w-[28px] -ml-[10px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-4.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="h-full w-[28px] -ml-[10px] rounded-full border border-custom4 overflow-hidden"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="font-bold text-secondary text-base ml-2 mr-1">12.2k</p>
+          <p class="text-base font-normal text-custom4">likes</p>
+          <div class="h-[6px] w-[6px] bg-custom1 rounded-full mx-2"></div>
+          <p class="font-bold text-secondary text-base ml-2 mr-1">12M</p>
+          <p class="text-base font-normal text-custom4">Feedbacks</p>
+        </div>
+
+        <div class="flex items-center">
+          <button
+            class="h-10 w-10 rounded-full border border-custom4 flex items-center justify-center"
+          >
+            <img class="h-6 w-6" src="/assets/icon/like.svg" alt="" />
+          </button>
+          <button
+            class="h-10 w-10 mx-3 rounded-full border border-custom4 flex items-center justify-center"
+          >
+            <img
+              class="h-6 w-6"
+              src="/assets/icon/interactive-space.svg"
+              alt=""
+            />
+          </button>
+          <button
+            class="h-[33px] bg-secondary px-3 rounded-[32px] flex items-center text-xs truncate text-custom9 font-medium pt-[1px]"
+          >
+            Send Feedback
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section three -->
+<section
+  class="hidden size5:block w-[360px] overflow-y-auto border-l border-custom6"
+>
+  <div
+    class="w-full border-b border-custom6 h-[84px] flex items-center pl-3 size3:pl-10"
+  >
+    <div class="flex">
+      <div class="h-10 w-10 rounded-full">
+        <img
+          class="h-full w-full object-cover"
+          src="/assets/images/home/pp-placeholder.png"
+        />
+      </div>
+      <div class="ml-2">
+        <p class="text-sm leading-[19.6px] mb-1 text-white">Victor Opulence</p>
+        <p class="text-custom4 text-sm">You are currently a free user</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ml-5 max-w-[250px] pt-3 size3:ml-10">
+    <p class="font-bold text-xl leading-[28px] text-white">Get Premium</p>
+    <p class="text-custom4 leading-[19.6px] font-normal text-sm mt-2">
+      Gain access to premium features, more visibiliy & engagementsand priority
+      support
+    </p>
+    <button
+      class="flex text-xs mt-2 items-center text-custom9 px-3 h-[33px] rounded-[32px] bg-custom11"
+    >
+      Subscribe
+    </button>
+    <div
+      class="h-[100px] mt-5 w-full bg-custom6 rounded uppercase flex items-center justify-center text-white"
+    >
+      ADS
+    </div>
+    <div class="my-5">
+      <p class="text-custom4 uppercase text-sm font-normal">people to follow</p>
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-1.png"
+              alt=""
+            />
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Maren Mango
+            </p>
+            <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+              @chi1234
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Follow
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-1.png"
+              alt=""
+            />
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Alena Dokidis
+            </p>
+            <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+              @chi1234
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Follow
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-1.png"
+              alt=""
+            />
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Corey Saris
+            </p>
+            <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+              @chi1234
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Follow
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-1.png"
+              alt=""
+            />
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Dulce Lubin
+            </p>
+            <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+              @chi1234
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Follow
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div class="h-10 w-10 rounded-full overflow-hidden">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-1.png"
+              alt=""
+            />
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Corey Carder
+            </p>
+            <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+              @chi1234
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Follow
+        </button>
+      </div>
+    </div>
+
+    <div class="my-5">
+      <p class="text-custom4 text-sm uppercase font-normal">
+        communities to join
+      </p>
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div
+            class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+          >
+            N
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Newbie Artists
+            </p>
+            <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+              24k Members
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Join
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div
+            class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+          >
+            A
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Art Club
+            </p>
+            <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+              24k Members
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Join
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div
+            class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+          >
+            A
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Art Club
+            </p>
+            <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+              24k Members
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Join
+        </button>
+      </div>
+
+      <div class="flex justify-between items-center h-[66px]">
+        <div class="flex items-center">
+          <div
+            class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+          >
+            A
+          </div>
+          <div class="ml-2">
+            <p class="text-sm font-medium text-secondary leading-[19.6px]">
+              Art Club
+            </p>
+            <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+              24k Members
+            </p>
+          </div>
+        </div>
+        <button
+          class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+        >
+          Join
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  class="absolute -bottom-2 right-0 h-12 w-12 rounded-full bg-secondary flex items-center justify-center"
+>
+  <img class="h-3 w-3" src="/assets/icon/home/add-c.svg" />
+</div>
+
+<!-- ........................ -->
+

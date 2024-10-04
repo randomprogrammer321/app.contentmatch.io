@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/Geist-Medium-BF6569491e1c281.otf') format('opentype');
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/Geist-Regular-BF6569491e3eff1.otf') format('opentype');
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/fonts/Geist-Bold-BF6569491da5a14.otf') format('opentype');
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+/* <h1 class="text-3xl font-bold">This is using Geist Bold</h1>
+  <h2 class="text-2xl font-medium">This is using Geist Medium</h2>
+  <p class="text-lg font-normal">This is using Geist Regular</p> 
+  84 Regular
+  106 Medium
+  146 Bold
+  */
+
+@layer utilities {
+
+  .bg-img {
+    background-image: url('/assets/images/auth/background-1.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 800px 826.88px;
+
+  }
+
+  .bg-img-otp {
+    background-image: url('/assets/images/auth/background-2.svg');
+    background-repeat: no-repeat;
+    background-position: 0 -480px;
+
+  }
+
+  input:-webkit-autofill {
+    background-color: transparent !important;
+    color: #EBEBEB !important;
+    box-shadow: 0 0 0 1000px transparent inset;
+  }
+
+  input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #EBEBEB !important;
+    font-size: 14px;
+    transition: background-color 5000s ease-in-out 0s;
+    /* Add a long transition */
+  }
+
+  input:focus + label,
+  input:valid + label {
+    font-size: 0.8rem;
+    bottom: 20px;
+    transform: translateY(-120%);
+  }
+
+   /* .overlay-animate {
+    animation: fadeIn 0.5s;
+  }
+
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+
+.fadeOut {
+    animation: fadeOut 0.3s forwards;
+}
+  textarea:focus + label,
+  textarea:valid + label {
+    font-size: 0.8rem;
+    top: 30px;
+    transform: translateY(-20%);
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html:hover, body:hover, *:hover {
+  scrollbar-width: thin
+}
+
+*:hover::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), #c2e9fb);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+*:hover::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+  /* .in:focus {
+    outline: 0.3px solid var(--tertiary-color);
+    border: none;
+}
+
+.in:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px red inset !important;
+}
+*/
+
+
+}
+
+
+
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
