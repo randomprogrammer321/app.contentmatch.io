@@ -6,7 +6,6 @@
   font-family: 'Geist';
   src: url('/assets/fonts/Geist-Medium-BF6569491e1c281.otf') format('opentype');
   font-weight: 500;
-  /* Medium */
   font-style: normal;
 }
 
@@ -14,7 +13,6 @@
   font-family: 'Geist';
   src: url('/assets/fonts/Geist-Regular-BF6569491e3eff1.otf') format('opentype');
   font-weight: 400;
-  /* Regular */
   font-style: normal;
 }
 
@@ -22,7 +20,6 @@
   font-family: 'Geist';
   src: url('/assets/fonts/Geist-Bold-BF6569491da5a14.otf') format('opentype');
   font-weight: 700;
-  /* Bold */
   font-style: normal;
 }
 
@@ -127,8 +124,8 @@ html:hover, body:hover, *:hover {
 }
 
 *:hover::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
 }
 
 *:hover::-webkit-scrollbar-thumb {
@@ -148,22 +145,40 @@ html:hover, body:hover, *:hover {
 }
 
 
-  /* .in:focus {
-    outline: 0.3px solid var(--tertiary-color);
-    border: none;
+.dialog, .dialog__I {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.in:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px red inset !important;
-}
-*/
-
-
+.show-backdrop {
+  opacity: 1;
 }
 
+.show-dialog {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
 
+  .mobile-drawup {
+    position: fixed;
+    bottom: -10049px;
+    right: 0px;
+    transition: 0.3s;
+  }
 
+  .mobile-drawup.active {
+    top: 0;
+  }
 
+  .mobile-drawup.show {
+    bottom: 0px;
+  }
+
+}
 
 * {
   margin: 0px;

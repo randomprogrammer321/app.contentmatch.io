@@ -1,4 +1,6 @@
 /** @type {import("tailwindcss").Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     "./assets/**/*.html",      
@@ -24,8 +26,11 @@ module.exports = {
         custom8: "#2E2E2E",
         custom9: "#252526",
         custom10: "rgba(255, 255, 255, 0.2)",
-        custom11: "#FFD700"
-
+        custom11: "#FFD700",
+        custom12: "rgba(37, 37, 38, 0.24)",
+        custom13: "rgba(235, 235, 235, 0.5)",
+        custom14: "#395AFF",
+        custom15: "rgba(15, 5, 29, 0.72)"
       },
       screens: {
         'size1': '846px',
@@ -42,9 +47,14 @@ module.exports = {
       },
       backdropBlur: {
         "40": "40px",
+        "8": "8px"
       },
       boxShadow: {
+        "custom": "16px 16px 40px 0 rgba(128, 128, 128, 0.12)", // Custom shadow
         "combined": "0px 1px 3px 0px rgba(37, 37, 37, 0.3), 0px 4px 8px 3px rgba(37, 37, 37, 0.15)",
+      },
+      borderImage: {
+        custom: "linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%)", // Custom gradient
       },
       animation: {
         'fade-in': 'fadeIn 2s ease forwards',
@@ -59,5 +69,14 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/forms"),
+    plugin(function({ addUtilities }) {
+      addUtilities({
+        '.border-image-custom': {
+          border: '1px solid',
+          borderImageSource: 'linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%)',
+          borderImageSlice: 1,
+        },
+      });
+    }),
   ],
 };

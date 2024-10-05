@@ -1,0 +1,40 @@
+<div
+        id="back-drop-4"
+        class="inset-y-0 fixed hidden z-40 h-screen w-screen bg-custom12 backdrop-blur-8 top-0 left-0"
+      ></div>
+      <div
+        id="notify-dia"
+        class="dialog hidden z-50 m-auto px-mpd w-full sm:px-0 sm:max-w-[490px]"
+      >
+        <div
+          class="backdrop-blur-40 rounded-[24px] p-3 bg-custom15 border-custom1 border-[0.5px] w-full sm:p-7"
+        >
+          <div
+            class="flex items-center justify-center rounded-full border border-custom4 h-16 w-16 mx-auto mb-7 sm:mb-6 sm:h-[100px] sm:w-[100px]"
+          >
+            <img class="h-14 w-14" src="/assets/icon/notifications.svg" />
+          </div>
+          <p
+            class="font-medium text-center text-secondary text-base mb-3 sm:mb-4 sm:text-2xl"
+          >
+            ContentMatch would like to send you notifications
+          </p>
+          <p class="text-center text-xs font-medium text-custom2 sm:text-base">
+            Notifications may include alert, sound batches, you can change this
+            in settings.
+          </p>
+          <button
+            id="notify-allow"
+            class="outline-none shadow-combined h-[41px] mt-4 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-[44px] sm:mt-5 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg"
+          >
+            Allow
+          </button>
+
+          <button
+            id="notify-dnt-allow"
+            class="outline-none h-[41px] mt-4 rounded-[40px] text-custom2 w-full text-xs sm:text-sm sm:h-[44px] transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg sm:mb-0"
+          >
+            Don't allow
+          </button>
+        </div>
+      </div>

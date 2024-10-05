@@ -1,12 +1,21 @@
+import { engagementDialog } from "../../components/dashboard/home/engagementDialog.js";
+import { notificationDialog } from "../../components/dashboard/home/notification-dialog.js";
 import { post } from "../../components/dashboard/home/posts.js";
+import { reportVideoDialog } from "../../components/dashboard/home/report-video-dialog.js";
 import { sectionThree } from "../../components/dashboard/home/section-three.js";
+import { welcomeDialog } from "../../components/dashboard/home/welcome-dialog.js";
 import { bottomTab } from "../../components/dashboard/ui/bottom-tab.js";
 import { sideBar } from "../../components/dashboard/ui/side-bar.js";
 
 
 const content = `
+${engagementDialog()}
+
+${notificationDialog()}
+${welcomeDialog()}
   ${sideBar()}
   ${post()}
+  ${reportVideoDialog()}
   ${sectionThree()}
   ${bottomTab()}
 `;

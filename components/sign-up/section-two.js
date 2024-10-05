@@ -48,7 +48,7 @@ export function sectionTwo() {
               </div>
 
               <form>
-                  <input type="email" class="w-full h-[45px] text-[12px] bg-transparent text-custom2 px-0 border-0 border-b-[1px] border-custom1 placeholder-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-[14px] transition-all duration-300 focus:border-b-[2px] focus:border-custom3" placeholder="Enter email address" />
+                  <input type="email" class="w-full h-[45px] text-[12px] bg-transparent text-custom2 px-0 border-0 border-b-[1px] border-custom1 placeholder-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-[14px] focus:border-b-[2px] focus:border-custom3" placeholder="Enter email address" />
                   <button class="outline-none w-full shadow-combined h-[44px] mt-[16px] rounded-[40px] text-custom2 bg-custom3 transition-transform duration-300 hover:scale-105">
                       Continue
                   </button>
