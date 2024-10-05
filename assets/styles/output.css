@@ -2293,6 +2293,44 @@ html:hover,
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+@font-face {
+  font-family: 'Geist';
+
+  src: url('/assets/fonts/Geist-Medium-BF6569491e1c281.otf') format('opentype');
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+
+  src: url('/assets/fonts/Geist-Regular-BF6569491e3eff1.otf') format('opentype');
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+
+  src: url('/assets/fonts/Geist-Bold-BF6569491da5a14.otf') format('opentype');
+
+  font-weight: 700;
+
+  font-style: normal;
+}
+
+/* <h1 class="text-3xl font-bold">This is using Geist Bold</h1>
+  <h2 class="text-2xl font-medium">This is using Geist Medium</h2>
+  <p class="text-lg font-normal">This is using Geist Regular</p> 
+  84 Regular
+  106 Medium
+  146 Bold
+  */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -2335,44 +2373,6 @@ html:hover,
 .mobile-drawup.show {
   bottom: 0px;
 }
-
-@font-face {
-  font-family: 'Geist';
-
-  src: url('/assets/fonts/Geist-Medium-BF6569491e1c281.otf') format('opentype');
-
-  font-weight: 500;
-
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist';
-
-  src: url('/assets/fonts/Geist-Regular-BF6569491e3eff1.otf') format('opentype');
-
-  font-weight: 400;
-
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist';
-
-  src: url('/assets/fonts/Geist-Bold-BF6569491da5a14.otf') format('opentype');
-
-  font-weight: 700;
-
-  font-style: normal;
-}
-
-/* <h1 class="text-3xl font-bold">This is using Geist Bold</h1>
-  <h2 class="text-2xl font-medium">This is using Geist Medium</h2>
-  <p class="text-lg font-normal">This is using Geist Regular</p> 
-  84 Regular
-  106 Medium
-  146 Bold
-  */
 
 * {
   margin: 0px;
