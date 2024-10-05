@@ -765,10 +765,6 @@ select {
   pointer-events: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .invisible {
   visibility: hidden;
 }
@@ -882,10 +878,6 @@ select {
   z-index: 50;
 }
 
-.m-1 {
-  margin: 0.25rem;
-}
-
 .m-auto {
   margin: auto;
 }
@@ -893,11 +885,6 @@ select {
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .mx-3 {
@@ -1098,10 +1085,6 @@ select {
   display: grid;
 }
 
-.contents {
-  display: contents;
-}
-
 .hidden {
   display: none;
 }
@@ -1128,10 +1111,6 @@ select {
 
 .h-16 {
   height: 4rem;
-}
-
-.h-2 {
-  height: 0.5rem;
 }
 
 .h-20 {
@@ -1278,10 +1257,6 @@ select {
   height: 80px;
 }
 
-.h-\[9px\] {
-  height: 9px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1406,10 +1381,6 @@ select {
   width: 80px;
 }
 
-.w-\[9px\] {
-  width: 9px;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1461,12 +1432,6 @@ select {
 
 .-translate-x-\[260px\] {
   --tw-translate-x: -260px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1622,10 +1587,6 @@ select {
 
 .rounded-\[40px\] {
   border-radius: 40px;
-}
-
-.rounded-\[4px\] {
-  border-radius: 4px;
 }
 
 .rounded-full {
@@ -2144,10 +2105,6 @@ select {
   opacity: 0;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .opacity-20 {
   opacity: 0.2;
 }
@@ -2227,10 +2184,6 @@ select {
   transition-duration: 500ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -2262,8 +2215,8 @@ input:-webkit-autofill,
   /* Add a long transition */
 }
 
-input:focus + label,
-  input:valid + label {
+input:focus+label,
+  input:valid+label {
   font-size: 0.8rem;
   bottom: 20px;
   transform: translateY(-120%);
@@ -2286,8 +2239,8 @@ input:focus + label,
     }
 } */
 
-textarea:focus + label,
-  textarea:valid + label {
+textarea:focus+label,
+  textarea:valid+label {
   font-size: 0.8rem;
   top: 30px;
   transform: translateY(-20%);
@@ -2303,7 +2256,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-html, body {
+html,
+  body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -2312,7 +2266,9 @@ html, body {
   width: 0;
 }
 
-html:hover, body:hover, *:hover {
+html:hover,
+  body:hover,
+  *:hover {
   scrollbar-width: thin
 }
 
@@ -2337,8 +2293,18 @@ html:hover, body:hover, *:hover {
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-.dialog, .dialog__I {
-  position: absolute;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dialog {
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);

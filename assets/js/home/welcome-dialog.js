@@ -2,12 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const welcomeDialog = document.getElementById("wel-dia");
     const backDrop = document.getElementById("back-drop-3");
     const doLater = document.getElementById("do-later");
-    backDrop.classList.remove("hidden");
-    welcomeDialog.classList.remove("hidden");
-  
+    backDrop.classList.remove('hidden');
+    welcomeDialog.classList.remove('hidden');
+    
+    console.log("Ran")
+    // Add show class for animation
     setTimeout(() => {
-      backDrop.classList.add("show-backdrop");
-      welcomeDialog.classList.add("show-dialog");
+      console.log("Rannnnn")
+      backDrop.classList.add('show-backdrop');
+      welcomeDialog.classList.add('show-dialog');
     }, 10);
   
     backDrop.addEventListener("click", () => {
