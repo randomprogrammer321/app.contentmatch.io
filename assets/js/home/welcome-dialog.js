@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     backDrop.classList.remove('hidden');
     welcomeDialog.classList.remove('hidden');
     
-    console.log("Ran")
     // Add show class for animation
     setTimeout(() => {
       console.log("Rannnnn")

@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const reportButtons = document.querySelectorAll(".repo-vid");
 
   reportButtons.forEach((button) => {
-    console.log("acl");
     button.addEventListener("click", (event) => {
       console.log("acl");
       reportBackDrop.classList.remove("hidden");
