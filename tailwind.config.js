@@ -31,7 +31,8 @@ module.exports = {
         custom13: "rgba(235, 235, 235, 0.5)",
         custom14: "#395AFF",
         custom15: "rgba(15, 5, 29, 0.72)",
-        custom16: "rgba(18, 18, 18, 0.4)"
+        custom16: "rgba(18, 18, 18, 0.4)",
+        custom17: "#00FF00"
       },
       screens: {
         'size1': '846px',

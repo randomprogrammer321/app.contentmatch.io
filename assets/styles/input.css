@@ -100,6 +100,11 @@
     animation: fadeOut 0.3s forwards;
   }
 
+  .container {
+    width: 100%; /* Or use width constraints that ensure it doesn't grow too much */
+    min-width: 0; /* Ensure children don't push it wider than intended */
+  }
+  
   .bio-textarea:focus+label,
   .bio-textarea:valid+label {
     font-size: 0.8rem;
@@ -123,7 +128,8 @@
     -moz-appearance: textfield;
   }
 
-  html,
+
+   html,
   body {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -133,36 +139,42 @@
     width: 0;
   }
 
-  html:hover,
+  /* html:hover,
   body:hover,
   *:hover {
-    scrollbar-width: thin
-  }
+    scrollbar-width:thin;
+    width: 3px;
+    height: 3px;
+  } */
 
   *:hover::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 3px;
+    height: 3px;
   }
 
   *:hover::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), #c2e9fb);
+    background: #888;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 3px;
+    height: 3px;
   }
 
   *:hover::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background: #888;
   }
 
   *:hover::-webkit-scrollbar-track {
-    background: #f5f5f5;
+    background: #f1f1f1; 
     border-radius: 10px;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
+  } 
 
   
 
 }
+
+
+
+
 .input-field {
   position: relative;
   border-bottom: 2px solid #ccc;
@@ -299,31 +311,27 @@
   transform: scale(0.95);
   display: none;
 }
-/* Style the radio button container */
 .custom-radio-container {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between the radio buttons */
+  gap: 10px;
 }
 
-/* Hide the default radio button */
 .radio-input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Style the label as a custom radio button */
 .custom-radio {
   display: flex;
   align-items: center;
   cursor: pointer;
   font-size: 16px;
   position: relative;
-  padding-left: 35px; /* Space for the custom checkmark */
+  padding-left: 35px;
 }
 
-/* Custom checkmark for the radio button */
 .radio-checkmark {
   position: absolute;
   left: 0;
@@ -337,13 +345,11 @@
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-/* Style when the radio button is checked */
 .radio-input:checked ~ .radio-checkmark {
   background-color: #4a90e2;
   border-color: #4a90e2;
 }
 
-/* Add a dot inside the checked radio button */
 .radio-checkmark::after {
   content: "";
   position: absolute;
@@ -357,12 +363,10 @@
   transform: translate(-50%, -50%);
 }
 
-/* Show the dot when the radio button is checked */
 .radio-input:checked ~ .radio-checkmark::after {
   display: block;
 }
 
-/* Hover effect for the radio button */
 .custom-radio:hover .radio-checkmark {
   border-color: #888;
 }
