@@ -1,324 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/assets/styles/output.css" rel="stylesheet" />
-    <style></style>
-  </head>
-  <body class="bg-primary font-geist">
-    <main id="content" class="h-screen w-screen flex overflow-auto flex-row">
-      <!-- SIDEBAR START -->
-      <div
-        id="back-drop"
-        class="hidden inset-y-0 z-20 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
-      ></div>
-      <section
-        id="side-bar"
-        class="fixed inset-y-0 z-30 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-x-hidden overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
-      >
-        <div
-          class="w-full mr-0 mt-0 pl-0 sm:mt-[14px] sm:mr-3 sm:pl-2 sm:w-[230px] size3:mr-10"
-        >
-          <!-- MOBILE NAVIGATION START -->
-          <nav class="flex flex-col w-full sm:hidden">
-            <!-- PROFILE CARD START -->
-            <div
-              class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
-            >
-              <div class="flex">
-                <div class="h-10 w-10 rounded-full">
-                  <img
-                    class="h-full w-full object-cover"
-                    src="/assets/images/home/pp-placeholder.png"
-                  />
-                </div>
-                <div class="ml-2">
-                  <p class="text-sm leading-[19.6px] mb-1 text-white">
-                    Victor Opulence
-                  </p>
-                  <p class="text-custom4 text-xs sm:text-sm">
-                    You are currently a free user
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- PROFILE CARD END -->
-          </nav>
-          <!-- MOBILE NAVIGATION END -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Picker Example</title>
+  <link href="/assets/styles/output.css" rel="stylesheet" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+  <style>
+    /* Basic styling for positioning */
+    #emojiPicker {
+      position: absolute;
+      bottom: 50px;
+      right: 5px;
+      z-index: 10;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative h-full w-full mr-4">
+    <input
+      id="inputField"
+      class="rounded-[40px] pl-5 text-xs bg-custom9 text-custom2 px-0 border-none placeholder-custom2 focus:outline-none focus:ring-0 w-full h-full sm:text-base focus:border focus:border-custom3"
+      placeholder="Hello I am new here"
+    />
+    <img
+      id="emojiButton"
+      class="absolute h-5 w-5 bottom-3 right-5 cursor-pointer"
+      src="/assets/icon/emoji/smiley.svg"
+    />
 
-          <!-- DESKTOP NAV START -->
-          <nav class="hidden sm:flex flex-col w-full border-b border-custom6">
-            <div class="h-14 w-14 mb-[15px]">
-              <img class="w-full h-full" src="/assets/logo/logo.svg" />
-            </div>
-            <a
-              href="#"
-              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
-            >
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/home-active.svg"
-                />
-              </div>
-              <p
-                class="font-medium pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Home
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/explore-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Explore
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/creator-match-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Creator Match
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/friends-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Friends
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/messages-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Messages
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/notification-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Notifications
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/profile-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Profile
-              </p>
-            </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-              <div class="h-6 w-6">
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/nav/settings-inactive.svg"
-                />
-              </div>
-              <p
-                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
-              >
-                Settings
-              </p>
-            </a>
-          </nav>
-          <!-- DESKTOP NAV END -->
+    <!-- Emoji picker element (hidden by default) -->
+    <emoji-picker id="emojiPicker" class="hidden"></emoji-picker>
+  </div>
 
-          <!-- ACTIVE COMMUNITIES START -->
-          <div class="w-full">
-            <div
-              class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0"
-            >
-              <p
-                class="uppercase text-sm text-custom4 font-normal sm:text-base"
-              >
-                active communities
-              </p>
-              <button class="flex items-center h-10 mt-3 mb-1">
-                <div
-                  class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10"
-                >
-                  <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
-                </div>
-                <p class="text-sm text-custom2 font-normal sm:text-base">
-                  Create a community
-                </p>
-              </button>
+  <script>
+    // Ensure everything loads before accessing DOM
+    document.addEventListener('DOMContentLoaded', function () {
+      // References to the elements
+      const emojiButton = document.getElementById('emojiButton');
+      const emojiPicker = document.getElementById('emojiPicker');
+      const inputField = document.getElementById('inputField');
 
-              <div class="flex items-center h-[73px]">
-                <div
-                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
-                >
-                  N
-                </div>
-                <div>
-                  <p
-                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
-                  >
-                    Newbie Artists
-                  </p>
-                  <p
-                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
-                  >
-                    24k Members
-                  </p>
-                </div>
-              </div>
+      // Toggle the emoji picker visibility when the smiley button is clicked
+      emojiButton.addEventListener('click', () => {
+        emojiPicker.classList.toggle('hidden');
+        console.log("Emoji button clicked");
+      });
 
-              <div class="flex items-center h-[73px]">
-                <div
-                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
-                >
-                  N
-                </div>
-                <div>
-                  <p
-                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
-                  >
-                    Art Hub
-                  </p>
-                  <p
-                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
-                  >
-                    29k Members
-                  </p>
-                </div>
-              </div>
+      // Append selected emoji to the input field
+      emojiPicker.addEventListener('emoji-click', (event) => {
+        const emoji = event.detail.unicode;
+        inputField.value += emoji; // Append the emoji to the input field's value
+      });
 
-              <div class="flex items-center h-[73px]">
-                <div
-                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
-                >
-                  N
-                </div>
-                <div>
-                  <p
-                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
-                  >
-                    Art Hub
-                  </p>
-                  <p
-                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
-                  >
-                    29k Members
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-center h-[73px]">
-                <div
-                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
-                >
-                  T
-                </div>
-                <div>
-                  <p
-                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
-                  >
-                    Cultural Practices
-                  </p>
-                  <p
-                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
-                  >
-                    1.4M Members
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ACTIVE COMMMUNTIES END -->
-
-          <!-- SIDE BAR FOOTER START -->
-          <a
-            class="flex items-center text-custom4 font-normal h-9 text-base pl-5 sm:pl-0"
-            href="#"
-            >How to use ContentMatch</a
-          >
-          <a
-            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
-            href="#"
-          >
-            Learn how to place ADs
-          </a>
-          <a
-            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
-            href="#"
-          >
-            Contact Support
-          </a>
-          <div class="h-20"></div>
-          <!-- SIDE BAR FOOTER END -->
-        </div>
-      </section>
-      <!-- SIDEBAR END -->
-
-      <!-- COMMUNITIES SECTION START -->
-      <section style="overflow: hidden; width: 100%;">
-        <div class="h-[54px] flex-none min-w-0 pl-10 bg-custom9 overflow-x-auto flex items-center gap-x-4 text-base text-custom2">
-          <p class="font-bold whitespace-nowrap">Arts and Culture</p>
-          <p class="whitespace-nowrap">Technology</p>
-          <p class="whitespace-nowrap">Health and wellbeing</p>
-          <p class="whitespace-nowrap">Motivation</p>
-          <p class="whitespace-nowrap">Hobbies</p>
-          <p class="whitespace-nowrap">Games</p>
-          <p class="whitespace-nowrap">Passion</p>
-          <p class="whitespace-nowrap">Religion</p>
-          <p class="whitespace-nowrap">Dancing</p>
-          <p class="whitespace-nowrap">Writing</p>
-          <p class="whitespace-nowrap">Nature</p>
-          <p class="whitespace-nowrap">Fashion</p>
-          <p class="whitespace-nowrap">Travel</p>
-        </div>
-      </section>
-      
-      <!-- COMMUNITIES SECTION END -->
-
-      <!-- SECTION THREE START -->
-      <section
-        class="hidden size5:block w-[360px] overflow-y-auto border-l border-custom6"
-      >
-        </div>
-      </section>
-      <!-- SECTION THREE END -->
-    </main>
-    <script defer src="/assets/js/home/side-bar.js"></script>
-  </body>
+      // Close the emoji picker when clicking outside of it
+      document.addEventListener('click', (event) => {
+        if (!emojiButton.contains(event.target) && !emojiPicker.contains(event.target)) {
+          emojiPicker.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
 </html>

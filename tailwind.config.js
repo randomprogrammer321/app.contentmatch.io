@@ -40,6 +40,7 @@ module.exports = {
         'size3': '1234px',
         'size4': '1150px',
         'size5': '900px',
+        'size6': '1352px'
       },
       padding: {
         mpd: "16px"

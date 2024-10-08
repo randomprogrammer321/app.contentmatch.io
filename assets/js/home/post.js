@@ -17,30 +17,29 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function updateButtonStyles(button) {
       activeButton.classList.remove('border-b-2', 'border-custom2', 'text-secondary');
-      activeButton.classList.add('text-custom2'); // Set previously active button's text color
+      activeButton.classList.add('text-custom2');
       button.classList.add('border-b-2', 'border-custom2', 'text-secondary');
-      activeButton = button; // Update active button reference
+      activeButton = button;
     }
   
-    // Add event listeners to buttons
     forYouBtn.addEventListener('click', () => {
       hideAllContents();
       contentForYou.classList.remove('hidden');
-      setTimeout(() => contentForYou.classList.remove('opacity-0'), 0); // Fade-in
+      setTimeout(() => contentForYou.classList.remove('opacity-0'), 0);
       updateButtonStyles(forYouBtn);
     });
   
     followingBtn.addEventListener('click', () => {
       hideAllContents();
       contentFollowing.classList.remove('hidden');
-      setTimeout(() => contentFollowing.classList.remove('opacity-0'), 0); // Fade-in
+      setTimeout(() => contentFollowing.classList.remove('opacity-0'), 0);
       updateButtonStyles(followingBtn);
     });
   
     communitiesBtn.addEventListener('click', () => {
       hideAllContents();
       contentCommunities.classList.remove('hidden');
-      setTimeout(() => contentCommunities.classList.remove('opacity-0'), 0); // Fade-in
+      setTimeout(() => contentCommunities.classList.remove('opacity-0'), 0);
       updateButtonStyles(communitiesBtn);
     });
   });
