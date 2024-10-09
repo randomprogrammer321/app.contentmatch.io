@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         primary: "#0F051D",
         secondary: "#FDFDFD",
+        error: "#FF0B0B",
         custom1: "#737373",
         custom2: "#EBEBEB",
         custom3: "#1E90FF",
@@ -32,7 +33,11 @@ module.exports = {
         custom14: "#395AFF",
         custom15: "rgba(15, 5, 29, 0.72)",
         custom16: "rgba(18, 18, 18, 0.4)",
-        custom17: "#00FF00"
+        custom17: "#00FF00",
+        custom18: "#F0F0F0",
+        custom19: "#7C8B9F",
+        custom20: "#1E1E1F",
+        custom21: "#121212"
       },
       screens: {
         'size1': '846px',

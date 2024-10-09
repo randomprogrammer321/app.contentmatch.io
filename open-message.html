@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/styles/output.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body class="bg-primary font-geist">
+    <main id="content" class="h-screen flex overflow-auto flex-row">
+      <!-- SIDEBAR START -->
+      <div
+        id="back-drop"
+        class="hidden inset-y-0 z-20 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
+      ></div>
+      <section
+        id="side-bar"
+        class="fixed inset-y-0 z-30 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-x-hidden overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
+      >
+        <div
+          class="w-full mr-0 mt-0 pl-0 sm:mt-[14px] sm:mr-3 sm:pl-2 sm:w-[230px] size3:mr-10"
+        >
+          <!-- MOBILE NAVIGATION START -->
+          <nav class="flex flex-col w-full sm:hidden">
+            <!-- PROFILE CARD START -->
+            <div
+              class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
+            >
+              <div class="flex">
+                <div class="h-10 w-10 rounded-full">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/pp-placeholder.png"
+                  />
+                </div>
+                <div class="ml-2">
+                  <p class="text-sm leading-[19.6px] mb-1 text-white">
+                    Victor Opulence
+                  </p>
+                  <p class="text-custom4 text-xs sm:text-sm">
+                    You are currently a free user
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- PROFILE CARD END -->
+
+            <!-- MOBILE NAV LINK START -->
+            <div class="border-b border-custom6 mx-5">
+              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/profile.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Profile
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/friends-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Friends
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="/assets/logo/logo.svg" />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Get Premium
+                </p>
+              </a>
+
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/settings-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Settings
+                </p>
+              </a>
+              <button class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/log-out.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Log out
+                </p>
+              </button>
+            </div>
+            <!-- MOBILE NAV LINKS END -->
+          </nav>
+          <!-- MOBILE NAVIGATION END -->
+
+          <!-- DESKTOP NAV START -->
+          <nav class="hidden sm:flex flex-col w-full border-b border-custom6">
+            <div class="h-14 w-14 mb-[15px]">
+              <img class="w-full h-full" src="/assets/logo/logo.svg" />
+            </div>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/home-active.svg"
+                />
+              </div>
+              <p
+                class="font-medium pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Home
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/explore-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Explore
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/creator-match-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Creator Match
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/friends-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Friends
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+            >
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/messages-active.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Messages
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/notification-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Notifications
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/profile-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Profile
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/settings-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Settings
+              </p>
+            </a>
+          </nav>
+          <!-- DESKTOP NAV END -->
+
+          <!-- ACTIVE COMMUNITIES START -->
+          <div class="w-full">
+            <div
+              class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0"
+            >
+              <p
+                class="uppercase text-sm text-custom4 font-normal sm:text-base"
+              >
+                active communities
+              </p>
+              <button class="flex items-center h-10 mt-3 mb-1">
+                <div
+                  class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10"
+                >
+                  <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
+                </div>
+                <p class="text-sm text-custom2 font-normal sm:text-base">
+                  Create a community
+                </p>
+              </button>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Newbie Artists
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    24k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  T
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Cultural Practices
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    1.4M Members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ACTIVE COMMMUNTIES END -->
+
+          <!-- SIDE BAR FOOTER START -->
+          <a
+            class="flex items-center text-custom4 font-normal h-9 text-base pl-5 sm:pl-0"
+            href="#"
+            >How to use ContentMatch</a
+          >
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Learn how to place ADs
+          </a>
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Contact Support
+          </a>
+          <div class="h-20"></div>
+          <!-- SIDE BAR FOOTER END -->
+        </div>
+      </section>
+      <!-- SIDEBAR END -->
+
+      <!-- CHAT SECTION START -->
+      <section
+        class="hidden flex-col w-full pt-5 border-r border-custom6 size1:flex size1:w-[386px]"
+      >
+        <!-- HEADER START -->
+        <header class="px-4 sm:px-5">
+          <div class="flex justify-between h-7 items-center">
+            <button
+              id="hb-btn"
+              class="h-10 w-10 flex items-center justify-center mr-1 sm:h-14 sm:w-14 size4:hidden"
+            >
+              <img class="w-full h-full" src="/assets/logo/logo.svg" />
+            </button>
+            <p
+              class="font-medium text-white w-full text-center sm:text-start text-sm mr-2 sm:mr-0 sm:text-xl sm:w-max"
+            >
+              Messages
+            </p>
+            <button class="h-6 w-6 block sm:hidden">
+              <img class="h-full w-full" src="/assets/icon/search.svg" alt="" />
+            </button>
+
+            <button
+              class="hidden h-6 w-6 sm:flex items-center justify-center bg-white flex-shrink-0 rounded-full"
+            >
+              <img
+                class="h-[11.67px] w-[11.67px]"
+                src="/assets/icon/home/add-c.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div
+            class="hidden sm:flex flex-1 items-center px-3 rounded-[32px] overflow-hidden bg-custom8 mt-4 mx-5 sm:px-5 sm:mx-0"
+          >
+            <div class="flex items-center h-11 flex-1">
+              <input
+                type="email"
+                class="w-full h-full mt-[1px] text-xs bg-transparent text-custom2 px-0 border-0 border-none placeholder-custom4 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-sm focus:border-b-[2px] focus:border-none"
+                placeholder="Search"
+              />
+              <div
+                class="w-8 ml-3 h-5 sm:ml-2 border-l border-custom flex justify-end"
+              >
+                <img
+                  class="h-full w-5"
+                  src="/assets/icon/home/ep_search.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-col gap-y-4">
+            <button class="flex justify-between items-center w-full">
+              <div class="flex">
+                <div class="h-6 w-6 mr-2">
+                  <img
+                    class="w-full h-full"
+                    src="/assets/icon/message-incoming.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-sm font-medium text-white leading-[19.6px] mb-[2px] text-start"
+                  >
+                    Message requests
+                  </p>
+                  <p class="text-xs text-custom1 font-medium text-start">
+                    1 Message
+                  </p>
+                </div>
+              </div>
+
+              <div class="h-5 w-5 flex items-center justify-center">
+                <img src="/assets/icon/right-arrow.svg" />
+              </div>
+            </button>
+            <button class="flex justify-between items-center w-full">
+              <div class="flex">
+                <div class="h-6 w-6 mr-2">
+                  <img
+                    class="w-full h-full"
+                    src="/assets/icon/space-outline-sharp.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-sm font-medium text-white leading-[19.6px] mb-[2px] text-start"
+                  >
+                    Engagement requests
+                  </p>
+                  <p class="text-xs text-custom1 font-medium text-start">
+                    4 Engagements
+                  </p>
+                </div>
+              </div>
+
+              <div class="h-5 w-5 flex items-center justify-center">
+                <img src="/assets/icon/right-arrow.svg" />
+              </div>
+            </button>
+          </div>
+        </header>
+        <!-- HEADER END -->
+
+        <div
+          class="flex-1 pt-3 overflow-y-auto overflow-x-hidden space-y-[13px] w-full"
+        >
+          <!-- READ CHAT CARD START -->
+          <div
+            class="flex items-center h-[57px] justify-between w-full sm:h-[78px] px-4 sm:px-5"
+          >
+            <div class="h-full flex items-center mr-[15px] w-full">
+              <div
+                class="h-2 w-2 flex-shrink-0 rounded-full bg-custom3 mr-2 sm:mr-4"
+              ></div>
+              <div class="h-10 w-10 flex-shrink-0 rounded-full mr-2">
+                <img src="/assets/images/home/placeholder-4.png" alt="" />
+              </div>
+              <div
+                class="text-sm text-secondary font-medium w-52 whitespace-nowrap overflow-hidden text-ellipsis sm:text-base"
+              >
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Maria Ekstrom Bothman
+                </p>
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Hello John. Hope you are doing well?
+                </p>
+              </div>
+            </div>
+            <div class="text-xs font-normal text-custom4">
+              <p class="mb-[3px]">Today</p>
+              <p>09:20am</p>
+            </div>
+          </div>
+          <!-- READ CHAT CARD END -->
+
+          <!-- UNREAD CHAT CARD START -->
+          <div
+            class="flex items-center h-[57px] justify-between w-full px-4 sm:px-5 sm:h-[78px]"
+          >
+            <div class="h-full flex items-center mr-[15px] w-full">
+              <div
+                class="h-2 w-2 flex-shrink-0 rounded-full bg-custom3 mr-2 sm:mr-4"
+              ></div>
+              <div class="h-10 w-10 flex-shrink-0 rounded-full mr-2">
+                <img src="/assets/images/home/placeholder-5.png" alt="" />
+              </div>
+              <div
+                class="text-sm text-custom4 font-medium w-52 whitespace-nowrap overflow-hidden text-ellipsis sm:text-base"
+              >
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Talan Donin
+                </p>
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Hello John. Hope you are doing well?
+                </p>
+              </div>
+            </div>
+            <div class="text-xs font-normal text-custom4">
+              <p class="mb-[3px]">Today</p>
+              <p>09:20am</p>
+            </div>
+          </div>
+          <!-- UNREAD CHAT CARD END -->
+          <!-- READ CHAT CARD START -->
+          <div
+            class="flex items-center bg-custom9 h-[57px] justify-between w-full px-4 border-r-[3px] border-custom3 sm:px-5 sm:h-[78px]"
+          >
+            <div class="h-full flex items-center mr-[15px] w-full">
+              <div
+                class="h-2 w-2 flex-shrink-0 rounded-full bg-custom3 mr-2 sm:mr-4"
+              ></div>
+              <div class="h-10 w-10 flex-shrink-0 rounded-full mr-2">
+                <img src="/assets/images/home/placeholder-4.png" alt="" />
+              </div>
+              <div
+                class="text-sm text-secondary font-medium w-52 whitespace-nowrap overflow-hidden text-ellipsis sm:text-base"
+              >
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Leo Westervelt
+                </p>
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Hello John. Hope you are doing well?
+                </p>
+              </div>
+            </div>
+            <div class="text-xs font-normal text-custom4">
+              <p class="mb-[3px]">Today</p>
+              <p>09:20am</p>
+            </div>
+          </div>
+          <!-- READ CHAT CARD END -->
+          <!-- READ CHAT CARD START -->
+          <div
+            class="flex items-center h-[57px] justify-between w-full px-4 sm:px-5 sm:h-[78px]"
+          >
+            <div class="h-full flex items-center mr-[15px] w-full">
+              <div
+                class="h-2 w-2 flex-shrink-0 rounded-full bg-custom3 mr-2 sm:mr-4"
+              ></div>
+              <div class="h-10 w-10 flex-shrink-0 rounded-full mr-2">
+                <img src="/assets/images/home/placeholder-2.png" alt="" />
+              </div>
+              <div
+                class="text-sm text-secondary font-medium w-52 whitespace-nowrap overflow-hidden text-ellipsis sm:text-base"
+              >
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Maria Rhiel Madsen
+                </p>
+                <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                  Hello John. Hope you are doing well?
+                </p>
+              </div>
+            </div>
+            <div class="text-xs font-normal text-custom4">
+              <p class="mb-[3px]">Today</p>
+              <p>09:20am</p>
+            </div>
+          </div>
+          <!-- READ CHAT CARD END -->
+        </div>
+      </section>
+      <!-- CHAT SECTION END -->
+
+      <!-- SECTION THREE START -->
+      <section
+        class="flex-1 relative overflow-hidden flex flex-col items-center justify-center"
+      >
+        <!-- CHAT HEADER START -->
+        <div
+          class="w-full bg-primary border-b border-custom6 flex items-center justify-between absolute top-0 right-0 left-0 px-4 sm:px-10 h-[55px] sm:h-20"
+        >
+          <div class="flex items-center">
+            <button
+              class="h-[18px] w-3 flex items-center justify-center mb-[1.5px] mr-2 sm:hidden"
+            >
+              <img src="/assets/icon/back-outlined-left.svg" alt="" />
+            </button>
+            <div class="hidden sm:block h-10 w-10 rounded-full mr-3">
+              <img
+                class="h-ful w-full object-cover"
+                src="/assets/images/home/placeholder-4.png"
+                alt=""
+              />
+            </div>
+            <p class="font-bold text-base text-secondary">Leo Westervelt</p>
+          </div>
+          <div class="relative group">
+            <button
+              class="menuButton h-5 w-5 flex items-center justify-center mt-2 relative"
+            >
+              <img
+                class="h-full w-full"
+                src="/assets/icon/home/v-menu.svg"
+                alt="Menu"
+              />
+            </button>
+            <div
+              class="tooltip absolute right-0 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+            >
+              <button
+                class="cursor-pointer w-full repo-vid flex items-center truncate border-b border-custom6 text-xs h-[33px] sm:text-base sm:h-[46px]"
+              >
+                View Leo's profile
+              </button>
+              <button
+                class="cursor-pointer w-full repo-vid flex items-center truncate border-b border-custom6 text-xs h-[33px] sm:text-base sm:h-[46px]"
+              >
+                Schedule a meet-up
+              </button>
+              <button
+                class="cursor-pointer w-full repo-vid flex items-center truncate border-b border-custom6 text-xs h-[33px] sm:text-base sm:h-[46px]"
+              >
+                Clear chat
+              </button>
+              <button
+                class="repo-vid w-full text-error cursor-pointer flex items-center truncate text-xs h-[33px] sm:text-base sm:h-[46px]"
+              >
+                Block Leo
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- CHAT HEADER END -->
+         <!-- CHAT CONTAINER START -->
+        <div
+          id="chat-container"
+          class="flex-1 overflow-y-auto w-full flex flex-col items-end py-32 px-4 sm:px-10"
+        >
+          <p
+            class="text-center text-custom4 text-[10px] mx-auto mb-4 sm:mb-8 sm:text-sm"
+          >
+            Today, March 24
+          </p>
+          <!-- YOUR MESSAGE CARD START -->
+          <div class="flex w-full justify-start mb-4">
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start gap-y-1 ml-[11px] sm:ml-3"
+            >
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+          </div>
+          <!-- YOUR MESSAGE CARD END -->
+
+          <!-- RECIPIENT MESSAGE CARD START -->
+          <div class="flex w-full justify-end mb-4">
+            <div
+              class="flex flex-col justify-end items-end gap-y-1 mr-2 sm:mr-3"
+            >
+              <div class="flex items-center justify-end">
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tl-lg rounded-br-lg rounded-bl-lg max-w-[90%] bg-custom3 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Great🔥 That's a nice-design Idea. 😍👏
+                </div>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- RECIPIENT MESSAGE CARD END -->
+
+          <!-- YOUR MESSAGE CARD START -->
+          <div class="flex w-full justify-start mb-4">
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start gap-y-1 ml-[11px] sm:ml-3"
+            >
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+          </div>
+          <!-- YOUR MESSAGE CARD END -->
+
+          <!-- RECIPIENT MESSAGE CARD START -->
+          <div class="flex w-full justify-end mb-4">
+            <div
+              class="flex flex-col justify-end items-end gap-y-1 mr-2 sm:mr-3"
+            >
+              <div class="flex items-center justify-end">
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tl-lg rounded-br-lg rounded-bl-lg max-w-[90%] bg-custom3 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Great🔥 That's a nice-design Idea. 😍👏
+                </div>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- RECIPIENT MESSAGE CARD END -->
+          <!-- YOUR MESSAGE CARD START -->
+          <div class="flex w-full justify-start mb-4">
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start gap-y-1 ml-[11px] sm:ml-3"
+            >
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+          </div>
+          <!-- YOUR MESSAGE CARD END -->
+
+          <!-- RECIPIENT MESSAGE CARD START -->
+          <div class="flex w-full justify-end mb-4">
+            <div
+              class="flex flex-col justify-end items-end gap-y-1 mr-2 sm:mr-3"
+            >
+              <div class="flex items-center justify-end">
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tl-lg rounded-br-lg rounded-bl-lg max-w-[90%] bg-custom3 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Great🔥 That's a nice-design Idea. 😍👏
+                </div>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- RECIPIENT MESSAGE CARD END -->
+
+          <!-- YOUR MESSAGE CARD START -->
+          <div class="flex w-full justify-start mb-4">
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start gap-y-1 ml-[11px] sm:ml-3"
+            >
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <div class="flex items-center justify-start">
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tr-lg rounded-br-lg rounded-bl-lg mr-3 max-w-[90%] bg-custom9 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Hey, happy to hear from you. Yes, I will be back in a couple
+                  fo days.
+                </div>
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+          </div>
+          <!-- YOUR MESSAGE CARD END -->
+
+          <!-- RECIPIENT MESSAGE CARD START -->
+          <div class="flex w-full justify-end mb-4">
+            <div
+              class="flex flex-col justify-end items-end gap-y-1 mr-2 sm:mr-3"
+            >
+              <div class="flex items-center justify-end">
+                <button class="h-7 w-4">
+                  <img src="/assets/icon/menu-v.svg" alt="" />
+                </button>
+                <div
+                  class="font-normal text-xs text-custom18 p-[10px] rounded-tl-lg rounded-br-lg rounded-bl-lg max-w-[90%] bg-custom3 sm:max-w-[70%] sm:text-base sm:p-5"
+                >
+                  Great🔥 That's a nice-design Idea. 😍👏
+                </div>
+              </div>
+              <p class="text-custom19 font-normal text-sm">10:30 AM</p>
+            </div>
+            <div
+              class="flex-shrink-0 h-6 w-6 rounded overflow-hidden sm:h-10 sm:w-10"
+            >
+              <img
+                class="w-full h-full"
+                src="/assets/images/home/placeholder-5.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- RECIPIENT MESSAGE CARD END -->
+        </div>
+        <!-- CHAT CONTAINER END -->
+         
+        <!-- CHAT TEXT FIELD START -->
+        <div
+          class="absolute bottom-0 z-10 left-0 right-0 border-t border-custom6 h-[72px] sm:h-[114px] bg-black flex items-center w-full"
+        >
+          <div
+            class="flex justify-between w-full items px-4 h-10 sm:h-11 sm:px-10"
+          >
+            <div class="relative h-full w-full mr-4">
+              <input
+                class="rounded-[40px] pl-5 text-xs bg-custom9 text-custom2 px-0 border-none placeholder-custom2 focus:outline-none focus:ring-0 w-full h-full sm:text-base focus:border focus:border-custom3"
+                placeholder="Hello, I am new here."
+              />
+              <img
+                class="absolute h-5 w-5 bottom-3 right-5"
+                src="/assets/icon/emoji/smiley.svg"
+              />
+            </div>
+            <button
+              class="flex flex-shrink-0 items-center justify-center bg-custom3 rounded-full h-full w-11"
+            >
+              <img class="h-6 w-6" src="/assets/icon/round-send.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- CHAT TEXTFIELD END -->
+      </section>
+      <!-- SECTION THREE END -->
+    </main>
+    <script src="/assets/js/home/side-bar.js"></script>
+    <script src="/assets/js/home/menu-button.js"></script>
+    <script src="/assets/js/home/chat.js"></script>
+  </body>
+</html>
