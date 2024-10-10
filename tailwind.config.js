@@ -37,7 +37,8 @@ module.exports = {
         custom18: "#F0F0F0",
         custom19: "#7C8B9F",
         custom20: "#1E1E1F",
-        custom21: "#121212"
+        custom21: "#121212",
+        custom22: "#2D2D30"
       },
       screens: {
         'size1': '846px',
@@ -45,7 +46,8 @@ module.exports = {
         'size3': '1234px',
         'size4': '1150px',
         'size5': '900px',
-        'size6': '1352px'
+        'size6': '1352px',
+        'size7': '1000px',
       },
       padding: {
         mpd: "16px"

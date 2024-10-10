@@ -172,14 +172,11 @@
                 Friends
               </p>
             </a>
-            <a
-              href="#"
-              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
-            >
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
               <div class="h-6 w-6">
                 <img
                   class="h-full w-full"
-                  src="/assets/icon/nav/messages-active.svg"
+                  src="/assets/icon/nav/messages-inactive.svg"
                 />
               </div>
               <p
@@ -214,11 +211,14 @@
                 Profile
               </p>
             </a>
-            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+            <a
+              href="#"
+              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+            >
               <div class="h-6 w-6">
                 <img
                   class="h-full w-full"
-                  src="/assets/icon/nav/settings-inactive.svg"
+                  src="/assets/icon/nav/settings-active.svg"
                 />
               </div>
               <p
@@ -358,224 +358,270 @@
       </section>
       <!-- SIDEBAR END -->
 
-      <!-- CHAT SECTION START -->
+      <!-- SETTINGS NAV SECTION START -->
       <section
-        class="flex flex-col w-full pt-5 border-r border-custom6 size1:w-[386px]"
+        class="hidden flex-col w-full pt-5 overflow-y-auto border-r border-custom6 size1:flex size1:w-[321px]"
       >
-        <header class="px-5">
-          <div class="flex justify-between h-7 items-center">
-            <button
-              id="hb-btn"
-              class="h-10 w-10 flex items-center justify-center mr-1 sm:h-14 sm:w-14 size4:hidden"
-            >
-              <img class="w-full h-full" src="/assets/logo/logo.svg" />
-            </button>
-            <p class="text-xl font-medium text-white w-full sm:w-max">
-              Messages
-            </p>
-            <button class="h-6 w-6 block sm:hidden">
-              <img class="h-full w-full" src="/assets/icon/search.svg" alt="" />
-            </button>
-
-            <button
-              class="hidden h-6 w-6 sm:flex items-center justify-center bg-white flex-shrink-0 rounded-full"
-            >
+        <p class="text-white font-medium text-xl ml-5">Settings</p>
+        <nav class="w-full flex flex-col gap-y-2 mt-[37px]">
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-medium text-base text-custom2 pl-10"
+          >
+            Edit Profile
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-custom2 pl-10"
+          >
+            Notifications
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-custom2 pl-10"
+          >
+            Languages
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-custom2 pl-10"
+          >
+            Billing and Invoices
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-custom2 pl-10"
+          >
+            Account Privacy
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-white pl-10 bg-custom22 border-r-[3px] border-custom3"
+          >
+            Blocked users
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 justify-between font-normal text-base text-custom2 px-10"
+          >
+            <p>Customer's Support</p>
+            <div class="h-5 w-5">
               <img
-                class="h-[11.67px] w-[11.67px]"
-                src="/assets/icon/home/add-c.svg"
+                class="w-full h-full"
+                src="/assets/icon/arrow-outward.svg"
+                alt=""
+              />
+            </div>
+          </a>
+          <a
+            href="#"
+            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base text-custom2 pl-10"
+          >
+            Delete Account
+          </a>
+        </nav>
+      </section>
+      <!-- SETTINGS NAV SECTION END -->
+
+      <!-- SECTION THREE START -->
+      <section class="flex-1 flex-col overflow-y-auto pt-0 sm:pt-5">
+        <!-- MOBILE SETTING NAVIGATION START -->
+        <!-- <div class="block size1:hidden">
+          <div
+            class="h-[46px] flex items-center border-b border-custom6 px-4 sm:px-10"
+          >
+            <button class="h-[18px] w-[9px] mr-2">
+              <img
+                class="w-full h-full"
+                src="/assets/icon/back-outlined-left.svg"
                 alt=""
               />
             </button>
+            <p class="text-white font-medium text-base sm:text-xl">Settings</p>
           </div>
-          <div
-            class="flex flex-1 items-center px-3 rounded-[32px] overflow-hidden bg-custom8 mt-4 mx-5 sm:px-5 sm:mx-0"
-          >
-            <div class="flex items-center h-11 flex-1">
-              <input
-                type="email"
-                class="w-full h-full mt-[1px] text-xs bg-transparent text-custom2 px-0 border-0 border-none placeholder-custom4 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-sm focus:border-b-[2px] focus:border-none"
-                placeholder="Search"
-              />
-              <div
-                class="w-8 ml-3 h-5 sm:ml-2 border-l border-custom flex justify-end"
-              >
+          <nav class="px-4 sm:px-10">
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">Edit Profile</p>
+              <div class="h-[18px] w-[9px] mr-2">
                 <img
-                  class="h-full w-5"
-                  src="/assets/icon/home/ep_search.svg"
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
                   alt=""
                 />
               </div>
-            </div>
-          </div>
-          <div class="mt-4 flex flex-col gap-y-4">
-            <button class="flex justify-between items-center w-full">
-              <div class="flex">
-                <div class="h-6 w-6 mr-2">
-                  <img
-                    class="w-full h-full"
-                    src="/assets/icon/message-incoming.svg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p
-                    class="text-sm font-medium text-white leading-[19.6px] mb-[2px] text-start"
-                  >
-                    Message requests
-                  </p>
-                  <p class="text-xs text-custom1 font-medium text-start">
-                    1 Message
-                  </p>
-                </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">Notifications</p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
               </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">Languages</p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">
+                Billing and Invoices
+              </p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">
+                Account Privacy
+              </p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">Blocked users</p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">
+                Customer's Support
+              </p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/back-outlined.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+            <a
+              href="#"
+              class="h-[54px] w-full flex items-center justify-between"
+            >
+              <p class="text-base text-secondary font-normal">Delete Account</p>
+              <div class="h-[18px] w-[9px] mr-2">
+                <img
+                  class="w-full h-full"
+                  src="/assets/icon/arrow-outward.svg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </nav>
+        </div> -->
+        <!-- MOBILE SETTING NAVIGATION END -->
 
-              <div class="h-5 w-5 flex items-center justify-center">
-                <img src="/assets/icon/right-arrow.svg" />
-              </div>
+        <!-- DEACTIVATE ACCOUNT SECTION START -->
+        <div class="pl-4 pr-4 sm:pl-10 sm:pr-10 size1:pr-24">
+          <!-- DEACTIVATE ACCOUNT HEADER START -->
+          <div
+            class="h-[46px] flex items-center border-b border-custom6 mb-5 -mx-4 px-4 sm:px-0 sm:mx-0 sm:mb-9 sm:border-none sm:h-max"
+          >
+            <button class="h-[18px] w-[9px] mr-2 mb-[1px] block sm:hidden">
+              <img
+                class="w-full h-full"
+                src="/assets/icon/back-outlined-left.svg"
+                alt=""
+              />
             </button>
-            <button class="flex justify-between items-center w-full">
-              <div class="flex">
-                <div class="h-6 w-6 mr-2">
-                  <img
-                    class="w-full h-full"
-                    src="/assets/icon/space-outline-sharp.svg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p
-                    class="text-sm font-medium text-white leading-[19.6px] mb-[2px] text-start"
-                  >
-                    Engagement requests
-                  </p>
-                  <p class="text-xs text-custom1 font-medium text-start">
-                    4 Engagements
-                  </p>
-                </div>
-              </div>
-
-              <div class="h-5 w-5 flex items-center justify-center">
-                <img src="/assets/icon/right-arrow.svg" />
-              </div>
-            </button>
+            <p class="text-white font-medium text-base sm:text-xl">
+              Deactivate your account
+            </p>
           </div>
-        </header>
-        <div class="flex-1 overflow-y-auto overflow-x-hidden px-5 mt-1 w-full">
-          <!-- UNREAD CHAT CARD START -->
-          <div class="mt-10 w-full space-y-[13px]">
-            <div class="flex items-center justify-between mb-4 w-full">
-              <div class="h-full flex items-center mr-[15px] w-full">
-                <div class="h-2 w-2 rounded-full bg-custom3 mr-4"></div>
-                <div class="h-10 w-10 rounded-full mr-2">
-                  <img src="/assets/images/home/placeholder-4.png" alt="" />
-                </div>
-                <div class="text-base text-secondary w-full font-medium">
-                  <p>Maria Ekstrom Bothman</p>
-                  <p class="whitespace-nowrap overflow-hidden text-ellipsis w-full">Hello John. Hope you are doing well?</p>
-                </div>
+          <!-- DEACTIVATE ACCOUNT HEADER END -->
+
+          <!-- DEACTIVATE ACCOUNT START -->
+          <div
+            class="flex items-center gap-x-1 justify-between border border-custom6 rounded-xl p-3 mb-2 sm:mb-4 sm:py-3 sm:px-5"
+          >
+            <div class="flex items-center gap-x-2">
+              <div
+                class="rounded-full overflow-hidden h-10 w-10 sm:w-20 sm:h-20"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/images/home/pp-placeholder.png"
+                  alt=""
+                />
               </div>
-              <div class="text-xs font-normal text-custom4">
-                <p class="mb-[3px]">Today</p>
-                <p>09:20am</p>
+              <div class="flex flex-col gap-y-[6px]">
+                <p class="text-bold text-white text-xs sm:text-xl">
+                  Macdonald Anyanwu
+                </p>
+                <p class="font-medium text-custom4 text-xs sm:text-xl">
+                  @macdonald222
+                </p>
               </div>
             </div>
-
-            <!-- UNREAD CHAT CARD END -->
-           
-            <!-- READ CHAT CARD START -->
-
-            <div class="flex items-center justify-between mb-4 w-full">
-              <div class="h-full flex items-center mr-[15px]">
-                <div class="h-2 w-2 rounded-full bg-custom3 mr-4"></div>
-                <div class="h-10 w-10 rounded-full mr-2">
-                  <img src="/assets/images/home/placeholder-5.png" alt="" />
-                </div>
-                <div class="text-base text-custom4 font-medium">
-                  <p>Talan Donin</p>
-                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">Hellooo John. Hope you are doing well?</p>
-                </div>
-              </div>
-              <div class="text-xs font-normal text-custom4">
-                <p class="mb-[3px]">Yesterday</p>
-                <p>09:20am</p>
-              </div>
-            </div>
-
-            <!-- READ CHAT CARD END -->
-            
+            <p class="font-medium text-custom4 text-xs sm:text-base">
+              Joined: 12th June, 2024
+            </p>
           </div>
-        </div>
-      </section>
-      <!-- CHAT SECTION END -->
 
-      <!-- SECTION THREE START -->
-      <section class="flex-1 hidden items-center justify-center size1:flex">
-        <div class="max-w-[450px] px-3 m-auto">
-          <div class="w-[146px] h-[120px] mb-5 mx-auto">
-            <img
-              class="h-full w-full"
-              src="/assets/images/message/no-message-illustration.svg"
-              alt=""
-            />
-          </div>
-          <p class="text-center font-bold text-white mb-[2px]">Messages</p>
-          <p class="text-center leading-[25.6px] text-custom4">
-            Select your existing conversations or click the “+” on the top right
-            bar to start sending messages to friends
+          <p class="font-bold text-secondary text-xs mb-2 sm:mb-3 sm:text-base">
+            This will deactivate your account
           </p>
+          <p
+            class="font-normal text-custom4 leading-[19.2px] text-xs sm:text-base sm:leading-[25.6px]"
+          >
+            You're about to deactivate your Contentmatch account. Your display
+            name, @macdonald222, and public profile will no longer be visible on
+            contentmatch.com.
+          </p>
+          <button
+            class="px-3 bg-error rounded-[32px] flex items-center justify-center font-bold text-custom2 mt-2 text-xs sm:text-sm h-[33px] sm:h-9 sm:mt-3"
+          >
+            Deactivate
+          </button>
+          <!-- DEACTIVATE ACCOUNT SECTION END -->
         </div>
       </section>
       <!-- SECTION THREE END -->
-
-      <!-- BOTTOM TAB START -->
-      <div
-        class="h-[72px] w-full fixed right-0 bottom-0 left-0 z-30 bg-black border-t border-custom6 flex items-center justify-between px-[26px] size5:hidden"
-      >
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/home-inactive.svg"
-            alt=""
-          />
-        </a>
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/explore-inactive.svg"
-            alt=""
-          />
-        </a>
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/creator-match-inactive.svg"
-            alt=""
-          />
-        </a>
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/notification-inactive.svg"
-            alt=""
-          />
-        </a>
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/messages-active.svg"
-            alt=""
-          />
-        </a>
-        <a class="h-6 w-6" href="#">
-          <img
-            class="h-full w-full"
-            src="/assets/icon/nav/community-inactive.svg"
-            alt=""
-          />
-        </a>
-      </div>
-      <!-- BOTTOM TAB END -->
     </main>
     <script src="/assets/js/home/side-bar.js"></script>
+    <script src="/assets/js/home/image-preview.js"></script>
   </body>
 </html>

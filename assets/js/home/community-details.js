@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function hideAllContents() {
     videoTab.classList.add("hidden", "opacity-0");
     discussionTab.classList.add("hidden", "opacity-0");
-    if(aboutTab) {
-    aboutTab.classList.add("hidden", "opacity-0");
-}
-    discusInput.classList.add("hidden", "opacity-0");
+    if (aboutTab) {
+      aboutTab.classList.add("hidden", "opacity-0");
+    }
+    if (discusInput) {
+      discusInput.classList.add("hidden", "opacity-0");
+    }
   }
 
   function updateButtonStyles(button) {
@@ -42,18 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
     discussionTab.classList.remove("hidden");
 
     setTimeout(() => {
-      discusInput.classList.remove("hidden", "opacity-0");
-      discusInput.classList.add("flex");
+      if (discusInput) {
+        discusInput.classList.remove("hidden", "opacity-0");
+        discusInput.classList.add("flex");
+      }
+
       discussionTab.classList.remove("opacity-0");
     }, 0);
     updateButtonStyles(discusionBtn);
   });
 
-  if(aboutBtn) {
-  aboutBtn.addEventListener("click", () => {
-    hideAllContents();
-    aboutTab.classList.remove("hidden");
-    setTimeout(() => aboutTab.classList.remove("opacity-0"), 0);
-    updateButtonStyles(aboutBtn);
-  }); }
+  if (aboutBtn) {
+    aboutBtn.addEventListener("click", () => {
+      hideAllContents();
+      aboutTab.classList.remove("hidden");
+      setTimeout(() => aboutTab.classList.remove("opacity-0"), 0);
+      updateButtonStyles(aboutBtn);
+    });
+  }
 });
