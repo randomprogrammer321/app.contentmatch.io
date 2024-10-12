@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/styles/output.css" rel="stylesheet" />
+   
+  </head>
+  <body class="bg-primary font-geist">
+    <main class="h-screen flex flex-row">
+      <!-- SIDEBAR START -->
+      <div
+        id="back-drop"
+        class="hidden inset-y-0 z-20 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
+      ></div>
+      <section
+        id="side-bar"
+        class="fixed inset-y-0 z-30 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-x-hidden overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
+      >
+        <div
+          class="w-full mr-0 mt-0 pl-0 sm:mt-[14px] sm:mr-3 sm:pl-2 sm:w-[230px] size3:mr-10"
+        >
+          <!-- MOBILE NAVIGATION START -->
+          <nav class="flex flex-col w-full sm:hidden">
+            <!-- PROFILE CARD START -->
+            <div
+              class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
+            >
+              <div class="flex">
+                <div class="h-10 w-10 rounded-full">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/pp-placeholder.png"
+                  />
+                </div>
+                <div class="ml-2">
+                  <p class="text-sm leading-[19.6px] mb-1 text-white">
+                    Victor Opulence
+                  </p>
+                  <p class="text-custom4 text-xs sm:text-sm">
+                    You are currently a free user
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- PROFILE CARD END -->
+
+            <!-- MOBILE NAV LINK START -->
+            <div class="border-b border-custom6 mx-5">
+              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/profile.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Profile
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/friends-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Friends
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="/assets/logo/logo.svg" />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Get Premium
+                </p>
+              </a>
+
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/settings-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Settings
+                </p>
+              </a>
+              <button class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/log-out.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Log out
+                </p>
+              </button>
+            </div>
+            <!-- MOBILE NAV LINKS END -->
+          </nav>
+          <!-- MOBILE NAVIGATION END -->
+
+          <!-- DESKTOP NAV START -->
+          <nav class="hidden sm:flex flex-col w-full border-b border-custom6">
+            <div class="h-14 w-14 mb-[15px]">
+              <img class="w-full h-full" src="/assets/logo/logo.svg" />
+            </div>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/home-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-medium pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Home
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/explore-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Explore
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+            >
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/creator-match-active.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Creator Match
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/friends-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Friends
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/messages-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Messages
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/notification-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Notifications
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/profile-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Profile
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/settings-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Settings
+              </p>
+            </a>
+          </nav>
+          <!-- DESKTOP NAV END -->
+
+          <!-- ACTIVE COMMUNITIES START -->
+          <div class="w-full">
+            <div
+              class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0"
+            >
+              <p
+                class="uppercase text-sm text-custom4 font-normal sm:text-base"
+              >
+                active communities
+              </p>
+              <button class="flex items-center h-10 mt-3 mb-1">
+                <div
+                  class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10"
+                >
+                  <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
+                </div>
+                <p class="text-sm text-custom2 font-normal sm:text-base">
+                  Create a community
+                </p>
+              </button>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Newbie Artists
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    24k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  T
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Cultural Practices
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    1.4M Members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ACTIVE COMMMUNTIES END -->
+
+          <!-- SIDE BAR FOOTER START -->
+          <a
+            class="flex items-center text-custom4 font-normal h-9 text-base pl-5 sm:pl-0"
+            href="#"
+            >How to use ContentMatch</a
+          >
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Learn how to place ADs
+          </a>
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Contact Support
+          </a>
+          <div class="h-20"></div>
+          <!-- SIDE BAR FOOTER END -->
+        </div>
+      </section>
+      <!-- SIDEBAR END -->
+
+      <!-- CREATOR MATCH START -->
+      <section class="relative flex-1 overflow-hidden w-full">
+        <!-- HEADER START -->
+        <header class="absolute left-0 right-0 z-20 flex items-center justify-between bg-primary py-3 border-b border-custom6 sm:border-none pl-4 pr-4 sm:pl-10 md:pr-10 sm:pr-[100px] sm:py-4">
+        
+      
+          <div class="flex items-center gap-x-3">
+        <button
+          id="matchesBtn"
+          class="border-b border-custom2 font-normal text-secondary hover:text-secondary h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+        >
+          Matches
+        </button>
+        <button
+          id="pst-enga"
+          class="truncate font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+        >
+          Past Engagements
+        </button>
+        <button
+          id="rqts"
+          class="mx-3 font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+        >
+          Requests
+        </button>
+      </div>
+
+      <div class="flex items-center gap-x-1">
+        <div class="flex items-center">
+          <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/pp-placeholder.png"
+              alt=""
+            />
+          </div>
+          <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/pp-placeholder.png"
+              alt=""
+            />
+          </div>
+          <div class="h-6 w-6 rounded-full border border-custom2">
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/pp-placeholder.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <p class="hidden sm:block font-medium truncate text-custom2 text-sm md:text-base">
+          3 creators liked your profile
+        </p>
+      </div>
+      </header>
+      <!-- HEADER END -->
+
+      <!-- MATCHES SECTION START -->
+      <div class="h-full overflow-y-auto pb-20 px-4 py-20 sm:px-10">
+        <!-- MATCH CARD START -->
+        <div
+          class=" rounded-[32px] border bg-custom21 border-custom6 mx-auto max-w-[720px] p-3 sm:p-10"
+        >
+          <div class="flex justify-between mb-1">
+            <div class="flex items-center gap-x-1">
+              <div class="rounded-full overflow-hidden h-8 w-8 sm:h-10 sm:w-10">
+                <img class="w-full h-full object-cover" src="/assets/images/home/pp-placeholder.png" alt="" />             
+              </div>
+              <p class="font-medium text-secondary text-xs sm:text-base">
+                Thomas Andrews
+              </p>
+            </div>
+           
+            <div class="relative group">
+              <button
+                class="menuButton h-5 w-5 flex items-center justify-center mt-2 relative"
+              >
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/home/v-menu.svg"
+                  alt="Menu"
+                />
+              </button>
+              <div
+                class="tooltip absolute w-[136px] right-0 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl border border-custom6 shadow-combined sm:w-[184px]"
+              >
+                <button
+                  class="cursor-pointer w-full repo-vid flex items-center truncate text-xs h-[25px] sm:h-[46px] sm:text-base"
+                >
+                  Report post
+                </button>
+              </div>
+            </div>
+          </div>
+           <p class="font-normal text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base">As the final buzzer sounds, echoing through the neighborhood, the court transforms into a stage where the spirit of competition and camaraderie thrives. </p>
+          <div class="relative w-full overflow-hidden mt-3 sm:mt-4">
+            <div class="h-[3px] flex justify-center gap-x-1 sm:h-1">
+              <span
+                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                data-index="0"
+              ></span>
+              <span
+                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                data-index="1"
+              ></span>
+              <span
+                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                data-index="2"
+              ></span>
+              <span
+                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                data-index="3"
+              ></span>
+            </div>
+            <!-- Slider Container -->
+            <div
+              id="slider"
+              class="rounded-lg relative flex mt-3 transition-transform duration-500 ease-in-out sm:mt-4"
+            >
+              <!-- SLIDE 1 START -->
+              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
+                <div
+                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                >
+                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                    <img
+                      class="w-full h-full"
+                      src="/assets/icon/socials/youtube.svg"
+                    />
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                  >
+                    Uploaded from YouTube
+                  </p>
+                </div>
+                <div
+                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                >
+                  <img
+                    src="/assets/images/home/video-placeholder.png"
+                    class="h-full w-full object-cover"
+                    alt=""
+                  />
+                </div>
+
+              </div>
+              <!-- SLIDE 1 END -->
+              <!-- SLIDE 2 START -->
+              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
+                <div
+                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                >
+                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                    <img
+                      class="w-full h-full"
+                      src="/assets/icon/socials/youtube.svg"
+                    />
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                  >
+                    Uploaded from YouTube
+                  </p>
+                </div>
+                <div
+                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                >
+                  <img
+                    src="/assets/images/home/video-placeholder.png"
+                    class="h-full w-full object-cover"
+                    alt=""
+                  />
+                </div>
+
+              </div>
+              <!-- SLIDE 2 END -->
+
+              <!-- SLIDE 3 START -->
+              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
+                <div
+                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                >
+                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                    <img
+                      class="w-full h-full"
+                      src="/assets/icon/socials/youtube.svg"
+                    />
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                  >
+                    Uploaded from YouTube
+                  </p>
+                </div>
+                <div
+                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                >
+                  <img
+                    src="/assets/images/home/video-placeholder.png"
+                    class="h-full w-full object-cover"
+                    alt=""
+                  />
+                </div>
+
+              </div>
+              <!-- SLIDE 3 END -->
+
+              <!-- SLIDE FOUR START -->
+              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
+                <div
+                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                >
+                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                    <img
+                      class="w-full h-full"
+                      src="/assets/icon/socials/youtube.svg"
+                    />
+                  </div>
+                  <p
+                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                  >
+                    Uploaded from YouTube
+                  </p>
+                </div>
+                <div
+                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                >
+                  <img
+                    src="/assets/images/home/video-placeholder.png"
+                    class="h-full w-full object-cover"
+                    alt=""
+                  />
+                </div>
+
+              </div>
+              <!-- SLIDE FOUR END -->
+            </div>
+            <div class="flex items-center h-9 gap-x-3 mt-4 justify-center px-[25px] sm:px-0 sm:justify-between">
+              <button
+                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+              >
+                <div class="h-5 w-5">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/dislike.svg"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
+                >
+                  Dislike
+                </p>
+              </button>
+              <button
+                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+              >
+                <div class="h-5 w-5">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/like.svg"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
+                >
+                  Like
+                </p>
+              </button>
+              <button
+                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+              >
+                <div class="h-5 w-5">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/follow.svg"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
+                >
+                  Follow
+                </p>
+              </button>
+              <button
+                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+              >
+                <div class="h-5 w-5">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/super-engage.svg"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px] truncate"
+                >
+                  Super Engage
+                </p>
+              </button>
+              <button
+                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+              >
+                <div class="h-5 w-5">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/collaborate-req.svg"
+                    alt=""
+                  />
+                </div>
+                <p
+                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px] truncate"
+                >
+                  Collaboration request
+                </p>
+              </button>
+            </div>
+
+            <!-- NAVIGATION BUTTON START -->
+            <div
+              class="absolute top-[35%] transform translate-y-[35%] left-2 right-2 flex justify-between px-0 sm:px-4 z-10"
+            >
+              <button
+                id="prevBtn"
+                class="bg-custom10 border border-secondary backdrop-blur-8 rounded-full h-8 w-8 sm:h-11 sm:w-11"
+              >
+                <img
+                  class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                  src="/assets/icon/back-outlined-left.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                id="nextBtn"
+                class="bg-custom10 border border-secondary backdrop-blur-8 rounded-full transform scale-x-[-1] h-8 w-8 sm:h-11 sm:w-11"
+              >
+                <img
+                  class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                  src="/assets/icon/back-outlined-left.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- NAVIGATION BUTTON END -->
+          </div>
+        </div>
+        <p class="mx-auto font-medium text-custom4 text-center text-xs my-10 sm:text-base sm:my-8">Swipe card to see more creators</p>
+       
+        <!-- MATCH CARD END -->
+      </div>
+      <!-- MATCHES SECTION END -->
+      </div>
+      </section>
+      <!-- CREATOR MATCH END -->
+
+
+      <!-- REPORT POST DIALOG START -->
+      <div
+        id="back-drop-5"
+        class="inset-y-0 hidden z-40 h-screen w-screen bg-transparent sm:bg-custom12 fixed top-0 left-0"
+      ></div>
+      <div
+        id="report-dia"
+        class="dialog z-50 hidden sm:m-auto bg-primary sm:bg-tranparent px-mpd w-full h-full sm:h-max sm:max-w-[585px] sm:backdrop-blur-40 rounded-[24px] pt-7 sm:border-custom1 sm:border-[0.5px] sm:p-8"
+      >
+        <div class="flex items-center justify-between mb-4 sm:mb-6">
+          <p class="text-base text-secondary font-medium sm:text-2xl">
+            Report this video
+          </p>
+          <button
+            id="close-repo-dia"
+            class="h-6 w-6 flex items-center justify-center"
+          >
+            <img
+              class="h-[14px] w-[14px]"
+              src="/assets/icon/close.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <p class="text-white font-medium text-xs sm:text-base">
+          Select a reason that applies
+        </p>
+        <div
+          class="flex flex-wrap mt-5 gap-x-3 gap-y-4 pb-4 mb-4 border-b border-custom6 sm:mt-6"
+        >
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Harassment
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Fraud or scam
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Self-ham
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Spam
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Violence
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Sexual content
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Fake account
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Graphic content
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Illegal activites
+          </button>
+          <button
+            class="flex items-center px-3 border border-custom1 rounded-[40px] h-[33px] font-normal text-xs text-custom2 sm:text-base sm:px-5 sm:h-[46px]"
+          >
+            Child Abuse
+          </button>
+        </div>
+        <p class="text-sm text-white font-medium sm:text-base">
+          If your reason isn't listed, feel free to type it out.
+        </p>
+        <input
+          class="w-full mt-4 h-[45px] text-xs bg-transparent text-custom2 px-0 border-0 border-b-[1px] border-custom1 placeholder-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-sm focus:border-b-[2px] focus:border-custom3 sm:mt-6"
+          placeholder="Reasons"
+        />
+        <button
+          class="outline-none shadow-combined h-[41px] mt-6 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-[44px] sm:mt-6 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg"
+        >
+          Report
+        </button>
+      </div>
+      <!-- REPORT POST DIALOG END -->
+
+      <!-- BOTTOM TAB START -->
+      <div
+        class="h-[72px] w-full fixed right-0 bottom-0 left-0 z-30 bg-black border-t border-custom6 flex items-center justify-between px-[26px] size5:hidden"
+      >
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/home-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/explore-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/creator-match-active.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/notification-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/community-inactive.svg"
+            alt=""
+          />
+        </a>
+      </div>
+      <!-- BOTTOM TAB END -->
+    </main>
+    <script src="/assets/js/home/side-bar.js"></script>
+    <script src="/assets/js/home/menu-button.js"></script>
+    <script src="/assets/js/home/report-video-dialog.js"></script>
+    <script defer src="/assets/js/home/slider.js"> </script>
+  </body>
+</html>

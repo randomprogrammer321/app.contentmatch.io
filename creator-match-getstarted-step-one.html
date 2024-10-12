@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/styles/output.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body class="bg-primary font-geist">
+    <main class="h-screen flex overflow-auto flex-row">
+      <!-- SIDEBAR START -->
+      <div
+        id="back-drop"
+        class="hidden inset-y-0 z-20 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
+      ></div>
+      <section
+        id="side-bar"
+        class="fixed inset-y-0 z-30 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-x-hidden overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
+      >
+        <div
+          class="w-full mr-0 mt-0 pl-0 sm:mt-[14px] sm:mr-3 sm:pl-2 sm:w-[230px] size3:mr-10"
+        >
+          <!-- MOBILE NAVIGATION START -->
+          <nav class="flex flex-col w-full sm:hidden">
+            <!-- PROFILE CARD START -->
+            <div
+              class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
+            >
+              <div class="flex">
+                <div class="h-10 w-10 rounded-full">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/pp-placeholder.png"
+                  />
+                </div>
+                <div class="ml-2">
+                  <p class="text-sm leading-[19.6px] mb-1 text-white">
+                    Victor Opulence
+                  </p>
+                  <p class="text-custom4 text-xs sm:text-sm">
+                    You are currently a free user
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- PROFILE CARD END -->
+
+            <!-- MOBILE NAV LINK START -->
+            <div class="border-b border-custom6 mx-5">
+              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/profile.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Profile
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/friends-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Friends
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="/assets/logo/logo.svg" />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Get Premium
+                </p>
+              </a>
+
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/settings-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Settings
+                </p>
+              </a>
+              <button class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/log-out.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Log out
+                </p>
+              </button>
+            </div>
+            <!-- MOBILE NAV LINKS END -->
+          </nav>
+          <!-- MOBILE NAVIGATION END -->
+
+          <!-- DESKTOP NAV START -->
+          <nav class="hidden sm:flex flex-col w-full border-b border-custom6">
+            <div class="h-14 w-14 mb-[15px]">
+              <img class="w-full h-full" src="/assets/logo/logo.svg" />
+            </div>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/home-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-medium pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Home
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/explore-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Explore
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+            >
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/creator-match-active.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Creator Match
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/friends-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Friends
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/messages-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Messages
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/notification-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Notifications
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/profile-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Profile
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/settings-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Settings
+              </p>
+            </a>
+          </nav>
+          <!-- DESKTOP NAV END -->
+
+          <!-- ACTIVE COMMUNITIES START -->
+          <div class="w-full">
+            <div
+              class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0"
+            >
+              <p
+                class="uppercase text-sm text-custom4 font-normal sm:text-base"
+              >
+                active communities
+              </p>
+              <button class="flex items-center h-10 mt-3 mb-1">
+                <div
+                  class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10"
+                >
+                  <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
+                </div>
+                <p class="text-sm text-custom2 font-normal sm:text-base">
+                  Create a community
+                </p>
+              </button>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Newbie Artists
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    24k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  T
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Cultural Practices
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    1.4M Members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ACTIVE COMMMUNTIES END -->
+
+          <!-- SIDE BAR FOOTER START -->
+          <a
+            class="flex items-center text-custom4 font-normal h-9 text-base pl-5 sm:pl-0"
+            href="#"
+            >How to use ContentMatch</a
+          >
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Learn how to place ADs
+          </a>
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Contact Support
+          </a>
+          <div class="h-20"></div>
+          <!-- SIDE BAR FOOTER END -->
+        </div>
+      </section>
+      <!-- SIDEBAR END -->
+
+      <!-- CREATOR MATCH START -->
+      <section
+        class="relative flex flex-col pb-20 flex-1 overflow-y-auto w-full px-4 content-match-bg-1 sm:px-10"
+      >
+        <!-- MOBILE HEADER START -->
+        <header
+          class="fixed top-0 right-4 left-4 bg-primary w-full h-14 z-20 pr-[75px] flex items-center sm:hidden"
+        >
+          <button
+            id="hb-btn"
+            class="h-10 w-10 flex items-center justify-center mr-1"
+          >
+            <img class="w-full h-full" src="/assets/logo/logo.svg" />
+          </button>
+          <p class="w-full text-center text-white font-medium text-sm">
+            Creator Match
+          </p>
+        </header>
+        <!-- MOBILE HEADER END -->
+
+        <!-- GET STARTED START -->
+        <div class="mx-auto max-w-[365px] flex flex-col items-center mt-24">
+          <div class="flex items-center mb-2 sm:mb-3">
+            <div
+              class="rounded-full overflow-hidden border-2 border-secondary -mr-[19px] sm:-mr-10 h-10 w-10 sm:h-[76px] sm:w-[76px]"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/place-holder-7.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="rounded-full overflow-hidden border-2 border-secondary z-10 h-16 w-16 sm:h-[100px] sm:w-[100px]"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/pp-placeholder.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="rounded-full overflow-hidden border-2 border-secondary -ml-[19px] sm:-ml-10 h-10 w-10 sm:h-[76px] sm:w-[76px]"
+            >
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/placeholder-8.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <h1
+            class="font-medium text-white text-center text-base mb-2 sm:mb-3 sm:text-2xl"
+          >
+            Match with Contentmatch users
+          </h1>
+          <h2
+            class="font-normal text-center text-custom4 leading-[22.4px] text-sm mb-2 sm:text-base sm:mb-3"
+          >
+            Once you're matched with other users, you can start exploring shared
+            interests and begin collaborating.
+          </h2>
+          <a
+            href="#"
+            class="px-5 rounded-[32px] bg-custom3 flex items-center justify-center text-secondary font-medium w-max text-sm sm:text-base h-[33px] sm:h-[38px]"
+            >Get Started</a
+          >
+        </div>
+        <!-- GET STARTED END -->
+
+        <!-- BOTTOM SECTION START -->
+        <div
+          class="grid grid-cols-1 mt-8 gap-4 sm:gap-5 sm:mt-24 sm:grid-cols-2 size6:grid-cols-3"
+        >
+          <div
+            class="border border-custom6 rounded-xl p-3 sm:py-5 sm:px-4 bg-primary"
+          >
+            <p class="text-white font-bold text-xs mb-1 sm:text-2xl sm:mb-2">
+              Meet people
+            </p>
+            <p
+              class="font-normal text-custom4 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+            >
+              Connect with individuals who share your content goals and
+              interests on ContentMatch.
+            </p>
+            <div
+              class="w-full h-[200px] mt-3 rounded-lg overflow-hidden sm:mt-[16px] sm:h-[220px]"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/images/content-match/meet-people.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="border border-custom6 rounded-xl p-3 sm:py-5 sm:px-4 bg-primary"
+          >
+            <p class="text-white font-bold text-xs mb-1 sm:text-2xl sm:mb-2">
+              Exchange Ideas
+            </p>
+            <p
+              class="font-normal text-custom4 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+            >
+              Allows users to collaborate, brainstorm, and refine their content
+              strategies with others in the community.
+            </p>
+            <div
+              class="w-full h-[200px] mt-3 rounded-lg overflow-hidden sm:mt-[16px] sm:h-[220px]"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/images/content-match/exchange-ideas.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="border border-custom6 rounded-xl p-3 sm:py-5 sm:px-4 bg-primary"
+          >
+            <p class="text-white font-bold text-xs mb-1 sm:text-2xl sm:mb-2">
+              Discover opportunities
+            </p>
+            <p
+              class="font-normal text-custom4 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+            >
+              You can expand your reach, find partnerships, and explore creative
+              ventures tailored to your content vision.
+            </p>
+            <div
+              class="w-full h-[200px] mt-3 rounded-lg overflow-hidden sm:mt-[16px] sm:h-[220px]"
+            >
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/images/content-match/discover-opportunities.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- BOTTOM SECTION END -->
+      </section>
+      <!-- CREATOR MATCH END -->
+
+      <!-- BOTTOM TAB START -->
+      <div
+        class="h-[72px] w-full fixed right-0 bottom-0 left-0 z-30 bg-black border-t border-custom6 flex items-center justify-between px-[26px] size5:hidden"
+      >
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/home-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/explore-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/creator-match-active.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/notification-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/community-inactive.svg"
+            alt=""
+          />
+        </a>
+      </div>
+      <!-- BOTTOM TAB END -->
+    </main>
+    <script src="/assets/js/home/side-bar.js"></script>
+  </body>
+</html>

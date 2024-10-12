@@ -46,6 +46,20 @@
 
   }
 
+  .content-match-bg-1 {
+    background-image: url('/assets/images/content-match/content-match-bg1.svg');
+  }
+  .content-match-bg-1, .content-match-bg-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+  }
+
+  .content-match-bg-2 {
+    background-image: url('/assets/images/content-match/content-match-bg1.svg');
+  }
+
+
   .bg-img-otp {
     background-image: url('/assets/images/auth/background-2.svg');
     background-repeat: no-repeat;
@@ -167,7 +181,14 @@
     border-radius: 10px;
   } 
 
-  
+  @media only screen and (max-width: 640px) {
+    
+    .content-match-bg-1,  .content-match-bg-2 { 
+      background-position-y: 90px;
+      background-size: contain;
+    }
+     
+    }
 
 }
 

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const reportBackDrop = document.getElementById("back-drop-5");
   const closeReportDialog = document.getElementById("close-repo-dia");
   const reportButtons = document.querySelectorAll(".repo-vid");
+  const reportButton = document.querySelector(".repo-vid");
 
   reportButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -15,6 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
         reportDialog.classList.add("show-dialog");
       }, 300);
     });
+  });
+
+  reportButton.addEventListener("click", (event) => {
+    console.log("acl");
+    reportBackDrop.classList.remove("hidden");
+    reportDialog.classList.remove("hidden");
+
+    setTimeout(() => {
+      reportBackDrop.classList.add("show-backdrop");
+      reportDialog.classList.add("show-dialog");
+    }, 300);
   });
 
   reportBackDrop.addEventListener("click", () => {
