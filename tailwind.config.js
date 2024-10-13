@@ -17,6 +17,8 @@ module.exports = {
         primary: "#0F051D",
         secondary: "#FDFDFD",
         error: "#FF0B0B",
+        error2: "#FF0000",
+        success: "#00FF00",
         custom1: "#737373",
         custom2: "#EBEBEB",
         custom3: "#1E90FF",
@@ -38,7 +40,8 @@ module.exports = {
         custom19: "#7C8B9F",
         custom20: "#1E1E1F",
         custom21: "#121212",
-        custom22: "#2D2D30"
+        custom22: "#2D2D30",
+        custom32: "rgba(15, 5, 29, 0.72)"
       },
       screens: {
         'size1': '846px',

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/assets/styles/output.css" rel="stylesheet" />
-   
   </head>
   <body class="bg-primary font-geist">
     <main class="h-screen flex flex-row">
@@ -361,362 +360,1193 @@
       <!-- CREATOR MATCH START -->
       <section class="relative flex-1 overflow-hidden w-full">
         <!-- HEADER START -->
-        <header class="absolute left-0 right-0 z-20 flex items-center justify-between bg-primary py-3 border-b border-custom6 sm:border-none pl-4 pr-4 sm:pl-10 md:pr-10 sm:pr-[100px] sm:py-4">
-        
-      
+        <header
+          class="absolute left-0 right-0 z-20 flex items-center justify-between bg-primary py-3 border-b border-custom6 sm:border-none pl-4 pr-4 sm:pl-10 md:pr-10 sm:pr-[100px] sm:py-4"
+        >
           <div class="flex items-center gap-x-3">
-        <button
-          id="matchesBtn"
-          class="border-b border-custom2 font-normal text-secondary hover:text-secondary h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
-        >
-          Matches
-        </button>
-        <button
-          id="pst-enga"
-          class="truncate font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
-        >
-          Past Engagements
-        </button>
-        <button
-          id="rqts"
-          class="mx-3 font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
-        >
-          Requests
-        </button>
-      </div>
+            <button
+              id="matchesBtn"
+              class="border-b border-custom2 font-normal text-secondary hover:text-secondary h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+            >
+              Matches
+            </button>
+            <button
+              id="pstEngage"
+              class="truncate font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+            >
+              Past Engagements
+            </button>
+            <button
+              id="rqsts"
+              class="mx-3 font-normal hover:text-secondary text-custom2 h-[17px] text-xs sm:text-sm md:text-base sm:h-[22px]"
+            >
+              Requests
+            </button>
+          </div>
 
-      <div class="flex items-center gap-x-1">
-        <div class="flex items-center">
-          <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
-            <img
-              class="h-full w-full object-cover"
-              src="/assets/images/home/pp-placeholder.png"
-              alt=""
-            />
-          </div>
-          <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
-            <img
-              class="h-full w-full object-cover"
-              src="/assets/images/home/pp-placeholder.png"
-              alt=""
-            />
-          </div>
-          <div class="h-6 w-6 rounded-full border border-custom2">
-            <img
-              class="h-full w-full object-cover"
-              src="/assets/images/home/pp-placeholder.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <p class="hidden sm:block font-medium truncate text-custom2 text-sm md:text-base">
-          3 creators liked your profile
-        </p>
-      </div>
-      </header>
-      <!-- HEADER END -->
-
-      <!-- MATCHES SECTION START -->
-      <div class="h-full overflow-y-auto pb-20 px-4 py-20 sm:px-10">
-        <!-- MATCH CARD START -->
-        <div
-          class=" rounded-[32px] border bg-custom21 border-custom6 mx-auto max-w-[720px] p-3 sm:p-10"
-        >
-          <div class="flex justify-between mb-1">
-            <div class="flex items-center gap-x-1">
-              <div class="rounded-full overflow-hidden h-8 w-8 sm:h-10 sm:w-10">
-                <img class="w-full h-full object-cover" src="/assets/images/home/pp-placeholder.png" alt="" />             
+          <div
+            class="flex items-center gap-x-1 menuButton cursor-pointer relative group"
+          >
+            <div class="flex items-center">
+              <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/pp-placeholder.png"
+                  alt=""
+                />
               </div>
-              <p class="font-medium text-secondary text-xs sm:text-base">
-                Thomas Andrews
+              <div class="h-6 w-6 rounded-full border border-custom2 -mr-2">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/pp-placeholder.png"
+                  alt=""
+                />
+              </div>
+              <div class="h-6 w-6 rounded-full border border-custom2">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/pp-placeholder.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <p
+              class="hidden sm:block font-medium truncate text-custom2 text-sm md:text-base"
+            >
+              3 creators liked your profile
+            </p>
+
+            <!-- CREATOR LIKED PROFILE DROP DOWN START -->
+            <div
+              class="tooltip fixed sm:absolute right-0 top-0 z-10 mt-2 opacity-0 invisible transform scale-95 transition-all duration-300 ease-out w-full h-full overflow-hidden bg-primary sm:bg-custom21 sm:border sm:border-custom6 sm:rounded-xl sm:top-7 sm:h-max sm:w-[440px]"
+            >
+              <div
+                class="closeMenuButton flex items-center pl-4 h-[42px] gap-x-2 border-b border-custom6 sm:hidden"
+              >
+                <button class="closeMenuButton z-50 mb-[1px]">
+                  <img
+                    class="h-[17px] w-[9px]"
+                    src="/assets/icon/back-outlined-left.svg"
+                    alt=""
+                  />
+                </button>
+                <p class="text-white font-bold text-xs">Back</p>
+              </div>
+              <div class="bg-custom21 p-4 sm:p-5">
+                <p class="font-medium text-sm text-custom2 block sm:hidden">
+                  3 creators liked your profile
+                </p>
+                <div
+                  class="flex border-b border-custom6 items-center justify-between gap-x-2 h-[60px] sm:h-[76px]"
+                >
+                  <div class="flex items-center gap-x-1 sm:gap-x-2">
+                    <div class="rounded-full h-8 w-8 sm:h-11 sm:w-11">
+                      <img
+                        class="h-full w-full object-cover"
+                        src="/assets/images/home/pp-placeholder.png"
+                      />
+                    </div>
+                    <p
+                      class="text-ellipsis overflow-hidden line-clamp-3 sm:line-clamp-1 text-white text-xs sm:text-base"
+                    >
+                      <span class="font-bold">Lipshutz Mira</span>
+                      <span class="font-normal">liked your profile</span>
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex border-b border-custom6 items-center justify-between gap-x-2 h-[60px] sm:h-[76px]"
+                >
+                  <div class="flex items-center gap-x-1 sm:gap-x-2">
+                    <div class="rounded-full h-8 w-8 sm:h-11 sm:w-11">
+                      <img
+                        class="h-full w-full object-cover"
+                        src="/assets/images/home/placeholder-4.png"
+                      />
+                    </div>
+                    <p
+                      class="text-ellipsis overflow-hidden line-clamp-3 sm:line-clamp-1 text-white text-xs sm:text-base"
+                    >
+                      <span class="font-bold">Tatiana Westervelt</span>
+                      <span class="font-normal">liked your profile</span>
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between h-[60px] sm:h-[76px]"
+                >
+                  <div class="flex items-center gap-x-1 sm:gap-x-2">
+                    <div class="h-10 w-10 rounded-full">
+                      <img
+                        class="h-full w-full object-cover"
+                        src="/assets/images/home/placeholder-5.png"
+                      />
+                    </div>
+                    <p
+                      class="text-ellipsis overflow-hidden line-clamp-3 sm:line-clamp-1 text-white text-xs sm:text-base"
+                    >
+                      <span class="font-bold">Gustavo Mango</span>
+                      <span class="font-normal">liked your profile</span>
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CREATOR LIKED PROFILE DROP DOWN END -->
+          </div>
+        </header>
+        <!-- HEADER END -->
+
+        <div class="h-full relative overflow-y-auto mb-24 px-4 pt-20 sm:px-10">
+          <!-- REQUEST TAB START -->
+          <div
+            id="rqstSection"
+            class="hidden mb-14 overflow-y-auto opacity-0 transition-opacity duration-1000 max-w-[684px] mx-auto"
+          >
+            <!-- PENDING REQUEST CARD END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:bg-primary sm:mb-7 sm:p-5"
+            >
+              <p class="font-bold text-custom2 text-xs mb-1 sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center truncate justify-center leading-[10px] px-3 rounded-full border border-error2 h-[33px] text-error2 font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Decline
+                  </button>
+                  <button
+                    class="hidden items-center truncate justify-center leading-[10px] px-3 rounded-full bg-custom3 h-[33px] text-secondary font-medium text-xs sm:flex sm:text-base sm:h-[38px]"
+                  >
+                    Super engagement request
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
+              </p>
+              <button
+                class="flex items-center mt-1 w-full truncate justify-center leading-[10px] px-3 rounded-full bg-custom3 h-[33px] text-secondary font-medium text-xs sm:hidden sm:h-[38px]"
+              >
+                Super engagement request
+              </button>
+            </div>
+            <!-- PENDING REQUEST CARD END -->
+
+            <!-- ACCEPTED REQUEST CARD END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:bg-primary sm:mb-7 sm:p-5"
+            >
+              <p class="font-bold text-success mb-1 text-xs sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center leading-[10px] px-3 rounded-full bg-secondary h-[33px] text-custom9 font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
               </p>
             </div>
-           
-            <div class="relative group">
-              <button
-                class="menuButton h-5 w-5 flex items-center justify-center mt-2 relative"
-              >
-                <img
-                  class="h-full w-full"
-                  src="/assets/icon/home/v-menu.svg"
-                  alt="Menu"
-                />
-              </button>
-              <div
-                class="tooltip absolute w-[136px] right-0 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl border border-custom6 shadow-combined sm:w-[184px]"
-              >
-                <button
-                  class="cursor-pointer w-full repo-vid flex items-center truncate text-xs h-[25px] sm:h-[46px] sm:text-base"
-                >
-                  Report post
-                </button>
+            <!-- REQUESTED REQUEST CARD END -->
+
+            <!-- ACCEPTED REQUEST CARD END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:bg-primary sm:mb-7 sm:p-5"
+            >
+              <p class="font-bold text-success mb-1 text-xs sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center leading-[10px] px-3 rounded-full bg-secondary h-[33px] text-custom9 font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Follow
+                  </button>
+                </div>
               </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
+              </p>
+            </div>
+            <!-- REQUESTED REQUEST CARD END -->
+
+            <!-- ACCEPTED REQUEST CARD END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:bg-primary sm:mb-7 sm:p-5"
+            >
+              <p class="font-bold text-success mb-1 text-xs sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center leading-[10px] px-3 rounded-full bg-secondary h-[33px] text-custom9 font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
+              </p>
+            </div>
+            <!-- ACCEPTED REQUEST CARD END -->
+
+            <!-- ACCEPTED REQUEST CARD END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:bg-primary sm:mb-7 sm:p-5"
+            >
+              <p class="font-bold text-success mb-1 text-xs sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center leading-[10px] px-3 rounded-full bg-secondary h-[33px] text-custom9 font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
+              </p>
+            </div>
+            <!-- ACCEPTED REQUEST CARD END -->
+          </div>
+          <!-- REQUEST TAB END -->
+
+          <!-- PAST ENGAGMENT TAB START -->
+          <div
+            id="pstEngaSection"
+            class="hidden mb-14 opacity-0 transition-opacity duration-1000 max-w-[684px] mx-auto"
+          >
+            <!-- PAST ENGAGMENT END START -->
+            <div
+              class="border border-custom6 bg-custom21 w-full rounded-xl p-3 mb-4 sm:mb-7 sm:p-5"
+            >
+              <div class="flex justify-between mb-1 s:mb-2">
+                <div class="flex gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:w-11 sm:h-11"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-x-1">
+                      <p class="font-bold text-white text-xs sm:text-base">
+                        Alena Dokidis
+                      </p>
+                      <div class="h-5 w-5">
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/verified.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <p class="font-medium text-custom4 text-xs sm:text-sm">
+                      @macdonald222
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-x-3">
+                  <button
+                    class="flex items-center justify-center rounded-full border border-custom6 h-9 w-9 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-5 h-5 sm:h-6 sm:w-6"
+                      src="/assets/icon/nav/messages-inactive.svg"
+                    />
+                  </button>
+                  <button
+                    class="flex items-center justify-center leading-[10px] px-3 rounded-full border border-custom6 h-[33px] text-secondary font-medium text-xs sm:text-base sm:h-[38px]"
+                  >
+                    Following
+                  </button>
+                </div>
+              </div>
+              <p
+                class="text-secondary font-normal mb-1 text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+              >
+                Designer, Creative thinker. Passionate about crafting meaningful
+                experience. Explorer of ideas, art and life little details
+              </p>
+              <p class="font-bold text-custom4 text-xs sm:text-sm">
+                You engaged with this creator on May 05, 2024
+              </p>
+            </div>
+            <!-- PAST ENGAGMENT CARD END -->
+          </div>
+          <!-- PAST ENGAGMENT TAB END -->
+
+          <!-- MATCHES TAB START -->
+          <div
+            id="matchSection"
+            class="card__swipe-cont transition-opacity duration-1000 h-full max-w-[720px] sm:h-screen"
+          >
+            <!-- MATCH CARD START -->
+
+            <div
+              class="card__swipe cursor-grab rounded-[32px] border bg-custom21 border-custom6 mx-auto p-3 sm:p-10"
+            >
+              <div class="flex justify-between mb-1">
+                <div class="flex items-center gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-medium text-secondary text-xs sm:text-base">
+                    Thomas Andrewsss
+                  </p>
+                </div>
+
+                <div class="relative group">
+                  <button
+                    class="menuButton h-5 w-5 flex items-center justify-center mt-2 relative"
+                  >
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/home/v-menu.svg"
+                      alt="Menu"
+                    />
+                  </button>
+                  <div
+                    class="tooltip absolute w-[136px] right-0 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl border border-custom6 shadow-combined sm:w-[184px]"
+                  >
+                    <button
+                      class="cursor-pointer w-full repo-vid flex items-center truncate text-xs h-[25px] sm:h-[46px] sm:text-base"
+                    >
+                      Report post
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="font-normal text-secondary leading-[16.8px] text-xs text-ellipsis overflow-hidden line-clamp-3 sm:line-clamp-2 sm:leading-[22.4px] sm:text-base"
+              >
+                As the final1 buzzer sounds, echoing through the neighborhood,
+                the court transforms into a stage where the spirit of
+                competition and camaraderie thrives. As the final1 buzzer
+                sounds, echoing through the neighborhood, the court transforms
+                into a stage where the spirit of competition and camaraderie
+                thrives.
+              </p>
+              <div class="relative w-full overflow-hidden mt-3 sm:mt-4">
+                <!-- NAVIGATION BUTTON START -->
+                <div
+                  class="absolute top-[35%] transform translate-y-[35%] left-2 right-2 flex justify-between px-0 sm:px-4 z-10"
+                >
+                  <button
+                    id="prevBtn"
+                    class="prevBtn bg-custom10 border border-secondary backdrop-blur-8 rounded-full h-8 w-8 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                      src="/assets/icon/back-outlined-left.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button
+                    id="nextBtn"
+                    class="nextBtn bg-custom10 border border-secondary backdrop-blur-8 rounded-full transform scale-x-[-1] h-8 w-8 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                      src="/assets/icon/back-outlined-left.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <!-- NAVIGATION BUTTON END -->
+                <div class="h-[3px] flex justify-center gap-x-1 sm:h-1">
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="0"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="1"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="2"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="3"
+                  ></span>
+                </div>
+                <!-- Slider Container -->
+                <div
+                  id="slider"
+                  class="slider rounded-lg relative flex mt-3 transition-transform duration-500 ease-in-out sm:mt-4"
+                >
+                  <!-- SLIDE 1 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 1 END -->
+                  <!-- SLIDE 2 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 2 END -->
+
+                  <!-- SLIDE 3 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 3 END -->
+
+                  <!-- SLIDE FOUR START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE FOUR END -->
+                </div>
+                <div
+                  class="flex items-center h-9 gap-x-3 mt-4 justify-center px-[25px] sm:px-0 sm:justify-between"
+                >
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/dislike.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Dislike
+                    </p>
+                  </button>
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/like.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Like
+                    </p>
+                  </button>
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/follow.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Follow
+                    </p>
+                  </button>
+                  <button
+                    class="sup-eng-btn flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/super-engage.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px] truncate"
+                    >
+                      Super Engage
+                    </p>
+                  </button>
+                  <button
+                    class="send-fdbk-btn flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/collaborate-req.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px] truncate"
+                    >
+                      Collaboration request
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- MATCH CARD END -->
+
+            <!-- MATCH CARD START -->
+            <div
+              class="card__swipe cursor-grab rounded-[32px] border bg-custom21 border-custom6 mx-auto p-3 sm:p-10"
+            >
+              <div class="flex justify-between mb-1">
+                <div class="flex items-center gap-x-1">
+                  <div
+                    class="rounded-full overflow-hidden h-8 w-8 sm:h-10 sm:w-10"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-medium text-secondary text-xs sm:text-base">
+                    Thomas Andrews
+                  </p>
+                </div>
+
+                <div class="relative group">
+                  <button
+                    class="menuButton h-5 w-5 flex items-center justify-center mt-2 relative"
+                  >
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/home/v-menu.svg"
+                      alt="Menu"
+                    />
+                  </button>
+                  <div
+                    class="tooltip absolute w-[136px] right-0 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl border border-custom6 shadow-combined sm:w-[184px]"
+                  >
+                    <button
+                      class="cursor-pointer w-full repo-vid flex items-center truncate text-xs h-[25px] sm:h-[46px] sm:text-base"
+                    >
+                      Report post
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="font-normal text-secondary leading-[16.8px] text-xs text-ellipsis overflow-hidden line-clamp-3 sm:line-clamp-2 sm:leading-[22.4px] sm:text-base"
+              >
+                As the final2 buzzer sounds, echoing through the neighborhood,
+                the court transforms into a stage where the spirit of
+                competition and camaraderie thrives.
+              </p>
+              <div class="relative w-full overflow-hidden mt-3 sm:mt-4">
+                <!-- NAVIGATION BUTTON START -->
+                <div
+                  class="absolute top-[35%] transform translate-y-[35%] left-2 right-2 flex justify-between px-0 sm:px-4 z-10"
+                >
+                  <button
+                    id="prevBtn"
+                    class="prevBtn bg-custom10 border border-secondary backdrop-blur-8 rounded-full h-8 w-8 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                      src="/assets/icon/back-outlined-left.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button
+                    id="nextBtn"
+                    class="nextBtn bg-custom10 border border-secondary backdrop-blur-8 rounded-full transform scale-x-[-1] h-8 w-8 sm:h-11 sm:w-11"
+                  >
+                    <img
+                      class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
+                      src="/assets/icon/back-outlined-left.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <!-- NAVIGATION BUTTON END -->
+                <div class="h-[3px] flex justify-center gap-x-1 sm:h-1">
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="0"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="1"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="2"
+                  ></span>
+                  <span
+                    class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
+                    data-index="3"
+                  ></span>
+                </div>
+                <!-- Slider Container -->
+                <div
+                  id="slider"
+                  class="slider rounded-lg relative flex mt-3 transition-transform duration-500 ease-in-out sm:mt-4"
+                >
+                  <!-- SLIDE 1 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 1 END -->
+                  <!-- SLIDE 2 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 2 END -->
+
+                  <!-- SLIDE 3 START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE 3 END -->
+
+                  <!-- SLIDE FOUR START -->
+                  <div
+                    class="relative min-w-full h-max rounded-lg overflow-hidden"
+                  >
+                    <div
+                      class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
+                    >
+                      <div class="w-5 h-[14px] sm:w-7 sm:h-5">
+                        <img
+                          class="w-full h-full"
+                          src="/assets/icon/socials/youtube.svg"
+                        />
+                      </div>
+                      <p
+                        class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
+                      >
+                        Uploaded from YouTube
+                      </p>
+                    </div>
+                    <div
+                      class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
+                    >
+                      <img
+                        src="/assets/images/home/video-placeholder.png"
+                        class="h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- SLIDE FOUR END -->
+                </div>
+                <div
+                  class="flex items-center h-9 gap-x-3 mt-4 justify-center px-[25px] sm:px-0 sm:justify-between"
+                >
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/dislike.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Dislike
+                    </p>
+                  </button>
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/like.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Like
+                    </p>
+                  </button>
+                  <button
+                    class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/follow.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px]"
+                    >
+                      Follow
+                    </p>
+                  </button>
+                  <button
+                    class="sup-eng-btn flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/super-engage.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px] truncate"
+                    >
+                      Super Engage
+                    </p>
+                  </button>
+                  <button
+                    class="send-fdbk-btn flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
+                  >
+                    <div class="h-5 w-5">
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/collaborate-req.svg"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="hidden size1:block font-medium text-secondary text-xs leading-[15px] truncate"
+                    >
+                      Collaboration request
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- MATCH CARD END -->
+            <div class="h-9 w-full absolute bottom-40 sm:-bottom-40">
+              <p
+                class="mx-auto font-medium text-custom4 text-center text-xs sm:text-base"
+              >
+                Swipe card to see more creators
+              </p>
             </div>
           </div>
-           <p class="font-normal text-secondary leading-[16.8px] text-xs sm:leading-[22.4px] sm:text-base">As the final buzzer sounds, echoing through the neighborhood, the court transforms into a stage where the spirit of competition and camaraderie thrives. </p>
-          <div class="relative w-full overflow-hidden mt-3 sm:mt-4">
-            <div class="h-[3px] flex justify-center gap-x-1 sm:h-1">
-              <span
-                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
-                data-index="0"
-              ></span>
-              <span
-                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
-                data-index="1"
-              ></span>
-              <span
-                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
-                data-index="2"
-              ></span>
-              <span
-                class="indicator h-full w-full bg-custom6 rounded-[32px] cursor-pointer"
-                data-index="3"
-              ></span>
-            </div>
-            <!-- Slider Container -->
-            <div
-              id="slider"
-              class="rounded-lg relative flex mt-3 transition-transform duration-500 ease-in-out sm:mt-4"
-            >
-              <!-- SLIDE 1 START -->
-              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
-                <div
-                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
-                >
-                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
-                    <img
-                      class="w-full h-full"
-                      src="/assets/icon/socials/youtube.svg"
-                    />
-                  </div>
-                  <p
-                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
-                  >
-                    Uploaded from YouTube
-                  </p>
-                </div>
-                <div
-                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
-                >
-                  <img
-                    src="/assets/images/home/video-placeholder.png"
-                    class="h-full w-full object-cover"
-                    alt=""
-                  />
-                </div>
-
-              </div>
-              <!-- SLIDE 1 END -->
-              <!-- SLIDE 2 START -->
-              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
-                <div
-                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
-                >
-                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
-                    <img
-                      class="w-full h-full"
-                      src="/assets/icon/socials/youtube.svg"
-                    />
-                  </div>
-                  <p
-                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
-                  >
-                    Uploaded from YouTube
-                  </p>
-                </div>
-                <div
-                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
-                >
-                  <img
-                    src="/assets/images/home/video-placeholder.png"
-                    class="h-full w-full object-cover"
-                    alt=""
-                  />
-                </div>
-
-              </div>
-              <!-- SLIDE 2 END -->
-
-              <!-- SLIDE 3 START -->
-              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
-                <div
-                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
-                >
-                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
-                    <img
-                      class="w-full h-full"
-                      src="/assets/icon/socials/youtube.svg"
-                    />
-                  </div>
-                  <p
-                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
-                  >
-                    Uploaded from YouTube
-                  </p>
-                </div>
-                <div
-                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
-                >
-                  <img
-                    src="/assets/images/home/video-placeholder.png"
-                    class="h-full w-full object-cover"
-                    alt=""
-                  />
-                </div>
-
-              </div>
-              <!-- SLIDE 3 END -->
-
-              <!-- SLIDE FOUR START -->
-              <div class="relative min-w-full h-max rounded-lg overflow-hidden">
-                <div
-                  class="absolute top-2 left-2 flex bg-custom10 items-center h-[22px] px-2 backdrop-blur-8 rounded-[20px] sm:top-4 sm:left-4 sm:px-3 sm:h-9"
-                >
-                  <div class="w-5 h-[14px] sm:w-7 sm:h-5">
-                    <img
-                      class="w-full h-full"
-                      src="/assets/icon/socials/youtube.svg"
-                    />
-                  </div>
-                  <p
-                    class="text-[10px] text-secondary font-medium pl-1 sm:text-sm"
-                  >
-                    Uploaded from YouTube
-                  </p>
-                </div>
-                <div
-                  class="h-[290px] bg-white w-full rounded-lg overflow-hidden sm:h-[579px]"
-                >
-                  <img
-                    src="/assets/images/home/video-placeholder.png"
-                    class="h-full w-full object-cover"
-                    alt=""
-                  />
-                </div>
-
-              </div>
-              <!-- SLIDE FOUR END -->
-            </div>
-            <div class="flex items-center h-9 gap-x-3 mt-4 justify-center px-[25px] sm:px-0 sm:justify-between">
-              <button
-                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
-              >
-                <div class="h-5 w-5">
-                  <img
-                    class="h-full w-full"
-                    src="/assets/icon/dislike.svg"
-                    alt=""
-                  />
-                </div>
-                <p
-                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
-                >
-                  Dislike
-                </p>
-              </button>
-              <button
-                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
-              >
-                <div class="h-5 w-5">
-                  <img
-                    class="h-full w-full"
-                    src="/assets/icon/like.svg"
-                    alt=""
-                  />
-                </div>
-                <p
-                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
-                >
-                  Like
-                </p>
-              </button>
-              <button
-                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
-              >
-                <div class="h-5 w-5">
-                  <img
-                    class="h-full w-full"
-                    src="/assets/icon/follow.svg"
-                    alt=""
-                  />
-                </div>
-                <p
-                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px]"
-                >
-                  Follow
-                </p>
-              </button>
-              <button
-                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
-              >
-                <div class="h-5 w-5">
-                  <img
-                    class="h-full w-full"
-                    src="/assets/icon/super-engage.svg"
-                    alt=""
-                  />
-                </div>
-                <p
-                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px] truncate"
-                >
-                  Super Engage
-                </p>
-              </button>
-              <button
-                class="flex items-center justify-center flex-1 border border-custom6 rounded-[32px] h-full px-3 gap-x-2"
-              >
-                <div class="h-5 w-5">
-                  <img
-                    class="h-full w-full"
-                    src="/assets/icon/collaborate-req.svg"
-                    alt=""
-                  />
-                </div>
-                <p
-                  class="hidden size1:block font-medium text-secondary text-xs leading-[10px] truncate"
-                >
-                  Collaboration request
-                </p>
-              </button>
-            </div>
-
-            <!-- NAVIGATION BUTTON START -->
-            <div
-              class="absolute top-[35%] transform translate-y-[35%] left-2 right-2 flex justify-between px-0 sm:px-4 z-10"
-            >
-              <button
-                id="prevBtn"
-                class="bg-custom10 border border-secondary backdrop-blur-8 rounded-full h-8 w-8 sm:h-11 sm:w-11"
-              >
-                <img
-                  class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
-                  src="/assets/icon/back-outlined-left.svg"
-                  alt=""
-                />
-              </button>
-              <button
-                id="nextBtn"
-                class="bg-custom10 border border-secondary backdrop-blur-8 rounded-full transform scale-x-[-1] h-8 w-8 sm:h-11 sm:w-11"
-              >
-                <img
-                  class="w-5 h-5 sm:w-6 sm:h-6 m-auto"
-                  src="/assets/icon/back-outlined-left.svg"
-                  alt=""
-                />
-              </button>
-            </div>
-            <!-- NAVIGATION BUTTON END -->
-          </div>
+          <!-- MATCHES TAB END -->
         </div>
-        <p class="mx-auto font-medium text-custom4 text-center text-xs my-10 sm:text-base sm:my-8">Swipe card to see more creators</p>
-       
-        <!-- MATCH CARD END -->
-      </div>
-      <!-- MATCHES SECTION END -->
-      </div>
       </section>
       <!-- CREATOR MATCH END -->
-
 
       <!-- REPORT POST DIALOG START -->
       <div
@@ -729,7 +1559,7 @@
       >
         <div class="flex items-center justify-between mb-4 sm:mb-6">
           <p class="text-base text-secondary font-medium sm:text-2xl">
-            Report this video
+            Report this post
           </p>
           <button
             id="close-repo-dia"
@@ -855,10 +1685,153 @@
         </a>
       </div>
       <!-- BOTTOM TAB END -->
+
+      <!-- COLLABORATION REQUEST DIALOG START -->
+      <div
+        id="back-drop-6"
+        class="inset-y-0 fixed hidden z-40 h-screen w-screen bg-custom12 backdrop-blur-8 top-0 left-0"
+      ></div>
+      <div
+        id="if-mobile-drawup"
+        class="hidden feed-bk-dialog dialog z-50 m-auto w-full p-0 border-[0.5px] backdrop-blur-40 pt-2 px-4 rounded-tl-3xl rounded-tr-3xl sm:rounded-[24px] h-[370px] lg:h-screen xl:h-auto overflow-y-auto sm:p-8 sm:bg-custom5 sm:border-custom1 sm:max-w-[564px]"
+      >
+        <div
+          class="block mx-auto w-[120px] h-1 rounded-xl bg-custom4 mb-3 sm:hidden"
+        ></div>
+        <div class="flex justify-center mx-auto mt-2 mb-4 sm:mt-0">
+          <div
+            class="rounded-full overflow-hidden border border-custom2 h-16 w-16 -mr-7 sm:-mr-10 sm:h-[100px] sm:w-[100px]"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/pp-placeholder.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="rounded-full overflow-hidden border border-custom2 h-16 w-16 sm:h-[100px] sm:w-[100px]"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/placeholder-8.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <p
+          class="font-medium text-secondary text-center text-base leading-[22.4px] mb-3 sm:mb-4 sm:leading-[33.6px] sm:text-2xl"
+        >
+          You have requested to collaborate with this user
+        </p>
+        <p
+          class="font-normal text-custom4 text-center text-xs leading-[19.2px] mb-4 sm:leading-[25.6px] sm:text-base"
+        >
+          Your collaboration request is pending approval. The user will be
+          notified and can choose to accept or decline your invitation.
+        </p>
+        <button
+          class="font-medium outline-none shadow-combined h-[41px] mt-4 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-11 sm:mt-5 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg"
+        >
+          Proceed to Message
+        </button>
+
+        <button
+          id="close-fdbk"
+          class="font-medium outline-none border border-custom6 h-[41px] mb-8 mt-4 rounded-[40px] text-custom2 w-full text-xs sm:text-sm sm:h-11 transition-transform duration-200 hover:translate-y-[-2px] sm:mb-0"
+        >
+          Exit
+        </button>
+      </div>
+      <!-- COLLABORATION REQUEST DIALOG END -->
+
+      <!-- SUPER ENGAGEMENT DIALOG START -->
+      <div
+        id="back-drop-7"
+        class="inset-y-0 fixed hidden z-40 h-screen w-screen bg-custom12 backdrop-blur-sm card-shadow top-0 left-0"
+      ></div>
+      <div
+        id="if-mobile-drawup2"
+        class="h-[610px] hidden sup-eng-dialog dialog z-50 m-auto w-full p-0 border-[0.5px] backdrop-blur-40 pt-2 px-4 rounded-tl-3xl rounded-tr-3xl sm:rounded-[24px] lg:h-screen xl:h-auto overflow-y-auto sm:p-8 sm:bg-custom32 sm:border-custom1 sm:max-w-[464px]"
+      >
+        <div
+          class="block mx-auto w-[120px] h-1 rounded-xl bg-custom4 mb-3 sm:hidden"
+        ></div>
+        <p
+          class="font-medium text-secondary text-center mt-5 text-base sm:text-xl sm:mt-0"
+        >
+          Super Engagement Requests
+        </p>
+        <div
+          class="mx-auto rounded-full overflow-hidden h-14 w-14 mt-2 mb-1 sm:my-1"
+        >
+          <img
+            class="h-full w-full object-cover"
+            src="/assets/images/home/pp-placeholder.png"
+            alt=""
+          />
+        </div>
+        <div class="flex gap-x-1 items-center mb-1 mx-auto justify-center w-full">
+          <p
+            class="font-bold text-white text-center justify-center text-xs sm:text-base"
+          >
+            Roger Culhane
+          </p>
+          <div class="w-5 h-5">
+            <img class="h-full w-full" src="/assets/icon/verified.svg" alt="" />
+          </div>
+        </div>
+        <p class="font-medium text-custom4 text-center text-xs sm:text-sm">
+          @macdonald222
+        </p>
+        <p
+          class="font-medium text-custom2 mt-2 mb-4 text-center text-sm sm:text-base"
+        >
+          Roger sent a super engagement request
+        </p>
+        <p class="font-normal text-secondary text-xs mb-2 sm:mb-3 sm:text-sm">
+          Proof of engagement
+        </p>
+        <div
+          class="border border-custom6 rounded-lg p-1 mb-4 sm:p-2 h-[183px] sm:h-[216px]"
+        >
+          <div class="h-full w-full relative rounded-[4px] overflow-hidden">
+            <div
+              class="absolute top-0 right-0 h-full w-full bg-custom21 opacity-40"
+            ></div>
+            <p
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-secondary truncate text-xs sm:text-xl"
+            >
+              Screen shot of engagement
+            </p>
+
+            <img
+              class="h-full w-full object-cover"
+              src="/assets/images/home/video-placeholder.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <button
+          class="font-medium outline-none shadow-combined h-[41px] mt-4 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-11 sm:mt-5 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg"
+        >
+          Proceed to Message
+        </button>
+
+        <button
+          id="close-sup-eng-dialog"
+          class="font-medium outline-none border border-custom6 h-[41px] mb-8 mt-4 rounded-[40px] text-custom2 w-full text-xs sm:text-sm sm:h-11 transition-transform duration-200 hover:translate-y-[-2px] sm:mb-0"
+        >
+          Exit
+        </button>
+      </div>
+      <!-- SUPER ENGAGEMENT DIALOG END -->
     </main>
     <script src="/assets/js/home/side-bar.js"></script>
     <script src="/assets/js/home/menu-button.js"></script>
     <script src="/assets/js/home/report-video-dialog.js"></script>
-    <script defer src="/assets/js/home/slider.js"> </script>
+    <script defer src="/assets/js/home/slider.js"></script>
+    <script src="/assets/js/home/matches.js"></script>
+    <script src="/assets/js/home/feedback-dialog.js"></script>
+    <script src="/assets/js/home/super-engage.js"></script>
   </body>
 </html>
