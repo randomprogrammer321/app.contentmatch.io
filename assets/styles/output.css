@@ -1524,10 +1524,6 @@ select {
   height: 54px;
 }
 
-.h-\[557px\] {
-  height: 557px;
-}
-
 .h-\[55px\] {
   height: 55px;
 }
@@ -1546,6 +1542,10 @@ select {
 
 .h-\[61\.14px\] {
   height: 61.14px;
+}
+
+.h-\[610px\] {
+  height: 610px;
 }
 
 .h-\[66px\] {
@@ -1595,10 +1595,6 @@ select {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[610px\] {
-  height: 610px;
 }
 
 .max-h-0 {
@@ -3004,7 +3000,8 @@ select {
   background-image: url('/assets/images/content-match/content-match-bg1.svg');
 }
 
-.content-match-bg-1, .content-match-bg-2 {
+.content-match-bg-1,
+  .content-match-bg-2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 0px;
@@ -3121,7 +3118,8 @@ html,
 }
 
 @media only screen and (max-width: 640px) {
-  .content-match-bg-1,  .content-match-bg-2 {
+  .content-match-bg-1,
+    .content-match-bg-2 {
     background-position-y: 90px;
     background-size: contain;
   }
@@ -3344,7 +3342,7 @@ select.custom-select option {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-.radio-input:checked ~ .radio-checkmark {
+.radio-input:checked~.radio-checkmark {
   background-color: #4a90e2;
   border-color: #4a90e2;
 }
@@ -3362,7 +3360,7 @@ select.custom-select option {
   transform: translate(-50%, -50%);
 }
 
-.radio-input:checked ~ .radio-checkmark::after {
+.radio-input:checked~.radio-checkmark::after {
   display: block;
 }
 
@@ -3444,13 +3442,6 @@ select.custom-select option {
 
 .card__swipe.below {
   z-index: 1;
-}
-
-.card-shadow {
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  border-image-source: linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%);
-  box-shadow: 16px 16px 40px 0px #8080801F;
 }
 
 .hover\:translate-y-\[-2px\]:hover {
@@ -4497,6 +4488,14 @@ select.custom-select option {
 
   .sm\:leading-\[39\.2px\] {
     line-height: 39.2px;
+  }
+
+  .sm\:shadow-custom1 {
+    --tw-shadow: 8px 8px 20px 0px #8080801F;
+    --tw-shadow-colored: 8px 8px 20px 0px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow-color: #737373;
+    --tw-shadow: var(--tw-shadow-colored);
   }
 
   .sm\:backdrop-blur-40 {

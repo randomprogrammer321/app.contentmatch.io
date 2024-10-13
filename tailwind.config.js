@@ -1,5 +1,5 @@
 /** @type {import("tailwindcss").Config} */
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        geist: ['Geist', 'sans-serif'],
+        geist: ["Geist", "sans-serif"],
       },
       colors: {
         primary: "#0F051D",
@@ -44,13 +44,13 @@ module.exports = {
         custom32: "rgba(15, 5, 29, 0.72)"
       },
       screens: {
-        'size1': '846px',
-        'size2': '954px',
-        'size3': '1234px',
-        'size4': '1150px',
-        'size5': '900px',
-        'size6': '1352px',
-        'size7': '1000px',
+        "size1": "846px",
+        "size2": "954px",
+        "size3": "1234px",
+        "size4": "1150px",
+        "size5": "900px",
+        "size6": "1352px",
+        "size7": "1000px",
       },
       padding: {
         mpd: "16px"
@@ -63,19 +63,20 @@ module.exports = {
         "8": "8px"
       },
       boxShadow: {
-        "custom": "16px 16px 40px 0 rgba(128, 128, 128, 0.12)", // Custom shadow
+        "custom": "16px 16px 40px 0 rgba(128, 128, 128, 0.12)",
         "combined": "0px 1px 3px 0px rgba(37, 37, 37, 0.3), 0px 4px 8px 3px rgba(37, 37, 37, 0.15)",
+        "custom1": "8px 8px 20px 0px #8080801F"
       },
       borderImage: {
-        custom: "linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%)", // Custom gradient
+        custom: "linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 70.03%)",
       },
       animation: {
-        'fade-in': 'fadeIn 2s ease forwards',
+        "fade-in": "fadeIn 2s ease forwards",
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
     },
@@ -84,9 +85,9 @@ module.exports = {
     require("@tailwindcss/forms"),
     plugin(function({ addUtilities }) {
       addUtilities({
-        '.border-image-custom': {
-          border: '1px solid',
-          borderImageSource: 'linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%)',
+        ".border-image-custom": {
+          border: "1px solid",
+          borderImageSource: "linear-gradient(144.36deg, #FFFFFF 0.04%, #737373 99.03%)",
           borderImageSlice: 1,
         },
       });
