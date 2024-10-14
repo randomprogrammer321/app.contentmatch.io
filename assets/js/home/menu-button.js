@@ -27,8 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         if (!tooltip.classList.contains("visible")) {
           openMenu(tooltip);
+        } else {
+          closeMenu(tooltip);
         }
       });
+
+      // document.addEventListener("click", () => {
+      //   if (tooltip.classList.contains("visible")) {
+      //   closeMenu(tooltip); }
+      // });
     } else {
       // For desktop behavior (using hover)
       button.addEventListener("mouseenter", () => {

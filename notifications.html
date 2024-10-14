@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/styles/output.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body class="bg-primary font-geist">
+    <main id="content" class="h-screen flex overflow-auto flex-row">
+      <!-- SIDEBAR START -->
+      <div
+        id="back-drop"
+        class="hidden inset-y-0 z-20 h-screen w-screen backdrop-blur-md bg-custom10 top-0 left-0"
+      ></div>
+      <section
+        id="side-bar"
+        class="fixed inset-y-0 z-30 h-screen top-0 left-0 bg-primary transform -translate-x-[260px] transition-transform duration-500 size4:translate-x-0 size4:static flex justify-end overflow-x-hidden overflow-y-auto border-r border-custom6 w-[260px] size3:w-[360px]"
+      >
+        <div
+          class="w-full mr-0 mt-0 pl-0 sm:mt-[14px] sm:mr-3 sm:pl-2 sm:w-[230px] size3:mr-10"
+        >
+          <!-- MOBILE NAVIGATION START -->
+          <nav class="flex flex-col w-full sm:hidden">
+            <!-- PROFILE CARD START -->
+            <div
+              class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
+            >
+              <div class="flex">
+                <div class="h-10 w-10 rounded-full">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/pp-placeholder.png"
+                  />
+                </div>
+                <div class="ml-2">
+                  <p class="text-sm leading-[19.6px] mb-1 text-white">
+                    Victor Opulence
+                  </p>
+                  <p class="text-custom4 text-xs sm:text-sm">
+                    You are currently a free user
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- PROFILE CARD END -->
+
+            <!-- MOBILE NAV LINK START -->
+            <div class="border-b border-custom6 mx-5">
+              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/profile.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Profile
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/friends-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Friends
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="/assets/logo/logo.svg" />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Get Premium
+                </p>
+              </a>
+
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/settings-inactive.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Settings
+                </p>
+              </a>
+              <button class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img
+                    class="h-full w-full"
+                    src="/assets/icon/nav/log-out.svg"
+                  />
+                </div>
+                <p
+                  class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+                >
+                  Log out
+                </p>
+              </button>
+            </div>
+            <!-- MOBILE NAV LINKS END -->
+          </nav>
+          <!-- MOBILE NAVIGATION END -->
+
+          <!-- DESKTOP NAV START -->
+          <nav class="hidden sm:flex flex-col w-full border-b border-custom6">
+            <div class="h-14 w-14 mb-[15px]">
+              <img class="w-full h-full" src="/assets/logo/logo.svg" />
+            </div>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/home-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-medium pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Home
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/explore-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Explore
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/creator-match-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Creator Match
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/friends-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Friends
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/messages-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Messages
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex items-center w0 h-10 rounded-xl pl-4 mb-5 bg-custom6"
+            >
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/notification-active.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Notifications
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/profile-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Profile
+              </p>
+            </a>
+            <a href="#" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+              <div class="h-6 w-6">
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/nav/settings-inactive.svg"
+                />
+              </div>
+              <p
+                class="font-normal pl-4 text-base text-custom7 leading-[22.4px]"
+              >
+                Settings
+              </p>
+            </a>
+          </nav>
+          <!-- DESKTOP NAV END -->
+
+          <!-- ACTIVE COMMUNITIES START -->
+          <div class="w-full">
+            <div
+              class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0"
+            >
+              <p
+                class="uppercase text-sm text-custom4 font-normal sm:text-base"
+              >
+                active communities
+              </p>
+              <button class="flex items-center h-10 mt-3 mb-1">
+                <div
+                  class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10"
+                >
+                  <img class="h-5 w-5" src="/assets/icon/home/add.svg" alt="" />
+                </div>
+                <p class="text-sm text-custom2 font-normal sm:text-base">
+                  Create a community
+                </p>
+              </button>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Newbie Artists
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    24k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  N
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Art Hub
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    29k Members
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center h-[73px]">
+                <div
+                  class="rounded-full flex items-center font-bold text-secondary justify-center bg-custom6 mr-2 h-10 w-10 text-xl sm:text-base sm:text-[20px]"
+                >
+                  T
+                </div>
+                <div>
+                  <p
+                    class="font-medium text-secondary leading-[16.8px] text-sm sm:leading-[22.4px] sm:text-base"
+                  >
+                    Cultural Practices
+                  </p>
+                  <p
+                    class="mt-[2px] text-xs font-normal text-custom2 leading-[16.8px] sm:leading-[19.6px] sm:mt-1 sm:text-sm"
+                  >
+                    1.4M Members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ACTIVE COMMMUNTIES END -->
+
+          <!-- SIDE BAR FOOTER START -->
+          <a
+            class="flex items-center text-custom4 font-normal h-9 text-base pl-5 sm:pl-0"
+            href="#"
+            >How to use ContentMatch</a
+          >
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Learn how to place ADs
+          </a>
+          <a
+            class="flex items-center text-custom4 font-normal text-base h-9 pl-5 sm:pl-0"
+            href="#"
+          >
+            Contact Support
+          </a>
+          <div class="h-20"></div>
+          <!-- SIDE BAR FOOTER END -->
+        </div>
+      </section>
+      <!-- SIDEBAR END -->
+
+      <!-- NOTICATIONS START -->
+      <section class="flex flex-col flex-1">
+        <!-- HEADER START -->
+        <header
+          class="w-full h-[52px] flex items-center border-b border-custom6 px-4 justify-between size4:justify-start sm:px-10 sm:h-[84px]"
+        >
+          <button
+            id="hb-btn"
+            class="h-8 w-8 flex items-center justify-center mr-1 size4:hidden"
+          >
+            <img class="w-full h-full" src="/assets/logo/logo.svg" />
+          </button>
+          <p class="text-white font-medium text-base sm:text-xl">
+            Notifications
+          </p>
+          <div class="h-6 w-6 block size4:hidden">
+            <img
+              class="h-full w-full"
+              src="/assets/icon/nav/settings-active.svg"
+              alt=""
+            />
+          </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- TOP TAB START -->
+        <div
+          class="w-full h-[48px] px-mpd flex items-end pb-2 border-b border-custom6 sm:px-10"
+        >
+          <button
+            id="forYouBtn"
+            class="text-secondary border-b-2 border-custom2 px-2 text-xs h-[25px] sm:text-base"
+          >
+            All
+          </button>
+          <button
+            id="followingBtn"
+            class="text-custom2 font-normal px-2 mx-3 text-xs h-[25px] sm:text-base"
+          >
+            Feedbacks
+          </button>
+          <button
+            id="communitiesBtn"
+            class="text-custom2 font-normal px-2 text-xs h-[25px] sm:text-base"
+          >
+            Super engagement
+          </button>
+        </div>
+        <!-- TOP TAB END -->
+
+        <!-- NOTIFCATION DELETED START -->
+        <!-- <div class="px-4 flex justify-between items-center bg-custom9 h-11 sm:h-14 sm:px-10 transition-transform transform -translate-y-10 opacity-0 animate-slideIn">
+          <p class="text-white font-medium text-sm sm:text-base">Notification deleted.</p>
+          <button class="flex items-center px-2 h-7 gap-x-1 rounded-xl bg-custom6 sm:gap-x-2 sm:h-8">
+            <div class="h-5 w-5 sm:h-6 sm:w-6"><img class="h-full w-full" src="/assets/icon/undo.svg" alt=""></div>
+            <p class="font-medium text-custom2 text-xs sm:text-sm">undo</p>
+          </button>
+        </div> -->
+
+        <!-- NOTIFCATION DELETED END -->
+
+        <!-- ALL TAB SECTION START -->
+        <div
+          id="contentForYou"
+          class="content transition-opacity duration-1000 flex flex-col flex-1 pb-32 overflow-y-auto"
+        >
+          <!-- CARD 1 START -->
+          <div class="w-full mx-auto px-4 py-3 sm:py-5 sm:pr-10 sm:pl-10">
+            <div class="w-full">
+              <div class="flex">
+                <div
+                  class="rounded-full flex-shrink-0 overflow-hidden mr-2 h-6 w-6 sm:h-12 sm:w-12 sm:mr-3"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="/assets/images/home/placeholder-8.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div class="flex flex-col space-y-1">
+                      <p
+                        class="text-white font-medium text-sm leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                      >
+                        Macdonald Anyanwu
+                        <span class="italic"> commented </span> on your YouTube
+                        video: This video is superb! Try to work on your audio.
+                      </p>
+                      <p class="font-medium text-custom4 text-sm">6:00am</p>
+                    </div>
+
+                    <div class="relative group">
+                      <button
+                        class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+                      >
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/menu-h.svg"
+                          alt=""
+                        />
+                      </button>
+                      <div
+                        class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+                      >
+                        <button
+                          class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                        >
+                          <div class="h-5 w-5 sm:h-6 sm:w-6">
+                            <img
+                              class="h-full w-full"
+                              src="/assets/icon/delete-outline.svg"
+                              alt=""
+                            />
+                          </div>
+                          <p
+                            class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                          >
+                            Delete post
+                          </p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-xl border border-custom6 gap-x-3 flex items-center mt-2 p-[6px] sm:p-2 sm:mt-3 sm:mr-14"
+                  >
+                    <div
+                      class="flex-shrink-0 overflow-hidden rounded-lg w-16 h-14 sm:h-[90px] sm:w-[100px]"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="/assets/images/home/video-placeholder.png"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="font-normal text-custom2 text-xs leading-[16px] text-ellipsis overflow-hidden line-clamp-4 sm:leading-[22.4px] sm:text-base"
+                    >
+                      As the final buzzer sounds, echoing through the
+                      neighborhood, the court transforms into a stage where the
+                      spirit of competition and camaraderie thrives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 1 STOP -->
+
+          <!-- CARD 2 STOP -->
+          <div
+            class="w-full px-10 flex py-5 justify-between bg-custom33 pl-[5px] pr-4 sm:pl-5 sm:pr-10"
+          >
+            <div class="flex items-center">
+              <div
+                class="rounded-full bg-custom3 mr-[5px] h-[6px] w-[6px] sm:h-3 sm:w-3 sm:mr-2"
+              ></div>
+              <div
+                class="rounded-full overflow-hidden mr-3 h-6 w-6 sm:h-12 sm:w-12"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/engagement.png"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center space-y-1">
+                <p class="text-white font-medium text-xs sm:text-base">
+                  Macdonald Anyanwu followed you
+                </p>
+                <p class="font-medium text-custom4 text-xs sm:text-sm">
+                  6:00am
+                </p>
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+              >
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/menu-h.svg"
+                  alt=""
+                />
+              </button>
+              <div
+                class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+              >
+                <button
+                  class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                >
+                  <div class="h-5 w-5 sm:h-6 sm:w-6">
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/delete-outline.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p
+                    class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                  >
+                    Delete post
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 STOP -->
+
+          <!-- CARD 3 START -->
+          <div
+            class="w-full px-10 flex py-5 justify-between pl-[5px] pr-4 sm:pl-5 sm:pr-10"
+          >
+            <div class="flex items-center">
+              <div
+                class="rounded-full bg-custom3 mr-[5px] h-[6px] w-[6px] sm:h-3 sm:w-3 sm:mr-2"
+              ></div>
+              <div
+                class="rounded-full overflow-hidden mr-3 h-6 w-6 sm:h-12 sm:w-12"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/engagement.png"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center space-y-1">
+                <p class="text-white font-medium text-xs sm:text-base">
+                  Macdonald Anyanwu followed you
+                </p>
+                <p class="font-medium text-custom4 text-xs sm:text-sm">
+                  6:00am
+                </p>
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+              >
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/menu-h.svg"
+                  alt=""
+                />
+              </button>
+              <div
+                class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+              >
+                <button
+                  class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                >
+                  <div class="h-5 w-5 sm:h-6 sm:w-6">
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/delete-outline.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p
+                    class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                  >
+                    Delete post
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 3 STOP -->
+        </div>
+        <!-- ALL TAB SECTION END -->
+
+        <!-- FEEDBACKS TAB SECTION START -->
+        <div
+          id="contentFollowing"
+          class="text-white content hidden opacity-0 transition-opacity duration-1000 flex-col flex-1 pb-32 overflow-y-auto"
+        >
+          <!-- CARD 1 START -->
+          <div class="w-full mx-auto px-4 py-3 sm:py-5 sm:pr-10 sm:pl-10">
+            <div class="w-full">
+              <div class="flex">
+                <div
+                  class="rounded-full flex-shrink-0 overflow-hidden mr-2 h-6 w-6 sm:h-12 sm:w-12 sm:mr-3"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="/assets/images/home/placeholder-8.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div>
+                      <p
+                        class="text-white font-medium text-sm leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                      >
+                        Macdonald Anyanwu sent a feedback on your YouTube video
+                      </p>
+                      <p class="font-medium text-custom4 text-sm">6:00am</p>
+                    </div>
+
+                    <div class="relative group">
+                      <button
+                        class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+                      >
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/menu-h.svg"
+                          alt=""
+                        />
+                      </button>
+                      <div
+                        class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+                      >
+                        <button
+                          class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                        >
+                          <div class="h-5 w-5 sm:h-6 sm:w-6">
+                            <img
+                              class="h-full w-full"
+                              src="/assets/icon/delete-outline.svg"
+                              alt=""
+                            />
+                          </div>
+                          <p
+                            class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                          >
+                            Delete post
+                          </p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-xl border border-custom6 gap-x-3 flex items-center mt-2 p-[6px] sm:p-2 sm:mt-3 sm:mr-14"
+                  >
+                    <div
+                      class="flex-shrink-0 overflow-hidden rounded-lg w-16 h-14 sm:h-[90px] sm:w-[100px]"
+                    >
+                      <img
+                        class="w-full h-full object-cover"
+                        src="/assets/images/home/video-placeholder.png"
+                        alt=""
+                      />
+                    </div>
+                    <p
+                      class="font-normal text-custom2 text-xs leading-[16px] text-ellipsis overflow-hidden line-clamp-4 sm:leading-[22.4px] sm:text-base"
+                    >
+                      As the final buzzer sounds, echoing through the
+                      neighborhood, the court transforms into a stage where the
+                      spirit of competition and camaraderie thrives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 1 STOP -->
+
+          <!-- CARD 2 STOP -->
+          <div
+            class="w-full px-10 flex py-5 justify-between bg-custom33 pl-[5px] pr-4 sm:pl-5 sm:pr-10"
+          >
+            <div class="flex items-center">
+              <div
+                class="rounded-full bg-custom3 mr-[5px] h-[6px] w-[6px] sm:h-3 sm:w-3 sm:mr-2"
+              ></div>
+              <div
+                class="rounded-full overflow-hidden mr-3 h-6 w-6 sm:h-12 sm:w-12"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/engagement.png"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center space-y-1">
+                <p class="text-white font-medium text-xs sm:text-base">
+                  Macdonald Anyanwu followed you
+                </p>
+                <p class="font-medium text-custom4 text-xs sm:text-sm">
+                  6:00am
+                </p>
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+              >
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/menu-h.svg"
+                  alt=""
+                />
+              </button>
+              <div
+                class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+              >
+                <button
+                  class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                >
+                  <div class="h-5 w-5 sm:h-6 sm:w-6">
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/delete-outline.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p
+                    class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                  >
+                    Delete post
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 STOP -->
+
+          <!-- CARD 3 START -->
+          <div
+            class="w-full px-10 flex py-5 justify-between pl-[5px] pr-4 sm:pl-5 sm:pr-10"
+          >
+            <div class="flex items-center">
+              <div
+                class="rounded-full bg-custom3 mr-[5px] h-[6px] w-[6px] sm:h-3 sm:w-3 sm:mr-2"
+              ></div>
+              <div
+                class="rounded-full overflow-hidden mr-3 h-6 w-6 sm:h-12 sm:w-12"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="/assets/images/home/engagement.png"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center space-y-1">
+                <p class="text-white font-medium text-xs sm:text-base">
+                  Macdonald Anyanwu followed you
+                </p>
+                <p class="font-medium text-custom4 text-xs sm:text-sm">
+                  6:00am
+                </p>
+              </div>
+            </div>
+            <div class="relative group">
+              <button
+                class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+              >
+                <img
+                  class="h-full w-full"
+                  src="/assets/icon/menu-h.svg"
+                  alt=""
+                />
+              </button>
+              <div
+                class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+              >
+                <button
+                  class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                >
+                  <div class="h-5 w-5 sm:h-6 sm:w-6">
+                    <img
+                      class="h-full w-full"
+                      src="/assets/icon/delete-outline.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p
+                    class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                  >
+                    Delete post
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 3 STOP -->
+        </div>
+        <!-- FEEDBACKS TAB SECTION END -->
+
+        <!-- SUPER ENGAGEMENT TAB SECTION START -->
+        <div
+          id="contentCommunities"
+          class="text-white content hidden opacity-0 transition-opacity duration-1000 flex-col flex-1 pb-32 overflow-y-auto"
+        >
+          <!-- SUPER ENGAGEMENT CARD START -->
+          <div class="w-full mx-auto px-4 py-3 sm:py-5 sm:pr-10 sm:pl-10">
+            <div class="w-full">
+              <div class="flex">
+                <div
+                  class="rounded-full flex-shrink-0 overflow-hidden mr-2 h-6 w-6 sm:h-12 sm:w-12 sm:mr-3"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="/assets/images/home/placeholder-8.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div class="flex flex-col space-y-1">
+                      <p
+                        class="text-white font-medium text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                      >
+                        Macdonald Anyanwu sent engagement on your post
+                      </p>
+                      <p class="font-medium text-custom4 text-sm">6:00am</p>
+                    </div>
+
+                    <div class="relative group">
+                      <button
+                        class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+                      >
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/menu-h.svg"
+                          alt=""
+                        />
+                      </button>
+                      <div
+                        class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+                      >
+                        <button
+                          class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                        >
+                          <div class="h-5 w-5 sm:h-6 sm:w-6">
+                            <img
+                              class="h-full w-full"
+                              src="/assets/icon/delete-outline.svg"
+                              alt=""
+                            />
+                          </div>
+                          <p
+                            class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                          >
+                            Delete post
+                          </p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-xl border border-custom6 flex flex-col gap-y-3 mt-2 p-[6px] sm:p-2 sm:mt-3 sm:mr-14"
+                  >
+                    <p
+                      class="font-normal text-custom2 text-sm leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                    >
+                      As the final buzzer sounds, echoing through the
+                      neighborhood, the court transforms into a stage where the
+                      spirit of competition and camaraderie thrives.
+                    </p>
+                    <div
+                      class="border border-custom6 rounded-lg p-1 sm:p-2 h-[183px] sm:h-[216px]"
+                    >
+                      <div
+                        class="h-full w-full relative rounded-[4px] overflow-hidden"
+                      >
+                        <div
+                          class="absolute top-0 right-0 h-full w-full bg-custom21 opacity-40"
+                        ></div>
+                        <p
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-secondary truncate text-xs sm:text-xl"
+                        >
+                          Screen shot of engagement
+                        </p>
+
+                        <img
+                          class="h-full w-full object-cover"
+                          src="/assets/images/home/video-placeholder.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="w-full flex items-center justify-center border border-custom6 rounded-[40px] font-medium text-white text-xs h-[33px] sm:text-sm sm:h-11"
+                    >
+                      Engage back
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SUPER ENGAGEMENT CARD STOP -->
+
+          <!-- SUPER ENGAGEMENT CARD START -->
+          <div class="w-full mx-auto px-4 py-3 sm:py-5 sm:pr-10 sm:pl-10">
+            <div class="w-full">
+              <div class="flex">
+                <div
+                  class="rounded-full flex-shrink-0 overflow-hidden mr-2 h-6 w-6 sm:h-12 sm:w-12 sm:mr-3"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="/assets/images/home/placeholder-8.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <div class="flex flex-col space-y-1">
+                      <p
+                        class="text-white font-medium text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                      >
+                        Macdonald Anyanwu sent engagement on your post
+                      </p>
+                      <p class="font-medium text-custom4 text-sm">6:00am</p>
+                    </div>
+
+                    <div class="relative group">
+                      <button
+                        class="menuButton h-5 w-5 ml-5 sm:ml-[10px] sm:w-6 sm:h-6"
+                      >
+                        <img
+                          class="h-full w-full"
+                          src="/assets/icon/menu-h.svg"
+                          alt=""
+                        />
+                      </button>
+                      <div
+                        class="tooltip absolute w-[184px] right-0 top-3 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 rounded-xl"
+                      >
+                        <button
+                          class="cursor-pointer w-full repo-vid flex items-center space-x-2 h-9 sm:h-[46px]"
+                        >
+                          <div class="h-5 w-5 sm:h-6 sm:w-6">
+                            <img
+                              class="h-full w-full"
+                              src="/assets/icon/delete-outline.svg"
+                              alt=""
+                            />
+                          </div>
+                          <p
+                            class="font-medium text-custom2 mt-[1px] truncate leading-none text-xs sm:text-base"
+                          >
+                            Delete post
+                          </p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-xl border border-custom6 flex flex-col gap-y-3 mt-2 p-[6px] sm:p-2 sm:mt-3 sm:mr-14"
+                  >
+                    <p
+                      class="font-normal text-custom2 text-sm leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+                    >
+                      As the final buzzer sounds, echoing through the
+                      neighborhood, the court transforms into a stage where the
+                      spirit of competition and camaraderie thrives.
+                    </p>
+                    <div
+                      class="border border-custom6 rounded-lg p-1 sm:p-2 h-[183px] sm:h-[216px]"
+                    >
+                      <div
+                        class="h-full w-full relative rounded-[4px] overflow-hidden"
+                      >
+                        <div
+                          class="absolute top-0 right-0 h-full w-full bg-custom21 opacity-40"
+                        ></div>
+                        <p
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-secondary truncate text-xs sm:text-xl"
+                        >
+                          Screen shot of engagement
+                        </p>
+
+                        <img
+                          class="h-full w-full object-cover"
+                          src="/assets/images/home/video-placeholder.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="w-full flex items-center justify-center border border-custom6 rounded-[40px] font-medium text-white text-xs h-[33px] sm:text-sm sm:h-11"
+                    >
+                      Engage back
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SUPER ENGAGEMENT CARD STOP -->
+        </div>
+
+        <!-- SUPER ENGAGEMENT TAB SECTION END -->
+      </section>
+      <!-- NOTICATIONS END -->
+
+      <!-- SECTION THREE START -->
+      <section
+        class="hidden size5:block w-[360px] overflow-y-auto border-l border-custom6"
+      >
+        <!-- PROFILE CARD START -->
+        <div
+          class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10"
+        >
+          <div class="flex">
+            <div class="h-10 w-10 rounded-full">
+              <img
+                class="h-full w-full object-cover"
+                src="/assets/images/home/pp-placeholder.png"
+              />
+            </div>
+            <div class="ml-2">
+              <p class="text-sm leading-[19.6px] mb-1 text-white">
+                Victor Opulence
+              </p>
+              <p class="text-custom4 text-xs sm:text-sm">
+                You are currently a free user
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- PROFILE CARD END -->
+        <div class="ml-5 max-w-[250px] pt-3 size3:ml-10">
+          <!-- GET PREMIUM CARD START -->
+          <div
+            class="p-3 rounded-xl border border-custom6 mb-3 size5:mb-0 size5:p-0 size5:border-none"
+          >
+            <p
+              class="font-bold text-base leading-[22.4px] text-white sm:leading-[28px] sm:text-xl"
+            >
+              Get Premium
+            </p>
+            <p
+              class="text-custom4 font-normal text-xs mt-2 leading-[16.8px] sm:leading-[19.6px] sm:text-sm"
+            >
+              Gain access to premium features, more visibiliy & engagementsand
+              priority support
+            </p>
+            <button
+              class="flex text-xs mt-2 items-center text-custom9 px-3 h-[33px] rounded-[32px] bg-custom11"
+            >
+              Subscribe
+            </button>
+          </div>
+          <!-- GET PREMIUM CARD END -->
+
+          <!-- ADS START -->
+          <div
+            class="h-[100px] mt-5 w-full bg-custom6 rounded uppercase flex items-center justify-center text-white"
+          >
+            ADS
+          </div>
+
+          <!-- ADS STOP -->
+
+          <!-- PEOPLE TO FOLLOW START -->
+          <div class="my-5">
+            <p class="text-custom4 uppercase text-sm font-normal">
+              people to follow
+            </p>
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/placeholder-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Maren Mango
+                  </p>
+                  <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+                    @chi1234
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Follow
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/placeholder-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Alena Dokidis
+                  </p>
+                  <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+                    @chi1234
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Follow
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/placeholder-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Corey Saris
+                  </p>
+                  <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+                    @chi1234
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Follow
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/placeholder-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Dulce Lubin
+                  </p>
+                  <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+                    @chi1234
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Follow
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div class="h-10 w-10 rounded-full overflow-hidden">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/assets/images/home/placeholder-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Corey Carder
+                  </p>
+                  <p class="text-custom4 font-normal text-sm leading-[19.6px]">
+                    @chi1234
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Follow
+              </button>
+            </div>
+          </div>
+          <!-- PEOPLE TO FOLLOW END  -->
+
+          <!-- COMMUNITIES TO JOIN START -->
+          <div class="my-5">
+            <p class="text-custom4 text-sm uppercase font-normal">
+              communities to join
+            </p>
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div
+                  class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+                >
+                  N
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Newbie Artists
+                  </p>
+                  <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+                    24k Members
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Join
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div
+                  class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+                >
+                  A
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Art Club
+                  </p>
+                  <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+                    24k Members
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Join
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div
+                  class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+                >
+                  A
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Art Club
+                  </p>
+                  <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+                    24k Members
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Join
+              </button>
+            </div>
+
+            <div class="flex justify-between items-center h-[66px]">
+              <div class="flex items-center">
+                <div
+                  class="h-10 w-10 rounded-full bg-custom6 text-xl flex items-center justify-center text-secondary font-bold"
+                >
+                  A
+                </div>
+                <div class="ml-2">
+                  <p
+                    class="text-sm font-medium text-secondary leading-[19.6px]"
+                  >
+                    Art Club
+                  </p>
+                  <p class="text-custom2 font-normal text-xs leading-[19.6px]">
+                    24k Members
+                  </p>
+                </div>
+              </div>
+              <button
+                class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary"
+              >
+                Join
+              </button>
+            </div>
+          </div>
+          <!-- COMMUNTIES TO JOIN END -->
+        </div>
+      </section>
+      <!-- SECTION THREE END -->
+
+      <!-- BOTTOM TAB BAR START -->
+      <div
+        class="h-[72px] w-full fixed right-0 bottom-0 left-0 z-30 bg-black border-t border-custom6 flex items-center justify-between px-[26px] size5:hidden"
+      >
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/home-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/explore-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/creator-match-inactive.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/notification-active.svg"
+            alt=""
+          />
+        </a>
+        <a class="h-6 w-6" href="#">
+          <img
+            class="h-full w-full"
+            src="/assets/icon/nav/community-inactive.svg"
+            alt=""
+          />
+        </a>
+      </div>
+      <!-- BOTTOM TAB BAR END -->
+    </main>
+
+    <script src="/assets/js/home/post.js"></script>
+    <script src="/assets/js/home/menu-button.js"></script>
+    <script src="/assets/js/home/side-bar.js"></script>
+  </body>
+</html>

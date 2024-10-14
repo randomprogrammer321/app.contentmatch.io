@@ -1189,6 +1189,10 @@ select {
   margin-right: 15px;
 }
 
+.mr-\[5px\] {
+  margin-right: 5px;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -1282,6 +1286,13 @@ select {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .block {
@@ -1556,6 +1567,10 @@ select {
   height: 68px;
 }
 
+.h-\[6px\] {
+  height: 6px;
+}
+
 .h-\[72px\] {
   height: 72px;
 }
@@ -1757,6 +1772,10 @@ select {
   width: 38px;
 }
 
+.w-\[6px\] {
+  width: 6px;
+}
+
 .w-\[80px\] {
   width: 80px;
 }
@@ -1865,6 +1884,11 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[35\%\] {
   --tw-translate-y: 35%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1899,6 +1923,22 @@ select {
 
 .animate-fade-in {
   animation: fadeIn 2s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
 }
 
 .cursor-grab {
@@ -2028,6 +2068,18 @@ select {
 
 .gap-y-\[6px\] {
   row-gap: 6px;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-\[13px\] > :not([hidden]) ~ :not([hidden]) {
@@ -2309,6 +2361,11 @@ select {
   background-color: rgb(30 144 255 / var(--tw-bg-opacity));
 }
 
+.bg-custom33 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 35 61 / var(--tw-bg-opacity));
+}
+
 .bg-custom4 {
   --tw-bg-opacity: 1;
   background-color: rgb(173 173 173 / var(--tw-bg-opacity));
@@ -2409,6 +2466,10 @@ select {
 
 .p-\[20px\] {
   padding: 20px;
+}
+
+.p-\[6px\] {
+  padding: 6px;
 }
 
 .px-0 {
@@ -2567,6 +2628,10 @@ select {
   padding-left: 20px;
 }
 
+.pl-\[5px\] {
+  padding-left: 5px;
+}
+
 .pl-\[9px\] {
   padding-left: 9px;
 }
@@ -2719,6 +2784,10 @@ select {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-\[10px\] {
   line-height: 10px;
 }
@@ -2729,6 +2798,10 @@ select {
 
 .leading-\[16\.8px\] {
   line-height: 16.8px;
+}
+
+.leading-\[16px\] {
+  line-height: 16px;
 }
 
 .leading-\[19\.2px\] {
@@ -2761,6 +2834,10 @@ select {
 
 .leading-\[33\.6px\] {
   line-height: 33.6px;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .leading-snug {
@@ -3700,6 +3777,10 @@ select.custom-select option {
     margin-left: 0.75rem;
   }
 
+  .sm\:ml-\[10px\] {
+    margin-left: 10px;
+  }
+
   .sm\:ml-\[2px\] {
     margin-left: 2px;
   }
@@ -3710,6 +3791,10 @@ select.custom-select option {
 
   .sm\:mr-0 {
     margin-right: 0px;
+  }
+
+  .sm\:mr-14 {
+    margin-right: 3.5rem;
   }
 
   .sm\:mr-2 {
@@ -4004,6 +4089,10 @@ select.custom-select option {
 
   .sm\:h-\[84px\] {
     height: 84px;
+  }
+
+  .sm\:h-\[90px\] {
+    height: 90px;
   }
 
   .sm\:h-max {
@@ -4385,6 +4474,10 @@ select.custom-select option {
     padding-left: 0.75rem;
   }
 
+  .sm\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
   .sm\:pr-1 {
     padding-right: 0.25rem;
   }
@@ -4659,6 +4752,10 @@ select.custom-select option {
   .size4\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .size4\:justify-start {
+    justify-content: flex-start;
   }
 
   .size4\:pr-0 {
