@@ -153,6 +153,11 @@
     -ms-overflow-style: none;
   }
 
+  .showa {
+    scrollbar-width: auto;  /* For Firefox */
+    -ms-overflow-style: auto;  /* For Internet Explorer and Edge */
+  }
+
   ::-webkit-scrollbar {
     width: 0;
   }
