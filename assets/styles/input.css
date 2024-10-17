@@ -94,6 +94,27 @@
     transform: translateY(-120%);
   }
 
+  progress {
+    vertical-align: top;
+  }
+
+  ::-webkit-progress-bar {
+    background-color: #3E3E42;
+    border-radius: 20px;
+  }
+
+  ::-webkit-progress-value {
+    background-color: #EBEBEB;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+  }
+
+  ::-moz-progress-bar {
+    background-color: #3E3E42;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+  }
+
   /* .overlay-animate {
     animation: fadeIn 0.5s;
   }
@@ -154,8 +175,10 @@
   }
 
   .showa {
-    scrollbar-width: auto;  /* For Firefox */
-    -ms-overflow-style: auto;  /* For Internet Explorer and Edge */
+    scrollbar-width: auto;
+    /* For Firefox */
+    -ms-overflow-style: auto;
+    /* For Internet Explorer and Edge */
   }
 
   ::-webkit-scrollbar {
@@ -266,6 +289,14 @@ select.custom-select option {
 .show-backdrop {
   opacity: 1;
 }
+
+
+.animatedDialog {
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+  height: auto;
+}
+
 
 .show-dialog {
   opacity: 1;

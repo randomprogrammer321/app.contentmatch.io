@@ -2,26 +2,27 @@ let starRating = 0;
 const selectElement = document.querySelector(".custom-select");
 
 function adjustWidth() {
-    // Create a temporary span element to measure the width of the selected option
-    const tempSpan = document.createElement('span');
-    tempSpan.style.visibility = 'hidden';
-    tempSpan.style.position = 'absolute';
-    tempSpan.style.whiteSpace = 'nowrap';
-    document.body.appendChild(tempSpan);
+  // Create a temporary span element to measure the width of the selected option
+  const tempSpan = document.createElement("span");
+  tempSpan.style.visibility = "hidden";
+  tempSpan.style.position = "absolute";
+  tempSpan.style.whiteSpace = "nowrap";
+  document.body.appendChild(tempSpan);
 
-    // Set the text of the temporary span to the selected option's text
-    tempSpan.textContent = selectElement.options[selectElement.selectedIndex].textContent;
+  // Set the text of the temporary span to the selected option's text
+  tempSpan.textContent =
+    selectElement.options[selectElement.selectedIndex].textContent;
 
-    // Adjust the width of the select element based on the span width
-    selectElement.style.width = `${tempSpan.offsetWidth + 52}px`;
+  // Adjust the width of the select element based on the span width
+  selectElement.style.width = `${tempSpan.offsetWidth + 52}px`;
 
-    // Remove the temporary span from the DOM
-    document.body.removeChild(tempSpan);
+  // Remove the temporary span from the DOM
+  document.body.removeChild(tempSpan);
 }
 
-if(selectElement) {
+if (selectElement) {
   adjustWidth();
-  selectElement.addEventListener('change', adjustWidth);
+  selectElement.addEventListener("change", adjustWidth);
 }
 
 function fillStars(starIndex) {
@@ -50,7 +51,8 @@ function fillStars(starIndex) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const isMobile = window.innerWidth <= 649;
-  const feedBackBtn = document.querySelectorAll(".send-fdbk-btn");
+  const feedBackBtns = document.querySelectorAll(".send-fdbk-btn");
+  const feedBackBtn = document.querySelector(".send-fdbk-btn");
   const mobileDrawup = document.getElementById("if-mobile-drawup");
   const backDrop = document.getElementById("back-drop-6");
   const feedBkDialog = document.querySelector(".feed-bk-dialog");
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       feedBkDialog.classList.remove("show");
     });
 
-    feedBackBtn.forEach((button) => {
+    feedBackBtns.forEach((button) => {
       button.addEventListener("click", (event) => {
         console.log("clikce");
 
@@ -86,18 +88,32 @@ document.addEventListener("DOMContentLoaded", () => {
           mobileDrawup.classList.add("show");
         }
 
-        event.stopPropagation();
+      //  event.stopPropagation();
       });
     });
 
+    if(feedBackBtn) {
+    feedBackBtn.addEventListener("click", (event) => {
+      console.log("clikce");
+
+      backDrop.classList.remove("hidden");
+      mobileDrawup.classList.remove("hidden");
+      mobileDrawup.classList.add("show");
+
+      backDrop.classList.add("show");
+
+      if (mobileDrawup) {
+        mobileDrawup.classList.add("show");
+      }
+
+      event.stopPropagation();
+    });
+  }
     document.addEventListener("touchstart", (e) => {
       if (backDrop) {
         startY = e.touches[0].clientY;
       }
     });
-
-    
-      
 
     document.addEventListener("touchmove", (e) => {
       if (backDrop && backDrop.classList.contains("show")) {
@@ -120,8 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileDrawup.classList.remove("mobile-drawup");
     backDrop.classList.add("hidden");
     mobileDrawup.classList.add("hidden");
-    feedBackBtn.forEach((button) => {
+    feedBackBtns.forEach((button) => {
+     
       button.addEventListener("click", (event) => {
+        console.log("clickeds");
         backDrop.classList.remove("hidden");
         mobileDrawup.classList.remove("hidden");
 
@@ -130,6 +148,17 @@ document.addEventListener("DOMContentLoaded", () => {
           mobileDrawup.classList.add("show-dialog");
         }, 10);
       });
+    });
+
+    feedBackBtn.addEventListener("click", (event) => {
+      console.log("clicked");
+      backDrop.classList.remove("hidden");
+      mobileDrawup.classList.remove("hidden");
+
+      setTimeout(() => {
+        backDrop.classList.add("show-backdrop");
+        mobileDrawup.classList.add("show-dialog");
+      }, 10);
     });
 
     backDrop.addEventListener("click", () => {
@@ -142,14 +171,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     });
 
-      cancelEngage.addEventListener("click", () => {
-        backDrop.classList.remove("show-backdrop");
-        mobileDrawup.classList.remove("show-dialog");
+    cancelEngage.addEventListener("click", () => {
+      backDrop.classList.remove("show-backdrop");
+      mobileDrawup.classList.remove("show-dialog");
 
-        setTimeout(() => {
-          backDrop.classList.add("hidden");
-          mobileDrawup.classList.add("hidden");
-        }, 300);
-      });
+      setTimeout(() => {
+        backDrop.classList.add("hidden");
+        mobileDrawup.classList.add("hidden");
+      }, 300);
+    });
   }
 });
