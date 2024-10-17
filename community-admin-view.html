@@ -8,6 +8,134 @@
   </head>
   <body class="bg-primary font-geist">
     <main id="content" class="h-screen w-screen flex overflow-auto flex-row">
+       <!-- SUBSCRIBE DIALOG START -->
+       <div
+       id="sub-dia-back-drop"
+       class="inset-y-0 hidden z-40 h-screen w-screen bg-transparent sm:bg-custom12 fixed top-0 left-0"
+     ></div>
+     <div
+       id="sub-dia"
+       class="dialog z-50 hidden sm:m-auto bg-primary sm:bg-tranparent px-mpd w-full h-full sm:h-max sm:max-w-[680px] sm:backdrop-blur-40 rounded-[24px] pt-7 sm:bg-custom15 sm:border-custom1 sm:border-[0.5px] sm:p-10"
+     >
+       <div
+         class="flex items-center justify-between space-x-3 mb-6 sm:mb-10 sm:space-x-8"
+       >
+         <div>
+           <p class="text-secondary font-medium mb-1 text-base sm:mb-3 sm:text-[28px]">
+             Subscribe now for a free month
+           </p>
+           <p
+             class="font-normal text-secondary text-xs leading-[16.8px] sm:leading-[22.4px] sm:text-base"
+           >
+             Subscribe to Contentmatch premium to get an extra one month free
+             to access all premium features
+           </p>
+         </div>
+         <div class="flex-shrink-0 h-20 w-20">
+           <img
+             class="w-full h-full"
+             src="/assets/icon/wrapped-gift.svg"
+             alt=""
+           />
+         </div>
+       </div>
+       <div class="flex items-center mb-6 sm:mb-10">
+         <div
+           class="rounded-full overflow-hidden h-16 w-16 mr-3 sm:mr-5 sm:w-[100px] sm:h-[100px]"
+         >
+           <img
+             class="w-full h-full object-cover"
+             src="/assets/images/home/pp-placeholder.png"
+             alt=""
+           />
+         </div>
+         <div>
+           <div class="flex items-center mb-2 space-x-2">
+             <p class="text-custom2 font-medium text-sm sm:text-xl">
+               Macdonald Anyanwu
+             </p>
+             <div class="h-5 w-5">
+               <img
+                 class="w-full h-full"
+                 src="/assets/icon/verified.svg"
+                 alt=""
+               />
+             </div>
+             <div
+           class="flex items-center justify-center rounded-[20px] border border-custom1 text-custom3 px-3 text-xs font-medium h-[29px]"
+         >
+           Premium User
+         </div>
+           </div>
+           <p class="font-normal text-custom4 text-xs sm:text-base">
+             @macdonald222
+           </p>
+
+         </div>
+         
+       </div>
+
+       <div>
+         <p class="text-secondary font-medium text-sm sm:text-xl">
+           What you will enjoy
+         </p>
+         <div class="flex items-center gap-x-2 p-2">
+           <div class="h-5 w-5">
+             <img class="h-full w-full" src="/assets/icon/check.svg" alt="" />
+           </div>
+           <p class="font-medium text-custom2 text-xs sm:text-base">
+             Unrestricted direct messaging
+           </p>
+         </div>
+         <div class="flex items-center gap-x-2 p-2">
+           <div class="h-5 w-5">
+             <img class="h-full w-full" src="/assets/icon/check.svg" alt="" />
+           </div>
+           <p class="font-medium text-custom2 text-xs sm:text-base">
+             Ad-free experience
+           </p>
+         </div>
+         <div class="flex items-center gap-x-2 p-2">
+           <div class="h-5 w-5">
+             <img class="h-full w-full" src="/assets/icon/check.svg" alt="" />
+           </div>
+           <p class="font-medium text-custom2 text-xs sm:text-base">
+             Increased group participation (join more than 2 groups)
+           </p>
+         </div>
+         <div class="flex items-center gap-x-2 p-2">
+           <div class="h-5 w-5">
+             <img class="h-full w-full" src="/assets/icon/check.svg" alt="" />
+           </div>
+           <p class="font-medium text-custom2 text-xs sm:text-base">
+             Ability to create multiple groups
+           </p>
+         </div>
+         <div class="flex items-center gap-x-2 p-2">
+           <div class="h-5 w-5">
+             <img class="h-full w-full" src="/assets/icon/check.svg" alt="" />
+           </div>
+           <p class="font-medium text-custom2 text-xs sm:text-base">
+             Access to boost packs for increased reach
+           </p>
+         </div>
+         <div class="mt-10">
+           <button
+             class="w-full text-secondary bg-custom3 rounded-[40px] font-medium text-xs mb-2 h-11 sm:text-sm"
+           >
+             Try Now
+           </button>
+           <button
+           id="close-sub-dia"
+             class="w-full text-secondary border border-custom6 rounded-[40px] font-medium text-xs h-11 sm:text-sm"
+           >
+             Not Now
+           </button>
+         </div>
+       </div>
+     </div>
+     <!-- SUBSCRIBE DIALOG END -->
+
       <!-- CREATE A COMMUNITY DIALOG START -->
       <div
         id="create-com-back-drop"
@@ -515,7 +643,9 @@
         <div
           class="max-w-[564px] px-4 rounded-[24px] py-8 m-auto backdrop-blur-40 bg-custom15 border-custom1 border-[0.5px] sm:p-8 sm:shadow-custom1"
         >
-          <div class="mx-auto mb-5 sm:mb-6 w-[120px] h-[120px] sm:h-[334px] sm:w-[334px]">
+          <div
+            class="mx-auto mb-5 sm:mb-6 w-[120px] h-[120px] sm:h-[334px] sm:w-[334px]"
+          >
             <img
               class="w-full h-full"
               src="/assets/images/community-created-success.svg"
@@ -1185,7 +1315,7 @@
                   Friends
                 </p>
               </a>
-              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+              <button class="open-sub-dia flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
                   <img class="h-full w-full" src="/assets/logo/logo.svg" />
                 </div>
@@ -1194,7 +1324,7 @@
                 >
                   Get Premium
                 </p>
-              </a>
+              </button>
 
               <a href="#" class="flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
@@ -1466,12 +1596,14 @@
         <!-- HEADER END -->
 
         <div class="flex-1 w-full h-full overflow-y-auto">
+          <!-- TAB HEADER START -->
           <div class="flex justify-between mt-4 px-4 sm:px-10 sm:mt-[34px]">
             <p class="font-medium text-custom2 text-sm sm:text-xl">
               Community Members
             </p>
             <p class="font-medium text-custom2 text-sm sm:text-xl">80</p>
           </div>
+          <!-- TAB HEADER END -->
 
           <!-- TOP TAB START -->
           <div
@@ -1492,9 +1624,10 @@
           </div>
           <!-- TOP TAB END -->
 
+          <!-- SEARCH BAR START -->
           <div class="px-4 sm:px-10">
             <div
-              class="flex flex-1 h-9 items-center rounded-[32px] overflow-y-hidden bg-custom8 px-4 sm:px-10 sm:h-11 sm:mx-0"
+              class="flex flex-1 h-9 items-center rounded-[32px] overflow-y-hidden bg-custom8 px-5 sm:h-11 sm:mx-0"
             >
               <div class="flex items-center h-5 flex-1">
                 <input
@@ -1516,8 +1649,9 @@
               </div>
             </div>
           </div>
+          <!-- SEARCH BAR END -->
 
-          <!-- ACTIVE USERS SECTION START -->
+          <!-- ACTIVE USERS TAB START -->
           <div
             id="activeUserSection"
             class="mt-6 transition-opacity duration-1000 px-4 sm:mt-5 sm:px-10"
@@ -1940,15 +2074,433 @@
             </div>
             <!-- MEMBERS END -->
           </div>
-          <!-- ACTIVE USERS SECTION END -->
-        </div>
+          <!-- ACTIVE USERS TAB END -->
 
-        <!-- DISCUSSIONS SECTION START -->
-        <div
-          id="blockedUserSection"
-          class="content hidden opacity-0 transition-opacity duration-1000 mt-4 h-full flex-1 px-4"
-        ></div>
-        <!-- DISCUSSION TAB END -->
+          <!-- DISCUSSION TAB START -->
+          <div
+            id="blockedUserSection"
+            class="content hidden opacity-0 transition-opacity duration-1000 h-full flex-1 mt-6 px-4 sm:mt-5 sm:px-10"
+          >
+            <!-- MODERATORS START -->
+            <div class="flex justify-between my-1 sm:my-3">
+              <p class="font-medium text-custom2 text-sm sm:text-base">
+                Moderators
+              </p>
+              <p class="font-medium text-custom2 text-sm sm:text-xl">3</p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 overflow-hidde gap-4 sm:grid-cols-3 mb-2 sm:mb-3 py-3 sm:py-0"
+            >
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between items-center">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute -left-32 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between items-center">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute -left-32 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between items-center">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute z-50 -left-32 top-7 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+            </div>
+            <!-- MODERATORS END -->
+
+            <!-- MEMBERS START -->
+            <div class="flex justify-between mb-1 mt-4 sm:mt-[23px] sm:mb-4">
+              <p class="font-medium text-custom2 text-sm sm:text-base">
+                Members
+              </p>
+              <p class="font-medium text-custom2 text-sm sm:text-xl">3</p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 overflow-hidde gap-4 sm:grid-cols-3 mb-2 sm:mb-3 py-3 sm:py-0"
+            >
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute -left-32 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute -left-32 top-7 z-10 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+              <!-- GRID ITEM START -->
+              <div class="p-3 rounded-xl border border-custom22">
+                <div class="flex justify-between">
+                  <div
+                    class="rounded-full mb-2 overflow-hidden h-10 w-10 sm:w-12 sm:h-12"
+                  >
+                    <img
+                      class="h-full w-full object-cover"
+                      src="/assets/images/home/pp-placeholder.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="relative group">
+                    <button
+                      class="menuButton h-5 w-5 flex items-center justify-center mt-2"
+                    >
+                      <img
+                        class="h-full w-full"
+                        src="/assets/icon/home/v-menu.svg"
+                        alt="Menu"
+                      />
+                    </button>
+                    <div
+                      class="tooltip absolute z-50 -left-32 top-7 mt-2 opacity-0 invisible font-normal text-base transform scale-95 transition-all duration-300 ease-out bg-custom9 text-custom2 px-3 py-2 rounded-xl border border-custom6 shadow-combined"
+                    >
+                      <button
+                        class="cursor-pointer w-full flex items-center h-[46px] truncate border-b border-custom6"
+                      >
+                        Remove this user
+                      </button>
+                      <button
+                        class="assignModeratorBtn w-full cursor-pointer flex items-center h-[46px] truncate"
+                      >
+                        Assign as moderator
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-2 mb-3 flex flex-col gap-y-1">
+                  <p class="text-secondary font-medium text-xs sm:text-base">
+                    Corey Vaccaro
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">10</span>
+                    <span class="text-custom1">Videos</span>
+                  </p>
+                  <p class="font-medium text-xs sm:text-sm">
+                    <span class="text-white">719k</span>
+                    <span class="text-custom1">Disccussions</span>
+                  </p>
+                </div>
+                <button
+                  class="flex items-center justify-center w-full rounded-[32px] bg-custom3 font-bold text-secondary mb-2 text-xs sm:text-sm h-[33px] sm:h-9"
+                >
+                  Follow
+                </button>
+                <p
+                  class="underline font-medium text-custom34 text-ellipsis overflow-hidden line-clamp-1 text-xs sm:text-sm"
+                >
+                  Super engagement request
+                </p>
+              </div>
+              <!-- GRID ITEM END -->
+            </div>
+            <!-- MEMBERS END -->
+          </div>
+          <!-- DISCUSSION TAB END -->
+        </div>
       </section>
       <!-- COMMUNITIES SECTION END -->
 
@@ -2290,5 +2842,6 @@
     <script src="/assets/js/home/attach-image.js"></script>
     <script src="/assets/js/home/image-preview.js"></script>
     <script src="/assets/js/home/create-community.js"></script>
+    <script src="/assets/js/home/subscribe.js"></script>
   </body>
 </html>
