@@ -44,7 +44,8 @@ module.exports = {
         custom32: "rgba(15, 5, 29, 0.72)",
         custom33: "#07233D",
         custom34: "#CCCCCC",
-        custom35: "#EBF5FF"
+        custom35: "#EBF5FF",
+        custom36: "#8D8D8D"
       },
       screens: {
         "size1": "846px",
