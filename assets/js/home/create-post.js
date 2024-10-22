@@ -103,7 +103,21 @@ document.addEventListener("DOMContentLoaded", () => {
     "open-create-post-dialog"
   );
 
+  const openCreatePostDialogMobile = document.querySelector(
+    ".open-create-post-dialog"
+  );
+
   openCreatePostDialog.addEventListener("click", (event) => {
+    createPostStepOneBackDrop.classList.remove("hidden");
+    createPostDialogStepOne.classList.remove("hidden");
+
+    setTimeout(() => {
+      createPostStepOneBackDrop.classList.add("show-backdrop");
+      createPostDialogStepOne.classList.add("show-dialog");
+    }, 300);
+  });
+
+  openCreatePostDialogMobile.addEventListener("click", (event) => {
     createPostStepOneBackDrop.classList.remove("hidden");
     createPostDialogStepOne.classList.remove("hidden");
 
