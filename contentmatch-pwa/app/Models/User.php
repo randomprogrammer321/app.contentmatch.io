@@ -75,7 +75,7 @@ class User extends Authenticatable
     public function platforms(): BelongsToMany
     {
         return $this->belongsToMany(Platform::class, 'user_platform_links')
-            ->withPivot(['platform_username', 'platform_user_id', 'verified_at'])
+            ->withPivot(['platform_username', 'platform_user_id', 'platform_url', 'verified_at'])
             ->withTimestamps();
     }
 

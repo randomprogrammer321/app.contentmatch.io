@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('icon_url')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::create('user_interests', function (Blueprint $table) {
