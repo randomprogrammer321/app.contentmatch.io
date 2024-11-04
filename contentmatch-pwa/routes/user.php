@@ -70,7 +70,7 @@ Route::middleware(['auth'])->prefix('onboarding')->group(function () {
     Route::POST('/step1', [OnboardingController::class, 'saveStep1'])->name('step1.save');
     
     Route::get('/step2', [OnboardingController::class, 'showStep2'])->name('step2');
-    Route::put('/step2', [OnboardingController::class, 'saveStep2'])->name('step2.save');
+    Route::post('/step2', [OnboardingController::class, 'saveStep2'])->name('step2.save');
     
     Route::get('/step3', [OnboardingController::class, 'showStep3'])->name('step3');
     Route::put('/step3', [OnboardingController::class, 'saveStep3'])->name('step3.save');

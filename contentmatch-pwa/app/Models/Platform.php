@@ -12,24 +12,15 @@ class Platform extends Model
 
     protected $fillable = [
         'name',
-        'icon_url',
+        'display_name',
+        'icon_path',
         'is_active'
     ];
 
-    protected $casts = [
-        'is_active' => 'boolean'
-    ];
-
-    // Relationships
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_platform_links')
-            ->withPivot(['platform_username', 'platform_user_id', 'verified_at'])
+            ->withPivot(['platform_username', 'platform_user_id', 'platform_url', 'verified_at'])
             ->withTimestamps();
-    }
-
-    public function content()
-    {
-        return $this->hasMany(Content::class);
     }
 }
