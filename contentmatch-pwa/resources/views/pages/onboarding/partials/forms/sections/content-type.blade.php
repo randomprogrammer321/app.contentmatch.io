@@ -3,19 +3,11 @@
         What type of content do you create?
     </p>
     <div class="grid grid-cols-3 mt-3 gap-y-3 gap-x-2 sm:gap-x-[14px] sm:gap-y-6 sm:mt-5">
-        @foreach([
-            'Gaming',
-            'Vlogging',
-            'Beauty & Fashion',
-            'Technology',
-            'Educational',
-            'Fitness & Health',
-            'DIY & Crafts',
-            'Food & Cooking',
-            'Music'
-        ] as $contentType)
-            <button type="button" data-content-type="{{ $contentType }}" class="content-type-btn w-full border text-custom2 border-custom1 text-xs font-normal text-center rounded-[40px] h-[33px] size1:h-[46px] sm:text-base">
-                {{ $contentType }}
+        @foreach(\App\Models\Category::where('is_active', true)->get() as $category)
+            <button type="button" 
+                data-content-type="{{ $category->name }}" 
+                class="content-type-btn w-full border text-custom2 border-custom1 text-xs font-normal text-center rounded-[40px] h-[33px] size1:h-[46px] sm:text-base">
+                {{ $category->name }}
             </button>
         @endforeach
     </div>
