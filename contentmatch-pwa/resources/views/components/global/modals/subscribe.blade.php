@@ -52,10 +52,10 @@
 
     {{-- Action Buttons --}}
     <div class="mt-10">
-        <button class="w-full text-secondary bg-custom3 rounded-[40px] font-medium text-xs mb-2 h-11 sm:text-sm">
+        <button onclick="window.location.href='/premium'" class="w-full text-secondary bg-custom3 rounded-[40px] font-medium text-xs mb-2 h-11 sm:text-sm">
             Try Now
         </button>
-        <button id="close-sub-dia" class="w-full text-secondary border border-custom6 rounded-[40px] font-medium text-xs h-11 sm:text-sm">
+        <button id="close-sub-dia" class="w-full     text-secondary border border-custom6 rounded-[40px] font-medium text-xs h-11 sm:text-sm">
             Not Now
         </button>
     </div>

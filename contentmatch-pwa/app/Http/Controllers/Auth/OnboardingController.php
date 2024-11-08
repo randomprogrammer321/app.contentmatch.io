@@ -10,6 +10,10 @@ use Illuminate\Validation\Rule;
 use Blaspsoft\Blasp\Facades\Blasp;
 use App\Models\Platform;
 use App\Models\Interest;
+use App\Models\AudienceSize;
+use App\Models\Category;
+use App\Models\OnboardingStep;
+use App\Models\SupportiveCause;
 
 class OnboardingController extends Controller
 {
@@ -23,11 +27,6 @@ class OnboardingController extends Controller
     public function saveStep1(Request $request)
     {
         try {
-            // Log incoming request data
-            \Log::info('Step 1 Request Data:', [
-                'all_data' => $request->all()
-            ]);
-
             $validated = $request->validate([
                 'username' => [
                     'required',
@@ -72,27 +71,7 @@ class OnboardingController extends Controller
                 ],
             ]);
 
-            // Log validated data
-            \Log::info('Step 1 Validated Data:', [
-                'validated' => $validated
-            ]);
 
-            // Additional profanity check with Blasp
-            $checkUsername = Blasp::check($validated['username']);
-            $checkFullName = Blasp::check($validated['full_name']);
-            $checkBio = Blasp::check($validated['bio']);
-
-            if ($checkUsername->hasProfanity() || $checkFullName->hasProfanity() || $checkBio->hasProfanity()) {
-                \Log::warning('Profanity detected in Step 1:', [
-                    'username_profanity' => $checkUsername->hasProfanity(),
-                    'fullname_profanity' => $checkFullName->hasProfanity(),
-                    'bio_profanity' => $checkBio->hasProfanity()
-                ]);
-                
-                return back()
-                    ->withInput()
-                    ->withErrors(['message' => 'Please keep it clean! Inappropriate content detected.']);
-            }
 
             $user = auth()->user();
 
@@ -117,21 +96,10 @@ class OnboardingController extends Controller
             }
 
             // Log data before update
-            \Log::info('About to update user:', [
-                'user_id' => $user->id,
-                'update_data' => [
-                    'username' => $validated['username'],
-                    'full_name' => $validated['full_name'],
-                    'bio' => $validated['bio'],
-                    'dob' => $validated['dob'],
-                    'gender' => $genderMap[$validated['gender']],
-                    'profile_image_url' => $validated['profile_image_url'] ?? $user->profile_image_url,
-                    'banner_url' => $validated['banner_url'] ?? $user->banner_url,
-                ]
-            ]);
+           
 
             // Update user profile
-            $updated = $user->update([
+            $user->update([
                 'username' => $validated['username'],
                 'full_name' => $validated['full_name'],
                 'bio' => $validated['bio'],
@@ -143,27 +111,19 @@ class OnboardingController extends Controller
 
             // Log update result
             \Log::info('User update result:', [
-                'success' => $updated,
+                'success' => true,
                 'user_after_update' => $user->fresh()->toArray()
             ]);
 
-            // Update onboarding progress
-            $progress = $user->onboardingProgress()->updateOrCreate(
-                ['step' => 1],
-                ['completed_at' => now()]
-            );
-
-            \Log::info('Onboarding progress updated:', [
-                'progress' => $progress->toArray()
-            ]);
+            // Get the step from onboarding_steps table
+          
 
             return redirect()->route('step2');
 
         } catch (\Exception $e) {
             \Log::error('Onboarding Step 1 Error:', [
                 'message' => $e->getMessage(),
-                'trace' => $e->getTraceAsString(),
-                'request_data' => $request->all()
+                'trace' => $e->getTraceAsString()
             ]);
             
             return back()
@@ -227,11 +187,11 @@ class OnboardingController extends Controller
 
             $user->platforms()->syncWithoutDetaching($updates);
 
-            $progress = $user->onboardingProgress()->updateOrCreate(
-                ['step' => 2],
-                ['completed_at' => now()]
-            );
+        
 
+            \Log::info('Step 2 completed, redirecting to step3');
+
+            // Add return statement with redirect()->to()
             return redirect()->route('step3');
 
         } catch (\Exception $e) {
@@ -251,38 +211,83 @@ class OnboardingController extends Controller
         try {
             $validated = $request->validate([
                 'interests' => ['required', 'array', 'min:1'],
-                'interests.*' => ['exists:interests,id']
+                'interests.*' => ['exists:interests,id'],
+                'causes' => ['required', 'array', 'min:1'],
+                'causes.*' => ['exists:supportive_causes,id']
             ]);
 
             $user = auth()->user();
             
-            // Sync the selected interests
-            $user->interests()->sync($validated['interests']);
+            // Sync interests - only active ones
+            $interests = Interest::whereIn('id', $validated['interests'])
+                ->where('is_active', true)
+                ->get()
+                ->pluck('id');
+            $user->interests()->sync($interests);
 
-            // Update onboarding progress
-            $user->onboardingProgress()->updateOrCreate(
-                ['step' => 3],
-                ['completed_at' => now()]
-            );
+            // Sync causes - only active ones
+            $causes = SupportiveCause::whereIn('id', $validated['causes'])
+                ->where('is_active', true)
+                ->get()
+                ->pluck('id');
+            $user->supportiveCauses()->sync($causes);
+
+            // Get the step
+            // $step = OnboardingStep::where('slug', 'step3')->first();
+            
+            // // Update onboarding progressx
+            // $user->onboardingProgress()->updateOrCreate(
+            //     ['step_id' => $step->id],
+            //     [
+            //         'data' => $validated,
+            //         'completed_at' => now()
+            //     ]
+            // );
 
             return redirect()->route('step4');
 
         } catch (\Exception $e) {
             return back()
                 ->withInput()
-                ->withErrors(['message' => 'Error saving interests: ' . $e->getMessage()]);
+                ->withErrors(['message' => 'Error saving preferences: ' . $e->getMessage()]);
         }
     }
 
     public function showStep4()
     {
-        return view('pages.onboarding.step4');
+        $audienceSizes = AudienceSize::where('is_active', true)->get();
+        $categories = Category::where('is_active', true)->get();
+        
+        return view('pages.onboarding.step4', compact('audienceSizes', 'categories'));
     }
 
     public function saveStep4(Request $request)
     {
-        // Validate and save more social links
-        return redirect()->route('onboarding.step5');
+        try {
+            $audienceSize = AudienceSize::find($request->audience_size);
+            $category = Category::find($request->content_type);
+
+            if (!$audienceSize || !$category) {
+                return back()->withErrors(['message' => 'Invalid selection']);
+            }
+
+            $user = auth()->user();
+
+            // Simple attach/sync without platform_id
+            $user->audienceSizes()->sync([$audienceSize->id]);
+            $user->categories()->sync([$category->id]);
+
+
+            // I need to update the users onboarding progress completed_at using the model
+            
+            $user->completeOnboarding();
+            return redirect()->route('step5');
+
+        } catch (\Exception $e) {
+            return back()
+                ->withInput()
+                ->withErrors(['message' => 'Error saving preferences: ' . $e->getMessage()]);
+        }
     }
 
     public function showStep5()

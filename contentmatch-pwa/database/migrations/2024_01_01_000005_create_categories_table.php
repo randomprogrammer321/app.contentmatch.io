@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('icon_url')->nullable();
             $table->text('description')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
 

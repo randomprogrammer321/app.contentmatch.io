@@ -66,7 +66,7 @@
                 </a>
 
                 {{-- Settings --}}
-                <a href="{{ route('settings.billing') }}" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+                <a href="{{ route('settings.profile') }}" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
                     <div class="h-6 w-6">
                         <img class="h-full w-full" src="{{ asset('assets/icon/nav/settings-inactive.svg') }}"/>
                     </div>
@@ -111,9 +111,9 @@
 
         {{-- Sidebar Footer --}}
         <div class="space-y-2 pl-5 sm:pl-0">
-            <a class="flex items-center text-custom4 font-normal h-9 text-base" href="#">How to use ContentMatch</a>
-            <a class="flex items-center text-custom4 font-normal text-base h-9" href="#">Learn how to place ADs</a>
-            <a class="flex items-center text-custom4 font-normal text-base h-9" href="#">Contact Support</a>
+            <a class="flex items-center text-custom4 font-normal h-9 text-base" target="_blank" href="https://contentmatch.io/our-app/">How to use ContentMatch</a>
+            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://discord.gg/contentmatch">Join our Discord</a>
+            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://support.contentmatch.com/contact">Contact Support</a>
         </div>
         <div class="h-20"></div>
     </div>

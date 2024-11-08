@@ -13,55 +13,38 @@ class OnboardingStepSeeder extends Seeder
         $steps = [
             [
                 'name' => 'Profile Setup',
+                'slug' => 'step1',
                 'description' => 'Set up your basic profile information',
                 'order' => 1,
-                'is_required' => true
             ],
             [
                 'name' => 'Social Links',
-                'description' => 'Connect your social media accounts',
+                'slug' => 'step2',
+                'description' => 'Add your social media links',
                 'order' => 2,
-                'is_required' => true
             ],
             [
-                'name' => 'Interests & Causes',
-                'description' => 'Tell us about your interests and causes',
+                'name' => 'Interests',
+                'slug' => 'step3',
+                'description' => 'Select your interests',
                 'order' => 3,
-                'is_required' => true
             ],
             [
                 'name' => 'Content Details',
-                'description' => 'Share details about your content',
+                'slug' => 'step4',
+                'description' => 'Tell us about your content',
                 'order' => 4,
-                'is_required' => true
             ],
-            [
-                'name' => 'Join Communities',
-                'description' => 'Join relevant communities',
-                'order' => 5,
-                'is_required' => false
-            ],
-            [
-                'name' => 'Follow Creators',
-                'description' => 'Follow other creators',
-                'order' => 6,
-                'is_required' => false
-            ],
-            [
-                'name' => 'Complete',
-                'description' => 'Complete your onboarding',
-                'order' => 7,
-                'is_required' => true
-            ],
+            // Add other steps as needed
         ];
 
         foreach ($steps as $step) {
             OnboardingStep::create([
                 'name' => $step['name'],
-                'slug' => Str::slug($step['name']),
+                'slug' => $step['slug'],
                 'description' => $step['description'],
                 'order' => $step['order'],
-                'is_required' => $step['is_required'],
+                'is_required' => true,
                 'is_active' => true,
             ]);
         }

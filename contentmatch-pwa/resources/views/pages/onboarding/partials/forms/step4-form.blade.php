@@ -1,5 +1,8 @@
 {{-- Content Creator Details Form --}}
-<form id="about-two" class="flex justify-center items-start animate-fade-in flex-1 sm:py-10 sm:items-center">
+<form action="{{ route('step4.save') }}" method="POST" id="about-two" class="flex justify-center items-start animate-fade-in flex-1 sm:py-10 sm:items-center">
+    
+    
+    
     <div class="max-w-[720px] w-full p-0 sm:border-[0.5px] sm:backdrop-blur-40 rounded-[24px] sm:p-[40px] sm:bg-custom5 sm:border-custom1">
         <button id="about-two-bk-btn" type="button" class="flex items-center transition-transform duration-200 hover:scale-105">
             <div class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]">
@@ -19,7 +22,7 @@
         
         {{-- Audience Size Section --}}
         @include('pages.onboarding.partials.forms.sections.audience-size')
-
+        @csrf
         <button type="submit" class="outline-none shadow-combined h-[41px] mt-4 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-[44px] sm:mt-10 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg">
             Continue
         </button>

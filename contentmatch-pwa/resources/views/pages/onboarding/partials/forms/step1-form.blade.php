@@ -124,9 +124,7 @@
             </div>
         </div>
 
-        <button type="submit" class="outline-none shadow-combined h-[41px] mt-8 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-[44px] sm:mt-12 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg">
-            Continue
-        </button>
+        <input type="submit" value="Continue" class="outline-none shadow-combined h-[41px] mt-8 rounded-[40px] text-custom2 bg-custom3 w-full text-xs sm:text-sm sm:h-[44px] sm:mt-12 transition-transform duration-200 hover:translate-y-[-2px] hover:shadow-lg">
     </div>
 </form>
 

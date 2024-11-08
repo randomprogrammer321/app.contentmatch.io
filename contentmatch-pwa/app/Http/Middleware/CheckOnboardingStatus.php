@@ -8,22 +8,19 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CheckOnboardingStatus
 {
-    /**
-     * Handle an incoming request.
-     */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() && !auth()->user()->onboarding_completed_at) {
-            // Check if we're already on an onboarding route
-            if (!$request->is('onboarding*')) {
-                // Get the user's latest onboarding progress or default to step1
-                $latestStep = auth()->user()->onboardingProgress()
-                    ->latest()
-                    ->first();
+        if (auth()->check()) {
+            $user = auth()->user();
 
-                $nextStep = $latestStep ? 'step' . ($latestStep->step + 1) : 'step1';
-                
-                return redirect()->route($nextStep); // Redirect to the next onboarding step
+            // If onboarding is completed and trying to access onboarding pages
+            if ($user->onboarding_completed_at && $request->is('onboarding*')) {
+                return redirect()->route('settings.index');
+            }
+
+            // If onboarding is not completed and trying to access non-onboarding pages
+            if (!$user->onboarding_completed_at && !$request->is('onboarding*')) {
+                return redirect()->route('step1');
             }
         }
 

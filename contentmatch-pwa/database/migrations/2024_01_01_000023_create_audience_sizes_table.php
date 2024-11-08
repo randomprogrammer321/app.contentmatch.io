@@ -23,10 +23,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('audience_size_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('platform_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
             
-            $table->unique(['user_id', 'platform_id']);
+            $table->unique(['user_id', 'audience_size_id']);
         });
     }
 

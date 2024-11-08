@@ -6,7 +6,7 @@
         @foreach(\App\Models\Purpose::where('is_active', true)->orderBy('order')->get() as $purpose)
             <button type="button" 
                     data-purpose="{{ $purpose->id }}" 
-                    class="purpose-btn w-full border text-custom2 border-custom1 text-xs font-normal text-center rounded-[40px] h-[33px] size1:h-[46px] sm:text-base hover:bg-custom3 hover:border-custom3 transition-colors {{ in_array($purpose->id, old('purposes', [])) ? 'bg-custom3 border-custom3' : '' }}">
+                    class="purpose-btn w-full border text-custom2 border-custom1 text-xs font-normal text-center rounded-[40px] h-[33px] size1:h-[46px] sm:text-base">
                 {{ $purpose->name }}
             </button>
         @endforeach
@@ -14,28 +14,39 @@
     <input type="hidden" name="purposes[]" id="selected-purposes">
 </div>
 
-@push('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+// Immediate execution
+console.log('Purpose script loaded');
+
+// Wait for DOM
+window.addEventListener('load', function() {
+    console.log('Window loaded');
+    
     const purposeButtons = document.querySelectorAll('.purpose-btn');
     const selectedPurposesInput = document.getElementById('selected-purposes');
-    const selectedPurposes = new Set();
+    let selectedPurposes = new Set();
+
+    console.log('Found buttons:', purposeButtons.length);
 
     purposeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            console.log('Button clicked:', this.dataset.purpose);
+            
             const purposeId = this.dataset.purpose;
             
             if (selectedPurposes.has(purposeId)) {
                 selectedPurposes.delete(purposeId);
-                this.classList.remove('bg-custom3', 'border-custom3');
+                this.classList.remove('bg-white', 'text-black');
+                this.classList.add('text-custom2');
             } else {
                 selectedPurposes.add(purposeId);
-                this.classList.add('bg-custom3', 'border-custom3');
+                this.classList.add('bg-white', 'text-black');
+                this.classList.remove('text-custom2');
             }
 
             selectedPurposesInput.value = Array.from(selectedPurposes).join(',');
+            console.log('Updated purposes:', selectedPurposesInput.value);
         });
     });
 });
 </script>
-@endpush

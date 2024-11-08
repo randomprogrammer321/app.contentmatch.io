@@ -2,7 +2,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <title>{{ config('app.name') }}</title>
@@ -14,6 +13,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="ContentMatch">
     <link rel="apple-touch-icon" href="{{ asset('assets/logo/logo-192x192.png') }}">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     
     @include('components.global.meta-tags')
     <link href="{{ asset('css/output.css') }}" rel="stylesheet" />
@@ -55,7 +57,11 @@
     </script>
 
     {{-- Scripts --}}
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="module" src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/home/side-bar.js') }}"></script>
+    <script src="{{ asset('js/home/create-post.js') }}"></script>
+    <script src="{{ asset('js/home/feedback-dialog.js') }}"></script>
+    <script src="{{ asset('js/home/subscribe.js') }}"></script>
     <script src="https://js.stripe.com/v3/" defer></script>
 
     @stack('scripts')

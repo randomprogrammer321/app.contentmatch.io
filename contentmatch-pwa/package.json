@@ -1,6 +1,5 @@
 {
     "private": true,
- 
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -20,6 +19,7 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "babel": "^6.23.0",
         "glob": "^11.0.0"
     }
 }

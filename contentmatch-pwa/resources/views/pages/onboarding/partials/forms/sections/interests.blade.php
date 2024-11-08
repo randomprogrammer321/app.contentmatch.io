@@ -16,4 +16,31 @@
             </button>
         @endforeach
     </div>
+    <input type="hidden" name="interests[]" id="selected-interests">
 </div>
+
+<script>
+window.addEventListener('load', function() {
+    const interestButtons = document.querySelectorAll('.interest-btn');
+    const selectedInterestsInput = document.getElementById('selected-interests');
+    let selectedInterests = new Set();
+
+    interestButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const interestId = this.dataset.interest;
+            
+            if (selectedInterests.has(interestId)) {
+                selectedInterests.delete(interestId);
+                this.classList.remove('bg-white', 'text-black');
+                this.classList.add('text-custom2');
+            } else {
+                selectedInterests.add(interestId);
+                this.classList.add('bg-white', 'text-black');
+                this.classList.remove('text-custom2');
+            }
+
+            selectedInterestsInput.value = Array.from(selectedInterests).join(',');
+        });
+    });
+});
+</script>

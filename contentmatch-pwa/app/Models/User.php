@@ -189,7 +189,7 @@ class User extends Authenticatable
         return $preferences[$type] ?? true;
     }
 
-    public function onboardingProgress(): HasMany
+    public function onboardingProgress()
     {
         return $this->hasMany(UserOnboardingProgress::class);
     }
@@ -235,6 +235,19 @@ class User extends Authenticatable
     public function purposes(): BelongsToMany
     {
         return $this->belongsToMany(Purpose::class, 'user_purposes')
+            ->withTimestamps();
+    }
+
+    public function audienceSizes(): BelongsToMany
+    {
+        return $this->belongsToMany(AudienceSize::class, 'user_audience_sizes')
+            ->withPivot('platform_id')
+            ->withTimestamps();
+    }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class, 'user_categories')
             ->withTimestamps();
     }
 }

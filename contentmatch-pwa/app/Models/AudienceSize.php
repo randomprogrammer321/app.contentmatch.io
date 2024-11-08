@@ -27,7 +27,6 @@ class AudienceSize extends Model
     public function users()
     {
         return $this->belongsToMany(User::class, 'user_audience_sizes')
-            ->withPivot('platform_id')
             ->withTimestamps();
     }
 }

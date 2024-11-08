@@ -12,6 +12,7 @@ use App\Http\Controllers\BillingPortalController;
 // Change 'guest' to ['auth', 'onboarding.check'] for protected routes
 Route::middleware(['auth', 'onboarding.check'])->group(function () {
     // Main Feed
+    Route::get('/', [FeedController::class, 'index'])->name('home');
     Route::get('/feed', [FeedController::class, 'index'])->name('feed.home');
     Route::get('/following', [FeedController::class, 'following'])->name('feed.following');
     // Trending/Explore Feed
@@ -22,7 +23,8 @@ Route::middleware(['auth', 'onboarding.check'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     // User Settings
     Route::prefix('settings')->group(function () {
-        Route::get('/', [SettingsController::class, 'index'])->name('settings.index');
+
+        Route::get('/', [SettingsController::class, 'profile'])->name('settings.index');
         
         // Profile Settings
         Route::get('/profile', [SettingsController::class, 'profile'])->name('settings.profile');
@@ -67,17 +69,26 @@ Route::middleware(['auth'])->group(function () {
 // Onboarding routes with just auth middleware
 Route::middleware(['auth'])->prefix('onboarding')->group(function () {
     Route::get('/step1', [OnboardingController::class, 'showStep1'])->name('step1');
-    Route::POST('/step1', [OnboardingController::class, 'saveStep1'])->name('step1.save');
+    Route::post('/step1', [OnboardingController::class, 'saveStep1'])->name('step1.save');
     
     Route::get('/step2', [OnboardingController::class, 'showStep2'])->name('step2');
     Route::post('/step2', [OnboardingController::class, 'saveStep2'])->name('step2.save');
     
     Route::get('/step3', [OnboardingController::class, 'showStep3'])->name('step3');
-    Route::put('/step3', [OnboardingController::class, 'saveStep3'])->name('step3.save');
+    Route::post('/step3', [OnboardingController::class, 'saveStep3'])->name('step3.save');
+    
     Route::get('/step4', [OnboardingController::class, 'showStep4'])->name('step4');
+    Route::post('/step4', [OnboardingController::class, 'saveStep4'])->name('step4.save');
+    
     Route::get('/step5', [OnboardingController::class, 'showStep5'])->name('step5');
+    Route::post('/step5', [OnboardingController::class, 'saveStep5'])->name('step5.save');
+    
     Route::get('/step6', [OnboardingController::class, 'showStep6'])->name('step6');
+    Route::post('/step6', [OnboardingController::class, 'saveStep6'])->name('step6.save');
+    
     Route::get('/step7', [OnboardingController::class, 'showStep7'])->name('step7');
+    Route::post('/step7', [OnboardingController::class, 'saveStep7'])->name('step7.save');
+    
     Route::get('/skip', [OnboardingController::class, 'skip'])->name('skip');
 });
 

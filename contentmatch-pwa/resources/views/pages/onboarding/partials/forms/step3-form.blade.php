@@ -1,5 +1,6 @@
 {{-- About You Form - Interests & Causes --}}
-<form id="about-one" class="flex justify-center items-start animate-fade-in flex-1 sm:py-10 sm:items-center">
+<form action="{{ route('step3.save') }}" method="POST"   id="about-one" class="flex justify-center items-start animate-fade-in flex-1 sm:py-10 sm:items-center">
+    @csrf
     <div class="max-w-[720px] w-full p-0 sm:border-[0.5px] sm:backdrop-blur-40 rounded-[24px] sm:p-[40px] sm:bg-custom5 sm:border-custom1">
         <button id="about-one-bk-btn" type="button" class="flex items-center transition-transform duration-200 hover:scale-105">
             <div class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]">
