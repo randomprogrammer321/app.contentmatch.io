@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>{{ config('app.name') }}</title>
+    <title>@yield('title')</title>
     
     {{-- PWA Meta Tags --}}
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ContentMatch">
     <link rel="apple-touch-icon" href="{{ asset('assets/logo/logo-192x192.png') }}">
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    
+    @livewireStyles
+
     @include('components.global.meta-tags')
     <link href="{{ asset('css/output.css') }}" rel="stylesheet" />
     @stack('styles')
@@ -60,9 +62,12 @@
     <script type="module" src="{{ asset('js/home.js') }}"></script>
     <script src="{{ asset('js/home/side-bar.js') }}"></script>
     <script src="{{ asset('js/home/create-post.js') }}"></script>
+    <script src="{{ asset('js/home/image-preview.js') }}"></script>
     <script src="{{ asset('js/home/feedback-dialog.js') }}"></script>
     <script src="{{ asset('js/home/subscribe.js') }}"></script>
+    <script src="{{ asset('js/home/post.js') }}"></script>
     <script src="https://js.stripe.com/v3/" defer></script>
+    @livewireScripts
 
     @stack('scripts')
 </body>

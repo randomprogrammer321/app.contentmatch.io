@@ -6,8 +6,19 @@
                 <img class="h-full w-full object-cover" src="{{ asset('assets/images/home/pp-placeholder.png') }}"/>
             </div>
             <div class="ml-2">
-                <p class="text-sm leading-[19.6px] mb-1 text-white">{{ auth()->user()->name ?? 'User Name' }}</p>
-                <p class="text-custom4 text-xs sm:text-sm">You are currently a free user</p>
+                <p class="text-sm leading-[19.6px] mb-1 text-white flex items-center">
+                    {{ auth()->user()->username ?? 'User Name' }}
+                    @if(auth()->user()->is_verified)
+                        <img class="ml-1" src="{{ asset('assets/icon/verified.svg') }}" alt="">
+                    @endif
+                </p>
+                <p class="text-custom4 text-xs sm:text-sm">
+                    @if(auth()->user()->is_premium)
+                        You are currently a Premium user
+                    @else
+                        You are currently a free user
+                    @endif
+                </p>
             </div>
         </div>
     </div>
@@ -16,12 +27,26 @@
     <div class="ml-5 max-w-[250px] pt-3 size3:ml-10">
         {{-- Premium Card --}}
         <div class="p-3 rounded-xl border border-custom6 mb-3 size5:mb-0 size5:p-0 size5:border-none">
-            <p class="font-bold text-base leading-[22.4px] text-white sm:leading-[28px] sm:text-xl">Get Premium</p>
+            <p class="font-bold text-base leading-[22.4px] text-white sm:leading-[28px] sm:text-xl">      
+            @if(auth()->user()->is_premium)   
+            Thank You! Premium user 
+           
+            @else  Get Premium 
+            @endif
+            </p>
             <p class="text-custom4 font-normal text-xs mt-2 leading-[16.8px] sm:leading-[19.6px] sm:text-sm">
+            @if(auth()->user()->is_premium)   
+                You are currently a Premium user, Thank you! for your support!
+            @else
                 Gain access to premium features, more visibiliy & engagements and priority support
+            @endif
             </p>
             <button class="open-sub-dia flex text-xs mt-2 items-center text-custom9 px-3 h-[33px] rounded-[32px] bg-custom11">
-                Subscribe
+                @if(auth()->user()->is_premium)
+                    Manage Subscription
+                @else
+                    Subscribe
+                @endif
             </button>
         </div>
 

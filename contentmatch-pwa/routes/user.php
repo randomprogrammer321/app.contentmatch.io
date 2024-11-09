@@ -14,13 +14,14 @@ Route::middleware(['auth', 'onboarding.check'])->group(function () {
     // Main Feed
     Route::get('/', [FeedController::class, 'index'])->name('home');
     Route::get('/feed', [FeedController::class, 'index'])->name('feed.home');
-    Route::get('/following', [FeedController::class, 'following'])->name('feed.following');
+    Route::get('/feed/following', [FeedController::class, 'following'])->name('feed.following');
+    Route::get('/feed/communities', [FeedController::class, 'communities'])->name('feed.communities');
     // Trending/Explore Feed
 });
 
 // Change 'guest' to ['auth', 'onboarding.check'] for protected routes
 // Route::middleware(['auth', 'onboarding.check'])->group(function () {
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // User Settings
     Route::prefix('settings')->group(function () {
 

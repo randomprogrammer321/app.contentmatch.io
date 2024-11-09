@@ -72,10 +72,96 @@
                     </div>
                     <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">Settings</p>
                 </a>
+
+                {{-- Logout --}}
+                @if(auth()->check())
+                    <a href="{{ route('logout') }}" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+                        <div class="h-6 w-6">
+                            <img class="h-full w-full" src="{{ asset('assets/icon/nav/log-out.svg') }}"/>
+                        </div>
+                    </a>
+                @endif
             </div>
         </nav>
 
+     
+
+        <nav class="flex flex-col w-full sm:hidden">
+            <!-- PROFILE CARD START -->
+            <div class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10">
+              <div class="flex">
+                <div class="h-10 w-10 rounded-full">
+                    <img class="h-full w-full object-cover" src="{{ asset('assets/images/home/pp-placeholder.png') }}"/>
+                </div>
+                <div class="ml-2">
+                  <p class="text-sm leading-[19.6px] mb-1 text-white flex items-center">{{ auth()->user()->username ?? 'User Name' }}
+                    @if(auth()->user()->is_premium)
+                        <img class="ml-1" src="{{ asset('assets/icon/verified.svg') }}" alt="">
+                    @endif
+                  </p>
+                  <p class="text-custom4 text-xs sm:text-sm">
+                    @if(auth()->user()->is_premium)
+                        Manage Your Premium 
+                    @else
+                        You are currently a free user
+                    @endif
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- PROFILE CARD END -->
+
+            <!-- MOBILE NAV LINK START -->
+            <div class="border-b border-custom6 mx-5">
+              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="assets/icon/nav/profile.svg">
+                </div>
+                <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                  Profile
+                </p>
+              </a>
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="assets/icon/nav/friends-inactive.svg">
+                </div>
+                <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                  Friends
+                </p>
+              </a>
+              <button class="open-sub-dia flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="assets/logo/logo.svg">
+                </div>
+                <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                  Get Premium
+                </p>
+              </button>
+
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="assets/icon/nav/settings-inactive.svg">
+                </div>
+                <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                  Settings
+                </p>
+              </a>
+              @if(auth()->check())
+              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+                <div class="h-6 w-6">
+                  <img class="h-full w-full" src="assets/icon/nav/settings-inactive.svg">
+                </div>
+                <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                  Settings
+                </p>
+              </a>
+              @endif
+            </div>
+            <!-- MOBILE NAV LINKS END -->
+          </nav>
+
         {{-- Active Communities Section --}}
+
         <div class="w-full">
             <div class="border-b border-custom6 mb-5 mx-5 pt-5 pb-2 sm:mb-7 sm:pb-5 sm:ml-0">
                 <p class="uppercase text-sm text-custom4 font-normal sm:text-base">active communities</p>
@@ -113,7 +199,7 @@
         <div class="space-y-2 pl-5 sm:pl-0">
             <a class="flex items-center text-custom4 font-normal h-9 text-base" target="_blank" href="https://contentmatch.io/our-app/">How to use ContentMatch</a>
             <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://discord.gg/contentmatch">Join our Discord</a>
-            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://support.contentmatch.com/contact">Contact Support</a>
+            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://support.contentmatch.io/en/customer/create-ticket/">Contact Support</a>
         </div>
         <div class="h-20"></div>
     </div>

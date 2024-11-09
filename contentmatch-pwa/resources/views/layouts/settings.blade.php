@@ -58,8 +58,11 @@
     </script>
 
     {{-- Scripts --}}
-    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="{{ asset('js/home/subscribe.js') }}"></script>
     <script src="https://js.stripe.com/v3/" defer></script>
+    <script src="{{ asset('js/home/image-preview.js') }}"></script>
+    <script src="{{ asset('js/home/side-bar.js') }}"></script>
 
     @stack('scripts')
 </body>

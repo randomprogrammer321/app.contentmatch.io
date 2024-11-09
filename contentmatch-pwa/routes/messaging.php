@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Message\MessageController;
 
-Route::middleware('guest')->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // Message Center
     Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
     

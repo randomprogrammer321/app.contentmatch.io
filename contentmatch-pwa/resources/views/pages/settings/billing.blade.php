@@ -1,6 +1,5 @@
-@extends('layouts.settings')
-
-@section('settings-content')
+@extends('layouts.app')
+@section('content')
 <section class="flex-1 flex-col overflow-y-auto pt-0 sm:pt-5">
 
 <div class="pl-4 pr-4 sm:pl-10 sm:pr-10 size1:pr-24">

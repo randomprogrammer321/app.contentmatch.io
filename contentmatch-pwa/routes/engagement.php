@@ -5,7 +5,7 @@ use App\Http\Controllers\Engagement\EngagementController;
 use App\Http\Controllers\Engagement\FeedbackController;
 use App\Http\Controllers\Engagement\EngagementRequestController;
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // General Engagement
     Route::post('/engagement', [EngagementController::class, 'store'])->name('engagement.store');
     

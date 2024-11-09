@@ -59,13 +59,19 @@
                class="text-secondary {{ $activeTab === 'home' ? 'border-b-2 border-custom2' : '' }} px-2 text-xs h-[25px] sm:text-base">
                 For you
             </a>
-            <a href="{{ route('feed.following') }}"
-               class="text-custom2 {{ $activeTab === 'following' ? 'border-b-2 border-custom2' : '' }} font-normal px-2 mx-3 text-xs h-[25px] sm:text-base">
-                Following
-            </a>
-            <button class="text-custom2 font-normal px-2 text-xs h-[25px] sm:text-base">
+            @if($activeTab === 'following')
+                <button id="followingBtn" class="text-custom2 font-normal px-2 mx-3 text-xs h-[25px] sm:text-base border-b-2 border-custom2 text-secondary">
+                    Following
+                </button>
+            @else
+                <a href="{{ route('feed.following') }}" class="text-custom2 font-normal px-2 mx-3 text-xs h-[25px] sm:text-base">
+                    Following
+                </a>
+            @endif
+            <a href="{{ route('feed.communities') }}"
+               class="text-custom2 {{ $activeTab === 'communities' ? 'border-b-2 border-custom2' : '' }} font-normal px-2 text-xs h-[25px] sm:text-base">
                 Communities
-            </button>
+            </a>
         </div>
 
         {{-- Main Content Area --}}

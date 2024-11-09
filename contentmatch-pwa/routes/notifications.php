@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Notification\NotificationController;
 
-Route::middleware('guest')->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // Main Notifications View
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
     

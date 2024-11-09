@@ -10,7 +10,11 @@ class CheckoutController extends Controller
     public function checkout(Request $request)
     {
         // this assumes user is logged in
-        $stripePriceId = 'price_1NO5cwHPavB6hDGgjkjrXm6l';
+
+        // the price id is the id of the subscription plan in stripe
+
+
+        $stripePriceId = env('STRIPE_PRICE_ID');
         $mode = 'subscription';
 
         return $request->user()->checkout($stripePriceId, [

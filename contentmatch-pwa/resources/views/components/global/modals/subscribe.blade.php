@@ -19,7 +19,7 @@
         </div>
         <div>
             <div class="flex items-center mb-2 space-x-2">
-                <p class="text-custom2 font-medium text-sm sm:text-xl">Macdonald Anyanwu</p>
+                <p class="text-custom2 font-medium text-sm sm:text-xl">@auth {{ auth()->user()->full_name }} @else User Name @endauth</p>
                 <div class="h-5 w-5">
                     <img class="w-full h-full" src="{{ asset('assets/icon/verified.svg') }}" alt=""/>
                 </div>
@@ -27,7 +27,7 @@
                     Premium User
                 </div>
             </div>
-            <p class="font-normal text-custom4 text-xs sm:text-base">@macdonald222</p>
+            <p class="font-normal text-custom4 text-xs sm:text-base">@auth {{ auth()->user()->username }} @else User Name @endauth</p>
         </div>
     </div>
 
@@ -52,7 +52,7 @@
 
     {{-- Action Buttons --}}
     <div class="mt-10">
-        <button onclick="window.location.href='/premium'" class="w-full text-secondary bg-custom3 rounded-[40px] font-medium text-xs mb-2 h-11 sm:text-sm">
+        <button onclick="window.location.href='{{ route('checkout') }}'" class="w-full text-secondary bg-custom3 rounded-[40px] font-medium text-xs mb-2 h-11 sm:text-sm">
             Try Now
         </button>
         <button id="close-sub-dia" class="w-full     text-secondary border border-custom6 rounded-[40px] font-medium text-xs h-11 sm:text-sm">

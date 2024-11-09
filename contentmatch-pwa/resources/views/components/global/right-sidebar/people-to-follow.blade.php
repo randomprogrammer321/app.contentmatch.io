@@ -24,6 +24,11 @@
                 'avatar' => 'placeholder-1.png'
             ],
             [
+                'name' => 'Dulce Lubin',
+                'username' => '@chi1234',
+                'avatar' => 'placeholder-1.png'
+            ],
+            [
                 'name' => 'Corey Carder',
                 'username' => '@chi1234',
                 'avatar' => 'placeholder-1.png'
@@ -48,9 +53,9 @@
                     </p>
                 </div>
             </div>
-            <button class="h-9 px-2 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary">
+            <a href="{{ route('profile.show', ['username' => $person['username']]) }}" class="h-9 px-4 rounded-[32px] border border-custom6 text-sm flex items-center font-bold text-secondary">
                 Follow
-            </button>
+    </a>
         </div>
     @endforeach
 </div>

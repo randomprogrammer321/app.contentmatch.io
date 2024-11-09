@@ -13,4 +13,7 @@
 
     {{-- Report Modal --}}
     @include('components.global.modals.report')
+
+    {{-- Create Post Modal --}}
+    @include('components.global.modals.create-post')
 </div>

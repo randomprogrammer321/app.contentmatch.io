@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Content\ContentController;
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // Content Feed
     
     // Content Creation

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Community\CommunityController;
 
-Route::middleware('guest')->group(function () {
+Route::middleware(['auth','onboarding.check'])->group(function () {
     // Main Community Routes
     Route::get('/communities', [CommunityController::class, 'index'])->name('communities.index');
     Route::get('/communities/explore', [CommunityController::class, 'explore'])->name('communities.explore');
