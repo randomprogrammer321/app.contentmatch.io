@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Match\MatchController;
 
-Route::middleware('guest')->group(function () {
+Route::middleware('auth', 'onboarding.check')->group(function () {
     // Getting Started/Onboarding Page
     Route::get('/match', [MatchController::class, 'index'])->name('match.index');
     
