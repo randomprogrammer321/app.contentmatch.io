@@ -72,7 +72,7 @@
               <label for="youtube-url" class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm">
                 YouTube
               </label>
-              <img src="{{ asset('assets/icon/socials/youtube.svg') }}" class="absolute right-[29px] bottom-[13px]" alt="">
+              <img src="{{ asset('/assets/icon/socials/youtube.svg') }}" class="absolute right-[29px] bottom-[13px]" alt="">
             </div>
 
             <div class="relative mb-1 sm:mb-2">

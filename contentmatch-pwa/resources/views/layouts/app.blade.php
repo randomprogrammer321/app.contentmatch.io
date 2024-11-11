@@ -60,13 +60,13 @@
 
     {{-- Scripts --}}
     <script type="module" src="{{ asset('js/home.js') }}"></script>
-    <script src="{{ asset('js/home/side-bar.js') }}"></script>
-    <script src="{{ asset('js/home/create-post.js') }}"></script>
-    <script src="{{ asset('js/home/image-preview.js') }}"></script>
-    <script src="{{ asset('js/home/feedback-dialog.js') }}"></script>
-    <script src="{{ asset('js/home/subscribe.js') }}"></script>
-    <script src="{{ asset('js/home/post.js') }}"></script>
-    <script src="https://js.stripe.com/v3/" defer></script>
+    <script defer src="{{ asset('js/home/side-bar.js') }}"></script>
+    <script defer src="{{ asset('js/home/create-post.js') }}"></script>
+    <script defer src="{{ asset('js/home/image-preview.js') }}"></script>
+    <script defer src="{{ asset('js/home/feedback-dialog.js') }}"></script>
+    <script defer src="{{ asset('js/home/subscribe.js') }}"></script>
+    <script defer src="{{ asset('js/home/post.js') }}"></script>
+    <script defer src="https://js.stripe.com/v3/" ></script>
     @livewireScripts
 
     @stack('scripts')
