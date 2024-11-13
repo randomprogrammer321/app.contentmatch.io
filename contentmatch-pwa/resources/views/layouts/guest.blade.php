@@ -17,7 +17,10 @@
     <main id="content" class="flex h-dvh">
       @yield('content')
     </main>
+    
     <script type="module" src="{{ asset('assets/js/signup.js') }}"></script>
+    <script src="{{ asset('js/home/back-button.js') }}"></script>
+    <script defer src="{{ asset('js/home/image-preview.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
   </body>
 </html>

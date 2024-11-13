@@ -2,16 +2,19 @@
     {{-- Profile Card --}}
     <div class="w-full border-b border-custom6 h-[76px] flex items-center pl-5 sm:h-[84px] sm:pl-3 size3:pl-10">
         <div class="flex">
+        <a href="{{ route('profile.show', ['username' => auth()->user()->username]) }}" class="text-sm leading-[19.6px] mb-1 text-white flex items-center">
             <div class="h-10 w-10 rounded-full">
                 <img class="h-full w-full object-cover" src="{{ asset('assets/images/home/pp-placeholder.png') }}"/>
             </div>
             <div class="ml-2">
+              
                 <p class="text-sm leading-[19.6px] mb-1 text-white flex items-center">
                     {{ auth()->user()->username ?? 'User Name' }}
                     @if(auth()->user()->is_verified)
                         <img class="ml-1" src="{{ asset('assets/icon/verified.svg') }}" alt="">
                     @endif
                 </p>
+                </a>
                 <p class="text-custom4 text-xs sm:text-sm">
                     @if(auth()->user()->is_premium)
                         You are currently a Premium user
@@ -20,6 +23,13 @@
                     @endif
                 </p>
             </div>
+            @if(auth()->check())
+                <a href="{{ route('logout') }}" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
+                    <div class="h-6 w-6">
+                        <img class="h-full w-full" src="{{ asset('assets/icon/nav/log-out.svg') }}"/>
+                    </div>
+                    </a>
+                @endif
         </div>
     </div>
 

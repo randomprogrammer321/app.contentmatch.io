@@ -61,9 +61,13 @@
     {{-- Scripts --}}
     <script type="module" src="{{ asset('js/home.js') }}"></script>
     <script defer src="{{ asset('js/home/side-bar.js') }}"></script>
+    <script src="{{ asset('js/home/back-button.js') }}"></script>
     <script defer src="{{ asset('js/home/create-post.js') }}"></script>
+    <script defer src="{{ asset('js/home/create-community.js') }}"></script>
+    <script defer src="{{ asset('js/home/engagement-dialog.js') }}"></script>
     <script defer src="{{ asset('js/home/image-preview.js') }}"></script>
     <script defer src="{{ asset('js/home/feedback-dialog.js') }}"></script>
+    <script defer src="{{ asset('js/home/report-video-dialog.js') }}"></script>
     <script defer src="{{ asset('js/home/subscribe.js') }}"></script>
     <script defer src="{{ asset('js/home/post.js') }}"></script>
     <script defer src="https://js.stripe.com/v3/" ></script>

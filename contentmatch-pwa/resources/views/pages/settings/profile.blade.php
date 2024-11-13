@@ -5,9 +5,10 @@
     <div class="pl-4 pr-4 sm:pl-10 sm:pr-10 size1:pr-24">
         <!-- PROFILE HEADER -->
     <div class="h-[46px] flex items-center border-b border-custom6 sm:border-none sm:h-max">
-        <a href="{{ route('settings.profile') }}" class="h-[18px] w-[9px] mr-2 mb-[1px] block sm:hidden">
-            <img class="w-full h-full" src="{{ asset('assets/icon/back-outlined-left.svg') }}" alt=""/>
-        </a>
+        
+        <button id="hb-btn"  class="h-[18px] w-[9px] mr-2 mb-[1px] block sm:hidden">
+        <img class="w-full h-full" src="{{ asset('assets/icon/back-outlined-left.svg') }}" alt=""/>
+    </button>
         <p class="text-white font-medium text-base sm:text-xl">Edit Profile</p>
     </div>
 
@@ -56,10 +57,11 @@
 
         <!-- Bio -->
         <div class="relative mb-3 sm:mb-2">
-            <textarea class="w-full pb-2 h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom1 focus:outline-none focus:ring-0 sm:h-[70px] sm:text-base focus:border-custom2 sm:mt-[25px] resize-none overflow-hidden">{{ auth()->user()->bio }}</textarea>
-            <label class="absolute bottom-[19px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm">
+        <label class="absolute bottom-[19px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm">
                 Bio
             </label>
+            <textarea class="w-full pb-2 h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom1 focus:outline-none focus:ring-0 sm:h-[70px] sm:text-base focus:border-custom2 sm:mt-[25px] resize-none overflow-hidden">{{ auth()->user()->bio }}</textarea>
+          
         </div>
 
         
@@ -107,6 +109,39 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-twitter-x absolute right-[29px] bottom-[13px]" viewBox="0 0 16 16">
   <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
 </svg> 
+            </div>
+          </div>
+          <div class="flex justify-between gap-x-2 mt-5 sm:mt-0 mb-5">
+            <div>
+              <p class="font-medium text-xs text-secondary leading-[22.4px] mb-2 sm:text-base">
+                Show suggested account on profiles
+              </p>
+              <p class="font-normal text-custom4 text-xs leading-[16.8px] sm:leading-[19.6px]">
+                Decide if similar accounts are shown on your profile and if your
+                account is suggested on others.
+              </p>
+            </div>
+            <label for="suggest-acc" class="flex items-center cursor-pointer">
+              <div class="relative">
+                <input id="suggest-acc" type="checkbox" class="sr-only peer">
+                <div class="block bg-gray-600 border border-custom4 peer-checked:bg-custom14 peer-checked:border-none w-[38px] h-6 rounded-full transition"></div>
+                <div class="dot absolute left-1 top-1 w-[16px] h-[16px] rounded-full bg-white border border-custom4 peer-checked:translate-x-[15px] peer-checked:none transition-transform"></div>
+              </div>
+            </label>
+          </div>
+          <div class="mb-5">
+            <p class="text-xs text-custom4 font-normal mb-1 sm:text-sm">
+              Profile link
+            </p>
+            <div class="flex gap-x-2">
+              <a target="_blank" href="{{ route('profile.show', auth()->user()->username) }}" class="break-all w-max">
+                <p class="font-normal text-secondary text-xs hover:underline sm:text-base">
+                  contentmatch/{{ auth()->user()->username }}
+                </p>
+              </a>
+              <button class="h-[18px] w-[18px] sm:h-5 sm:w-5">
+                <img class="h-full w-full" src="{{ asset('assets/icon/copy.svg') }}">
+              </button>
             </div>
           </div>
 

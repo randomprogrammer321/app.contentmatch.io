@@ -15,12 +15,17 @@
            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base {{ request()->routeIs('settings.language') ? 'text-white bg-custom22 border-r-[3px] border-custom3' : 'text-custom2' }} pl-10">
             Languages
         </a>
-
+        @if(auth()->user()->is_premium)
         <a href="{{ route('settings.billing-portal') }}" target="_blank"
            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base {{ request()->routeIs('settings.billing') ? 'text-white bg-custom22 border-r-[3px] border-custom3' : 'text-custom2' }} pl-10">
             Billing Portal
         </a>
-
+        @else
+        <a href="{{ route('checkout') }}" target="_blank"
+           class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base {{ request()->routeIs('settings.billing') ? 'text-white bg-custom22 border-r-[3px] border-custom3' : 'text-custom2' }} pl-10">
+            Upgrade to Premium
+        </a>    
+        @endif
         <a href="{{ route('privacy') }}" target="_blank"
            class="h-[54px] w-full flex items-center flex-shrink-0 font-normal text-base {{ request()->routeIs('settings.privacy') ? 'text-white bg-custom22 border-r-[3px] border-custom3' : 'text-custom2' }} pl-10">
             Account Privacy

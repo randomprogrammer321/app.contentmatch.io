@@ -74,13 +74,7 @@
                 </a>
 
                 {{-- Logout --}}
-                @if(auth()->check())
-                    <a href="{{ route('logout') }}" class="flex items-center w0 h-10 rounded-xl pl-4 mb-5">
-                        <div class="h-6 w-6">
-                            <img class="h-full w-full" src="{{ asset('assets/icon/nav/log-out.svg') }}"/>
-                        </div>
-                    </a>
-                @endif
+             
             </div>
         </nav>
 
@@ -113,50 +107,120 @@
 
             <!-- MOBILE NAV LINK START -->
             <div class="border-b border-custom6 mx-5">
-              <a href="#" class="flex items-center w0 h-10 text-base my-5">
+            @if(request()->is('settings*'))
+                    {{-- Settings Navigation for Mobile --}}
+                    <a href="{{ route('settings.profile') }}" 
+                       class="flex items-center w0 h-10 text-base mb-5">
+                 
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.profile') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Edit Profile
+                        </p>
+                    </a>
+
+                    <a href="{{ route('settings.notifications') }}" 
+                       class="flex items-center w0 h-10 text-base mb-5">
+                      
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.notifications') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Notifications
+                        </p>
+                    </a>
+
+                    <a href="{{ route('settings.language') }}" 
+                       class="flex items-center w0 h-10 text-base mb-5">
+                    
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.language') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Languages
+                        </p>
+                    </a>
+                    @if(auth()->user()->is_premium)
+                    <a href="{{ route('settings.billing-portal') }}" target="_blank"
+                       class="flex items-center w0 h-10 text-base mb-5">
+                   
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.billing') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Billing Portal
+                        </p>
+                    </a>
+                    @endif
+                    <a href="{{ route('privacy') }}" target="_blank"
+                       class="flex items-center w0 h-10 text-base mb-5">
+                      
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.privacy') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Account Privacy
+                        </p>
+                    </a>
+
+                    <a href="{{ route('settings.blocked') }}" 
+                       class="flex items-center w0 h-10 text-base mb-5">
+                    
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.blocked') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Blocked users
+                        </p>
+                    </a>
+
+                    <a href="https://support.contentmatch.io" target="_blank"
+                       class="flex items-center w0 h-10 text-base mb-5 justify-between">
+                        <div class="flex items-center">
+                         
+                            <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
+                                Customer's Support
+                            </p>
+                        </div>
+                       
+                    </a>
+
+                    <a href="{{ route('settings.deactivate') }}" 
+                       class="flex items-center w0 h-10 text-base mb-5">
+                    
+                        <p class="font-normal pl-4 text-base {{ request()->routeIs('settings.deactivate') ? 'text-white' : 'text-custom7' }} leading-[22.4px]">
+                            Delete Account
+                        </p>
+                    </a>
+                @else
+              <a href="{{ route('profile.show', ['username' => auth()->user()->username]) }}" class="flex items-center w0 h-10 text-base my-5">
                 <div class="h-6 w-6">
-                  <img class="h-full w-full" src="assets/icon/nav/profile.svg">
+                  <img class="h-full w-full" src="{{ asset('assets/icon/nav/profile.svg') }}">
                 </div>
                 <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
                   Profile
                 </p>
               </a>
-              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+              <a href="{{ route('communities.index') }}" class="flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
-                  <img class="h-full w-full" src="assets/icon/nav/friends-inactive.svg">
+                  <img class="h-full w-full" src="{{ asset('assets/icon/nav/friends-inactive.svg') }}">
                 </div>
                 <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
-                  Friends
+                  Communities
                 </p>
               </a>
               <button class="open-sub-dia flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
-                  <img class="h-full w-full" src="assets/logo/logo.svg">
+                  <img class="h-full w-full" src="{{ asset('assets/logo/logo.svg') }}">
                 </div>
                 <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
                   Get Premium
                 </p>
               </button>
 
-              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+              <a href="{{ route('settings.profile') }}" class="flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
-                  <img class="h-full w-full" src="assets/icon/nav/settings-inactive.svg">
+                  <img class="h-full w-full" src="{{ asset('assets/icon/nav/settings-inactive.svg') }}">
                 </div>
                 <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
                   Settings
                 </p>
               </a>
               @if(auth()->check())
-              <a href="#" class="flex items-center w0 h-10 text-base mb-5">
+              <a href="{{ route('logout') }}" class="flex items-center w0 h-10 text-base mb-5">
                 <div class="h-6 w-6">
-                  <img class="h-full w-full" src="assets/icon/nav/settings-inactive.svg">
+                  <img class="h-full w-full" src="{{ asset('assets/icon/nav/log-out.svg') }}">
                 </div>
                 <p class="font-normal pl-4 text-base text-custom7 leading-[22.4px]">
-                  Settings
+                  Logout
                 </p>
               </a>
               @endif
             </div>
+            @endif
             <!-- MOBILE NAV LINKS END -->
           </nav>
 
@@ -168,11 +232,13 @@
                 
                 {{-- Create Community Button --}}
                 <button class="open-create-com-dia flex items-center h-10 mt-3 mb-1">
-                    <div class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10">
-                        <img class="h-5 w-5" src="{{ asset('assets/icon/home/add.svg') }}" alt=""/>
-                    </div>
-                    <p class="text-sm text-custom2 font-normal sm:text-base">Create a community</p>
-                </button>
+                <div class="flex items-center justify-center h-8 w-8 mr-1 sm:h-10 sm:w-10">
+                  <img class="h-5 w-5" src="assets/icon/home/add.svg" alt="">
+                </div>
+                <p class="text-sm text-custom2 font-normal sm:text-base">
+                  Create a community
+                </p>
+              </button>
 
                 {{-- Community List --}}
                 <div class="space-y-4">
@@ -199,7 +265,9 @@
         <div class="space-y-2 pl-5 sm:pl-0">
             <a class="flex items-center text-custom4 font-normal h-9 text-base" target="_blank" href="https://contentmatch.io/our-app/">How to use ContentMatch</a>
             <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://discord.gg/contentmatch">Join our Discord</a>
+            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://support.contentmatch.io/en/customer/create-ticket/">DMCA TakeDown</a>
             <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="https://support.contentmatch.io/en/customer/create-ticket/">Contact Support</a>
+            <a class="flex items-center text-custom4 font-normal text-base h-9" target="_blank" href="{{ route('privacy') }}">Privacy Policy</a>
         </div>
         <div class="h-20"></div>
     </div>

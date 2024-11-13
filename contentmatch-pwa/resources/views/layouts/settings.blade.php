@@ -43,7 +43,7 @@
     @include('components.global.mobile-nav')
  
     {{-- Service Worker Registration Script --}}
-    <script>
+    <script defer>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')

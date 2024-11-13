@@ -5,9 +5,9 @@
 <div class="pl-4 pr-4 sm:pl-10 sm:pr-10 size1:pr-24">
     {{-- Mobile Header --}}
     <div class="h-[46px] flex items-center border-b border-custom6 mb-5 -mx-4 px-4 sm:px-0 sm:mx-0 sm:mb-9 sm:border-none sm:h-max">
-        <button class="h-[18px] w-[9px] mr-2 mb-[1px] block sm:hidden">
-            <img class="w-full h-full" src="{{ asset('assets/icon/back-outlined-left.svg') }}" alt=""/>
-        </button>
+    <button id="hb-btn"  class="h-[18px] w-[9px] mr-2 mb-[1px] block sm:hidden">
+        <img class="w-full h-full" src="{{ asset('assets/icon/back-outlined-left.svg') }}" alt=""/>
+    </button>
         <p class="text-white font-medium text-base sm:text-xl">Billing and Invoices</p>
     </div>
 
