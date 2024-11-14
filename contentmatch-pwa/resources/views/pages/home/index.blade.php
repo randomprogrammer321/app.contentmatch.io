@@ -73,9 +73,27 @@
                 Communities
             </a>
         </div>
-
+    
         {{-- Main Content Area --}}
         <div class="flex-1 overflow-y-auto px-[25px]">
+            @if(!Auth::user()->is_premium)
+                <div class="block size5:hidden">
+                    <!-- GET PREMIUM CARD START  -->
+            <div class="p-3 rounded-xl border border-custom6 mb-3 size5:mb-0 size5:p-0 size5:border-none">
+              <p class="font-bold text-base leading-[22.4px] text-white sm:leading-[28px] sm:text-xl">
+                Get Premium
+              </p>
+              <p class="text-custom4 font-normal text-xs mt-2 sm:leading-[16.8px] leading-[19.6px] sm:text-sm">
+                Gain access to premium features, more visibiliy &amp; engagementsand
+                priority support
+              </p>
+              <button class="open-sub-dia flex text-xs mt-2 items-center text-custom9 px-3 h-[33px] rounded-[32px] bg-custom11">
+                Subscribe
+              </button>
+            </div>
+                    <!-- GET PREMIUM CARD END -->
+                </div>
+            @endif
             {{-- Posts Section --}}
             @foreach($posts as $post)
                 @include('components.feed.post-card', ['post' => $post])

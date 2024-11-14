@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
+
+
 @section('content')
-<section class="flex flex-col flex-1">
+<main id="content" class="h-screen flex overflow-auto flex-row">
+    {{-- Main Content Section --}}
+<section class="flex-1 flex flex-col">
     {{-- Header --}}
     @include('components.explore.header')
 
@@ -32,6 +36,7 @@
             {{-- Communities content uses same card component --}}
         </div>
     </div>
-</section>
+    </section>
+</main>
 @endsection
 
