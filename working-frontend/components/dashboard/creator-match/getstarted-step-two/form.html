@@ -1,0 +1,121 @@
+<form
+  class="bg-primary rounded-xl px-4 m-auto w-full sm:max-w-[600px] sm:p-5 mt-24 sm:mt-[113px] sm:border sm:border-custom6 sm:px-10"
+>
+  <h1 class="text-center font-medium text-white mb-1 text-base sm:text-2xl">
+    Get started on Creator's match
+  </h1>
+  <h2
+    class="text-custom4 text-center font-normal text-xs mb-6 sm:text-base sm:mb-10"
+  >
+    You can also edit choices on your settings
+  </h2>
+  <p class="text-secondary font-medium mb-[6px] text-sm sm:text-xl">
+    Set your availability
+  </p>
+  <p class="font-normal text-custom4 text-xs sm:text-base">
+    Choose the date and time you will be available to match with users
+  </p>
+  <div class="relative mb-1 sm:mb-4">
+    <input
+      required
+      id="days"
+      value="Thurdays, Fridays"
+      class="w-full h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-base focus:border-custom2 sm:mt-[25px]"
+    />
+    <label
+      for="days"
+      class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm"
+    >
+      Days
+    </label>
+  </div>
+
+  <div class="relative mb-4">
+    <input
+      required
+      id="time"
+      value="3:00PM (GMT+1)"
+      class="w-full h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-base focus:border-custom2 sm:mt-[15px]"
+    />
+    <label
+      for="time"
+      class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm"
+    >
+      Time
+    </label>
+  </div>
+
+  <div class="border-b border-custom2">
+    <p for="time" class="text-custom4 text-xs">Meeting schedule</p>
+    <select
+      class="bg-transparent border-none cursor-pointer outline-none w-full font-normal text-secondary pl-0 focus:ring-0 text-xs h-[34px] sm:h-[48px] sm:text-base"
+    >
+      <option
+        class="text-black font-normal text-xs sm:text-base"
+        value="weekly"
+      >
+        Every Week
+      </option>
+      <option class="text-black font-normal text-xs sm:text-base" value="daily">
+        Every Day
+      </option>
+    </select>
+  </div>
+
+  <div class="mt-7 sm:mt-10">
+    <p class="font-medium text-secondary text-sm mb-[22px] sm:text-xl sm:mb-8">
+      Enter link of your top 3 videos
+    </p>
+    <div class="relative mb-1 sm:mb-4">
+      <input
+        required
+        id="v-link-one"
+        value="youtube.com/amdiw2904032"
+        class="w-full h-[45px] text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-base focus:border-custom2"
+      />
+      <label
+        for="v-link-one"
+        class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm"
+      >
+        Enter video link
+      </label>
+    </div>
+
+    <div class="relative mb-1 sm:mb-4">
+      <input
+        required
+        id="v-link-two"
+        value="youtube.com/amdiw2904032"
+        class="w-full h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-base focus:border-custom2 sm:mt-[15px]"
+      />
+      <label
+        for="v-link-two"
+        class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm"
+      >
+        Enter video link
+      </label>
+    </div>
+    <div class="relative mb-1 sm:mb-4">
+      <input
+        required
+        id="v-link-three"
+        value="youtube.com/amdiw2904032"
+        class="w-full h-[45px] mt-6 text-xs bg-transparent text-secondary px-0 border-0 border-b border-custom2 focus:outline-none focus:ring-0 sm:h-[48px] sm:text-base focus:border-custom2 sm:mt-[15px]"
+      />
+      <label
+        for="v-link-three"
+        class="absolute bottom-[13px] left-0 text-custom4 text-xs pointer-events-none transition-all duration-150 sm:text-sm"
+      >
+        Enter video link
+      </label>
+    </div>
+
+    <div class="flex justify-end mt-7 sm:mt-10">
+      <button
+        class="h-[38px] px-10 bg-custom3 flex items-center justify-center text-secondary rounded-[32px] w-full"
+      >
+        Proceed
+      </button>
+    </div>
+  </div>
+</form>
